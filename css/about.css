@@ -1,0 +1,1378 @@
+/* ===================================================================
+   ABOUT.CSS
+   File CSS khusus untuk about.html
+   Berisi: reset/global, header/navbar/dropdown/hamburger (shared),
+   whatsapp float, footer (shared), dan semua section About Us.
+   Tidak ada satupun value/rule yang diubah dari style.css asli.
+=================================================================== */
+
+/* ===== RESET / GLOBAL ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#111;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 60px;
+height:87px;
+
+background:#efe7da;
+border-bottom:1px solid #171310;
+z-index:999;
+transition:.4s;
+}
+
+header.scrolled{
+padding:12px 60px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.logo img{
+width:85px;
+height:85px;
+}
+
+.logo{
+    margin-left:40px;
+    margin-top:10px;
+}
+
+#navbar > nav{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav-list{
+    display:flex;
+    align-items:center;
+    gap:42px;
+    list-style:none;
+    margin-top :5px;
+}
+
+#navbar > nav a{
+text-decoration:none;
+color:#4a4a4a;
+font-size:17px;
+font-weight:500;
+transition:.3s;
+}
+
+#navbar > nav a:hover{
+color:#f7901e;
+}
+
+.active{
+    color:#f7901e !important;
+    font-weight:600;
+}
+
+/* ===== HEADER RIGHT (language pill + hamburger) ===== */
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.lang-pill{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    background:#ffffff;
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:999px;
+    padding:8px 16px 8px 12px;
+
+    font-size:12px;
+    font-weight:600;
+    color:#333;
+    letter-spacing:.5px;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.lang-pill:hover{
+    border-color:rgba(247,144,30,.5);
+    color:#f7901e;
+}
+
+.lang-pill .globe-icon{
+    font-size:13px;
+    line-height:1;
+}
+
+@media(max-width:900px){
+header{
+padding:20px;
+}
+}
+
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:55px;
+height:55px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+z-index:998;
+transition:.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+/* ===== learn-more (dipakai di logistics-info) ===== */
+.learn-more{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:18px;
+
+    text-decoration:none;
+    color:#F7901E;
+
+    font-family:'Outfit', sans-serif;
+    font-size:18px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.learn-more .arrow{
+    font-size:22px;
+    font-weight:700;
+    line-height:1;
+    transition:.3s;
+}
+
+.learn-more:hover{
+    color:#ff9f38;
+}
+
+.learn-more:hover .arrow{
+    transform:translateX(8px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#16100c;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:28px 100px;
+}
+
+.footer-container{
+    max-width:1300px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-logo{
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.footer-logo .white{
+    color:#ffffff;
+}
+
+.footer-logo .orange {
+    color: #F7901E;
+    background: transparent; 
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0;
+}
+
+.footer-copy{
+    color:#a7a7a7;
+    font-size:14px;
+}
+
+/* ================= MOBILE FOOTER ================= */
+
+@media (max-width:768px){
+
+.footer{
+    padding:25px 20px;
+}
+
+.footer-container{
+    flex-direction:column;
+    gap:18px;
+    text-align:center;
+}
+
+.footer-copy{
+    line-height:1.6;
+}
+
+}
+
+/* ===== ABOUT US HERO ===== */
+.about-hero{
+height:60vh;
+background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/assets/about/aboutus-bg.png);
+background-size:cover;
+background-position:center;
+
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.about-hero-overlay{
+position:absolute;
+inset:0;
+pointer-events:none;
+}
+
+.about-hero-content{
+position:relative;
+color:#fff;
+}
+
+.about-hero-content .small{
+letter-spacing:4px;
+font-size:12px;
+color:#f9a13d;
+margin-bottom:15px;
+}
+
+.about-hero-content h1{
+    font-size:64px;
+    font-family:'Playfair Display', serif;
+    color:#fff;
+    margin-top:80px; /* margin header */
+}
+
+.about-hero-content h1 span{
+    color:#F7901E;
+    text-shadow:0 0 12px rgba(247,144,30,.35);
+    font-family:'Playfair Display', serif;
+}
+
+/* ===== ABOUT BLOCK (WHO WE ARE / WHAT WE OFFER) ===== */
+.about-block{
+background:#16100c;
+padding:120px 100px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:90px;
+}
+
+.about-block.reverse{
+flex-direction:row-reverse;
+}
+
+.about-text{
+flex:1;
+max-width:620px;
+}
+
+.about-label{
+display:block;
+color:#F7901E;
+font-size:14px;
+font-weight:600;
+letter-spacing:5px;
+margin-bottom:18px;
+}
+
+.about-text h2{
+font-size:44px;
+color:#fff;
+font-family:Georgia,serif;
+margin-bottom:16px;
+line-height:1.2;
+}
+
+.about-sub{
+color:#f7901e;
+font-size:13px;
+font-weight:650;
+letter-spacing:2px;
+margin-bottom:28px;
+}
+
+.about-text p{
+color:#c7c7c7;
+line-height:1.9;
+font-size:16px;
+margin-bottom:24px;
+}
+
+.about-media{
+    flex:1;
+    aspect-ratio:16 / 9;
+    border-radius:24px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.about-media iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+}
+
+.about-media img{
+width:100%;
+height:400px;
+object-fit:cover;
+display:block;
+}
+
+.play-btn{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+width:70px;
+height:70px;
+border-radius:50%;
+
+background:#f7901e;
+color:#fff;
+font-size:22px;
+border:none;
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.3s;
+}
+
+.play-btn:hover{
+transform:translate(-50%,-50%) scale(1.1);
+}
+
+/* ===== "What We Offer" carousel: image on the left, dots below (no side arrows) ===== */
+.about-media.carousel-wrap{
+    aspect-ratio:auto;
+    border:none;
+    overflow:visible;
+    display:flex;
+    flex-direction:column;
+}
+
+.carousel-frame{
+    position:relative;
+    aspect-ratio:16 / 9;
+    border-radius:24px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.carousel{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.carousel-track{
+    display:flex;
+    height:100%;
+    transition:transform .5s ease;
+}
+
+.carousel-track img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    flex:0 0 100%;
+    display:block;
+}
+
+.carousel-dots-below{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:24px;
+}
+
+.carousel-dots-below .dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(255,255,255,.18);
+    border:none;
+    padding:0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.carousel-dots-below .dot:hover{
+    background:rgba(247,144,30,.5);
+}
+
+.carousel-dots-below .dot.active{
+    background:#f7901e;
+    width:26px;
+    border-radius:5px;
+}
+
+/* ===== MOBILE (about-hero & about-block) ===== */
+@media(max-width:900px){
+.about-hero{
+height:50vh;
+}
+
+.about-hero-content h1{
+font-size:40px;
+}
+
+.about-block,
+.about-block.reverse{
+flex-direction:column;
+padding:70px 20px;
+gap:40px;
+}
+
+.about-text h2{
+font-size:30px;
+}
+
+.about-media img{
+height:280px;
+}
+}
+
+/* ===== ABOUT SIDEBAR ===== */
+.about-wrapper{
+background:#16100c;
+display:flex;
+align-items:flex-start;
+gap:0;
+}
+
+.about-sidebar{
+position:sticky;
+top:100px;
+flex:0 0 220px;
+display:flex;
+flex-direction:column;
+padding:20px 20px 60px 30px;
+}
+
+.sidebar-links{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.sidebar-link{
+display:block;
+text-decoration:none;
+color:#9d9d9d;
+font-size:14px;
+font-weight:500;
+line-height:1.5;
+text-align:left;
+padding:14px 20px;
+border-radius:10px;
+transition:.3s;
+}
+
+.sidebar-link:hover{
+color:#fff;
+background:rgba(255,255,255,.05);
+}
+
+.sidebar-link.active{
+color:#fff !important;
+background:#f7901e;
+font-weight:600;
+box-shadow:0 8px 20px rgba(247,144,30,.3);
+}
+
+.about-content{
+flex:1;
+min-width:0;
+padding:20px 60px 60px 0;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.about-content .about-block{
+background:#1c140f;
+border:1px solid rgba(255,255,255,.1);
+border-radius:24px;
+padding:50px;
+margin-bottom:0;
+}
+
+#who-we-are,
+#what-we-offer,
+#our-factory,
+#our-logistics,
+#our-gallery{
+scroll-margin-top:100px;
+}
+
+/* ===== MOBILE: SIDEBAR DIKONTROL LEWAT HAMBURGER NAVBAR ===== */
+@media(max-width:900px){
+.about-wrapper{
+flex-direction:column;
+}
+
+.about-content{
+padding:0 20px;
+gap:20px;
+}
+
+.about-sidebar{
+position:relative;
+top:0;
+flex:none;
+flex-direction:column;
+align-items:flex-start;
+width:100%;
+padding:15px 20px 0;
+}
+
+.sidebar-links{
+display:none;
+flex-direction:column;
+gap:8px;
+width:100%;
+padding:0;
+}
+
+.sidebar-links.open{
+display:flex;
+margin-top:10px;
+}
+
+.about-content .about-block{
+padding:30px 25px;
+border-radius:18px;
+}
+
+}
+
+/* =========================
+   OUR FACTORY (REBUILD)
+========================= */
+
+.factory-section{
+    padding:0;
+}
+
+/* ---------- HERO ---------- */
+
+.factory-banner{
+    position:relative;
+    min-height:650px;
+
+    overflow:hidden;
+    border-radius:24px;
+
+    background-size:cover;
+    background-position:center;
+}
+
+.factory-banner-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8,7,5,.88) 0%,
+        rgba(8,7,5,.65) 45%,
+        rgba(8,7,5,.38) 100%
+    );
+}
+
+.factory-banner-content{
+
+    position:relative;
+    z-index:2;
+
+    height:650px;
+
+    padding:55px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+/* ---------- LEFT ---------- */
+
+.factory-banner-text{
+
+    width:36%;
+
+    padding-top:10px;
+}
+
+.factory-banner-text .about-label{
+
+    display:block;
+
+    color:#F7901E;
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+}
+
+.factory-banner-text h2{
+
+    font-family:Georgia,serif;
+
+    color:#fff;
+
+    font-size:56px;
+
+    line-height:1.05;
+
+    margin-bottom:22px;
+}
+
+.factory-banner-text p{
+
+    color:#d2d2d2;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    max-width:430px;
+}
+
+/* ---------- PANEL ---------- */
+
+.facility-panel{
+
+    position:absolute;
+
+    right:55px;
+
+    bottom:55px;
+
+    width:58%;
+
+    background:rgba(17,13,10,.72);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:24px;
+}
+
+.facility-label{
+
+    display:block;
+
+    color:#F7901E;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+}
+
+.facility-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    list-style:none;
+}
+
+.facility-card{
+
+    background:#241912;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.35s;
+}
+
+.facility-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#F7901E;
+}
+
+.facility-card img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.facility-body{
+
+    padding:18px;
+}
+
+.facility-body h4{
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+}
+
+.facility-body p{
+
+    color:#ababab;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+/* ---------- STATS ---------- */
+
+.factory-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    margin-top:30px;
+
+    background:#1d140f;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    list-style:none;
+}
+
+.stat-item{
+
+    padding:42px 20px;
+
+    text-align:center;
+}
+
+.stat-item:not(:last-child){
+
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.stat-item h3{
+
+    color:#F7901E;
+
+    font-size:34px;
+
+    font-family:Georgia,serif;
+
+    margin-bottom:10px;
+}
+
+.stat-item span{
+
+    font-size:16px;
+}
+
+.stat-item p{
+
+    color:#989898;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+}
+
+/* ---------- MAP ---------- */
+
+.factory-map{
+
+    margin-top:30px;
+
+    min-height:520px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#1b130e;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.factory-map::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:url("assets/about/indonesia-map.png") center/92% no-repeat;
+
+    opacity:.85;
+}
+
+.factory-map>*{
+
+    position:relative;
+
+    z-index:2;
+}
+
+.factory-map .about-label{
+
+    padding:32px 40px 0;
+
+    margin:0;
+}
+
+.factory-map h3{
+
+    color:#fff;
+
+    font-size:38px;
+
+    font-family:Georgia,serif;
+
+    margin:8px 40px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:900px){
+
+.factory-banner{
+
+    min-height:auto;
+}
+
+.factory-banner-content{
+
+    height:auto;
+
+    padding:30px;
+
+    display:block;
+}
+
+.factory-banner-text{
+
+    width:100%;
+}
+
+.factory-banner-text h2{
+
+    font-size:34px;
+}
+
+.facility-panel{
+
+    position:relative;
+
+    right:auto;
+    bottom:auto;
+
+    width:100%;
+
+    margin-top:40px;
+}
+
+.facility-grid{
+
+    grid-template-columns:1fr;
+}
+
+.facility-card img{
+
+    height:220px;
+}
+
+.factory-stats{
+
+    grid-template-columns:1fr;
+}
+
+.stat-item:not(:last-child){
+
+    border-right:none;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+}
+
+/* ===== OUR SHIPPING & LOGISTICS PARTNERS ===== */
+.logistics-section{
+padding:0;
+}
+
+.logistics-section h2{
+color:#fff;
+font-size:30px;
+font-family:Georgia,serif;
+font-weight:400;
+margin-top:10px;
+margin-bottom:35px;
+max-width:700px;
+}
+
+.logistics-list{
+display:flex;
+flex-direction:column;
+gap:22px;
+list-style:none;
+}
+
+.logistics-card{
+background:#1c140f;
+border:1px solid rgba(255,255,255,.1);
+border-radius:18px;
+padding:35px;
+
+display:flex;
+align-items:center;
+gap:35px;
+
+transition:.35s;
+}
+
+.logistics-card:hover{
+border-color:rgba(247,144,30,.4);
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.logistics-logo{
+flex:0 0 140px;
+width:140px;
+height:140px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+padding:15px;
+}
+
+.logistics-logo img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+.logistics-info{
+flex:1;
+position:relative;
+}
+
+.logistics-info h4{
+color:#fff;
+font-size:20px;
+font-family:Georgia,serif;
+font-weight:600;
+margin-bottom:8px;
+}
+
+.logistics-tag{
+display:block;
+color:#f7901e;
+font-size:11px;
+font-weight:650;
+letter-spacing:2px;
+margin-bottom:14px;
+}
+
+.logistics-info p{
+color:#c7c7c7;
+font-size:14px;
+line-height:1.7;
+max-width:500px;
+margin-bottom:18px;
+}
+
+.logistics-info .learn-more{
+position:absolute;
+bottom:0;
+right:0;
+font-size:14px;
+}
+
+/* ===== OUR GALLERY ===== */
+.gallery-section{
+padding:0;
+}
+
+.gallery-section h2{
+color:#fff;
+font-size:30px;
+font-family:Georgia,serif;
+font-weight:400;
+margin-top:10px;
+margin-bottom:30px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+list-style:none;
+}
+
+.gallery-item{
+border-radius:14px;
+overflow:hidden;
+height:180px;
+}
+
+.gallery-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+/* ===== MOBILE (logistics & gallery) ===== */
+@media(max-width:900px){
+.logistics-card{
+flex-direction:column;
+text-align:center;
+padding:30px 25px;
+}
+
+.logistics-info .learn-more{
+position:static;
+justify-content:center;
+margin-top:10px;
+}
+
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* ===== HAMBURGER (mobile navbar) ===== */
+.hamburger{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+background:none;
+border:none;
+padding:0;
+}
+
+.hamburger span{
+width:26px;
+height:2px;
+background:#222;
+}
+
+@media(max-width:900px){
+
+.hamburger{
+display:flex;
+z-index:1001;
+}
+
+.hamburger span{
+transition:.3s;
+}
+
+.hamburger.active span:nth-child(1){
+transform:translateY(7px) rotate(45deg);
+background:#fff;
+}
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+.hamburger.active span:nth-child(3){
+transform:translateY(-7px) rotate(-45deg);
+background:#fff;
+}
+
+#navbar > nav{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#16100c;
+padding:100px 20px 40px;
+overflow-y:auto;
+z-index:1000;
+}
+
+#navbar > nav.open{
+display:block;
+}
+
+.nav-list{
+flex-direction:column;
+gap:0;
+}
+
+#navbar > nav a{
+color:#cfcfcf;
+font-size:16px;
+padding:16px 18px;
+border-radius:12px;
+margin-bottom:6px;
+transition:.25s;
+display:block;
+}
+
+#navbar > nav a.active{
+background:#f7901e;
+color:#fff !important;
+font-weight:600;
+}
+
+.nav-dropdown{
+width:100%;
+}
+
+.dropdown-toggle{
+display:flex;
+align-items:center;
+justify-content:space-between;
+width:100%;
+}
+
+.dropdown-menu{
+position:static;
+opacity:1;
+visibility:visible;
+transform:none;
+display:block;
+max-height:0;
+overflow:hidden;
+background:transparent;
+border-top:none;
+border-radius:0;
+transition:max-height .35s ease;
+}
+
+.nav-dropdown.mobile-open .dropdown-menu{
+max-height:300px;
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:14px 20px;
+
+    color:#ffffff !important;
+
+    text-decoration:none;
+    font-size:14px;
+
+    white-space:nowrap;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.caret{
+transition:.3s;
+}
+
+.nav-dropdown.mobile-open .caret{
+transform:rotate(180deg);
+}
+}
+
+.no-scroll{
+overflow:hidden;
+}
+
+/* ===== shared border-top rule (element list dipertahankan sama persis
+   dengan style.css, walaupun sebagian selector di sini tidak dipakai
+   di about.html — supaya kode/rule tidak diubah sama sekali) ===== */
+.partners,
+.company-profile,
+.why-choose,
+.our-products,
+.info-cards,
+.news-section,
+.export-section,
+.catalog-section,
+.about-hero,
+.about-wrapper,
+.footer{
+border-top:1px solid rgba(247,144,30,.15);
+}
+
+/* ===== DROPDOWN (Our Product) - desktop ===== */
+
+.nav-dropdown{
+    position:relative;
+}
+
+.dropdown-toggle{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.caret{
+    font-size:11px;
+    transition:.3s;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:calc(100% + 12px);
+    left:0;
+
+    min-width:360px;
+    list-style:none;
+
+    background:#2b2b2b;
+
+    border-top:2px solid #F7901E;
+    border-radius:0 0 8px 8px;
+
+    overflow:hidden;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:14px 20px;
+
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+
+    white-space:nowrap;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.dropdown-menu a:last-child{
+    border-bottom:none;
+}
+
+.dropdown-menu a:hover{
+    background:#F7901E;
+    color:#fff !important;
+}
+
+/* tampil saat hover */
+.nav-dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.nav-dropdown:hover .caret{
+    transform:rotate(180deg);
+}
+
+/* tampil saat "Our Product" diklik (desktop) */
+.nav-dropdown.open .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.nav-dropdown.open .caret{
+    transform:rotate(180deg);
+}
+
+.dropdown-menu a,
+.dropdown-menu a:link,
+.dropdown-menu a:visited,
+.dropdown-menu a:active{
+    color:#fff !important;
+}
+
+.dropdown-menu a:hover{
+    background:#F7901E;
+    color:#fff !important;
+}
