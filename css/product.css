@@ -7,7 +7,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Playfair Display,sans-serif;
+font-family:'Playfair Display',sans-serif;
 }
 
 body{
@@ -37,6 +37,11 @@ transition:.4s;
 header.scrolled{
 padding:12px 60px;
 box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+#navbar,
+#navbar *{
+    font-family:'Poppins',sans-serif;
 }
 
 .logo img{

@@ -64,7 +64,7 @@ height:85px;
 .nav-list{
     display:flex;
     align-items:center;
-    gap:36px;
+    gap:42px;
     list-style:none;
     margin-top:5px;
 }
@@ -72,7 +72,7 @@ height:85px;
 #navbar > nav a{
 text-decoration:none;
 color:#4a4a4a;
-font-size:16px;
+font-size:17px;
 font-weight:500;
 transition:.3s;
 white-space:nowrap;
@@ -121,20 +121,6 @@ color:#f7901e;
 .lang-pill .globe-icon{
     font-size:13px;
     line-height:1;
-}
-
-@media(max-width:1100px){
-header{
-padding:10px 30px;
-}
-
-.nav-list{
-gap:22px;
-}
-
-#navbar > nav a{
-font-size:14.5px;
-}
 }
 
 @media(max-width:900px){
