@@ -468,7 +468,7 @@ transform:scale(1.1);
     grid-template-columns:1fr 1fr;
     gap:90px;
 
-    border-top:1px solid rgba(247,144,30,.15);
+    border-top:1px solid rgba(53,44,37,.6);
 }
 
 /* ----- LEFT: CONTACT INFORMATION ----- */

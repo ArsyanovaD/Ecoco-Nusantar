@@ -336,7 +336,7 @@ color:black;
 
 /* ===== PARTNERS SECTION ===== */
 .partners{
-background:#17100C;
+background:#110C08;
 padding:90px 100px;
 }
 
@@ -446,7 +446,7 @@ transform:scale(1.05);
 /* ===== COMPANY PROFILE SECTION ===== */
 
 .company-profile{
-    background:#16100c;
+    background:rgba(27,21,16,.4);
     color:#fff;
 
     padding:120px 100px;
@@ -597,12 +597,11 @@ transform:translateX(0);
 .our-products,
 .info-cards,
 .news-section,
-.export-section,
 .catalog-section,
 .about-hero,
 .about-wrapper,
 .footer{
-    border-top:1px solid rgba(243, 150, 44, 0.747);
+    border-top:1px solid rgba(53,44,37,.6);
 }
 
 /* ===== DROPDOWN (Our Product) ===== */
@@ -706,7 +705,7 @@ transform:translateX(0);
 
 /* ===== WHY CHOOSE US SECTION ===== */
 .why-choose{
-    background:#1b110a;
+    background:#110C08;
     padding:110px 100px;
 }
 
@@ -714,7 +713,7 @@ transform:translateX(0);
     display:flex;
     justify-content:space-between;
     align-items:flex-end;
-    max-width:1200px;
+    max-width:1300px;
     margin:0 auto 55px;
 }
 
@@ -739,7 +738,7 @@ transform:translateX(0);
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
-    max-width:1200px;
+    max-width:1300px;
     margin:0 auto;
     list-style:none;
 }
@@ -796,7 +795,7 @@ transform:translateX(0);
 
 /* ===== OUR PRODUCTS SECTION ===== */
 .our-products{
-    background:#16100c;
+    background:rgba(27,21,16,.4);
     padding:110px 100px;
 }
 
@@ -919,7 +918,7 @@ transform:translateX(0);
 
 /* ===== PACKAGING & PRODUCTION INFO SECTION ===== */
 .info-cards{
-    background:#16100c;
+    background:#110C08;
     padding:80px 100px;
 
     display:grid;
@@ -1042,7 +1041,7 @@ transform:translateX(0);
 
 /* ===== NEWS & ARTICLE SECTION ===== */
 .news-section{
-    background:#16100c;
+    background:rgba(27,21,16,.4);
     padding:100px 100px;
 }
 
@@ -1155,116 +1154,6 @@ transform:translateX(0);
     }
 }
 
-/* ================= EXPORT DESTINATION ================= */
-
-.export-section{
-    background:#16100c;
-    padding:100px;
-}
-
-.export-header{
-    max-width:1200px;
-    margin:0 auto 35px;
-}
-
-.export-header h2{
-    color:#fff;
-    font-family:Georgia,serif;
-    font-size:50px;
-    margin-bottom:15px;
-}
-
-.export-header p{
-    color:#bdbdbd;
-    font-size:20px;
-}
-
-.export-map{
-
-    position:relative;
-
-    max-width:1200px;
-    margin:auto;
-
-    border-radius:30px;
-    overflow:hidden;
-
-    background:#120d09;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    min-height:700px;
-}
-
-.export-overlay{
-
-    position:absolute;
-    inset:0;
-
-    background:
-    radial-gradient(circle at center,
-    rgba(247,144,30,.08),
-    transparent 70%);
-
-}
-
-.map-content{
-
-    position:relative;
-
-    z-index:2;
-
-    text-align:center;
-
-    padding:60px;
-}
-
-.small-title{
-
-    color:#F7901E;
-
-    letter-spacing:6px;
-
-    font-size:13px;
-
-    font-weight:600;
-}
-
-.map-content h3{
-
-    margin-top:10px;
-
-    color:#fff;
-
-    font-family:Georgia,serif;
-
-    font-size:46px;
-}
-
-.map-content p{
-
-    color:#bdbdbd;
-
-    margin:15px auto 40px;
-
-    max-width:600px;
-
-    line-height:1.8;
-}
-
-.map-content img{
-
-    width:100%;
-
-    max-width:1000px;
-
-    display:block;
-
-    margin:auto;
-
-    opacity:.9;
-}
-
 /* ==========================
    PRODUCT CATALOG
 ========================== */
@@ -1273,7 +1162,7 @@ transform:translateX(0);
 
     position:relative;
 
-    background:url("Assets/catalog-bg.jpg") center center/cover no-repeat;
+    background:url("/Assets/hero/hero.png") center center/cover no-repeat;
 
     padding:140px 20px;
 
@@ -1415,35 +1304,6 @@ transform:translateX(0);
 
 /* ===== MOBILE ===== */
 @media(max-width:900px){
-    .export-section{
-        padding:70px 20px;
-    }
-
-    .export-header h2{
-        font-size:30px;
-    }
-
-    .export-header p{
-        font-size:16px;
-    }
-
-    .export-map{
-        min-height:auto;
-        border-radius:20px;
-    }
-
-    .map-content{
-        padding:35px 20px;
-    }
-
-    .map-content h3{
-        font-size:26px;
-    }
-
-    .map-content p{
-        font-size:14px;
-    }
-
     .catalog-section{
         padding:80px 20px;
     }

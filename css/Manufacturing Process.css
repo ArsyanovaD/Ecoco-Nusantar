@@ -488,7 +488,7 @@ transform:scale(1.1);
 .process-tabs-section{
     background:#16100c;
     padding:0 100px 100px;
-    border-top:1px solid rgba(247,144,30,.15);
+    border-top:1px solid rgba(53,44,37,.6);
     padding-top:45px;
 }
 
@@ -703,7 +703,7 @@ transform:scale(1.1);
 .moq-section{
     background:#16100c;
     padding:90px 100px 120px;
-    border-top:1px solid rgba(247,144,30,.15);
+    border-top:1px solid rgba(53,44,37,.6);
 }
 
 .moq-title{
