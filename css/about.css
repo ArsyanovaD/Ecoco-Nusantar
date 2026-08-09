@@ -246,7 +246,7 @@ transform:scale(1.1);
 /* ===== ABOUT US HERO ===== */
 .about-hero{
 height:60vh;
-background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/assets/about/aboutus-bg.png);
+background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/Assets/about/aboutus-bg.png);
 background-size:cover;
 background-position:center;
 
@@ -887,7 +887,7 @@ border-radius:18px;
     position:absolute;
     inset:0;
 
-    background:url("assets/about/indonesia-map.png") center/92% no-repeat;
+    background:url("Assets/about/indonesia-map.png") center/92% no-repeat;
 
     opacity:.85;
 }
