@@ -310,7 +310,7 @@ max-width:620px;
 
 .about-label{
 display:block;
-color:#F7901E;
+color:#F99532;
 font-size:14px;
 font-weight:600;
 letter-spacing:5px;
@@ -325,8 +325,8 @@ margin-bottom:16px;
 line-height:1.2;
 }
 
-.about-sub{
-color:#f7901e;
+.about-text .about-sub{
+color:#F99532;
 font-size:13px;
 font-weight:650;
 letter-spacing:2px;
@@ -338,6 +338,7 @@ color:#c7c7c7;
 line-height:1.9;
 font-size:16px;
 margin-bottom:24px;
+text-align:justify;
 }
 
 .about-media{
@@ -396,6 +397,7 @@ transform:translate(-50%,-50%) scale(1.1);
 /* ===== "What We Offer" carousel: image on the left, dots below (no side arrows) ===== */
 .about-media.carousel-wrap{
     aspect-ratio:auto;
+    height:auto;
     border:none;
     overflow:visible;
     display:flex;
@@ -404,7 +406,8 @@ transform:translate(-50%,-50%) scale(1.1);
 
 .carousel-frame{
     position:relative;
-    aspect-ratio:16 / 9;
+    aspect-ratio:1 / 1;
+    flex-shrink:0;
     border-radius:24px;
     overflow:hidden;
     border:1px solid rgba(255,255,255,.15);
@@ -458,6 +461,63 @@ transform:translate(-50%,-50%) scale(1.1);
     background:#f7901e;
     width:26px;
     border-radius:5px;
+}
+
+/* ===== "What We Offer" hover zones: hover left = prev, hover right = next ===== */
+.carousel-hover-zone{
+    position:absolute;
+    top:0;
+    height:100%;
+    width:50%;
+    border:none;
+    padding:0;
+    cursor:pointer;
+    z-index:2;
+    background:transparent;
+    transition:background .3s;
+}
+
+.carousel-hover-zone.prev{ left:0; }
+.carousel-hover-zone.next{ right:0; }
+
+.carousel-hover-zone:hover{
+    background:linear-gradient(90deg, rgba(0,0,0,.45), rgba(0,0,0,0));
+}
+
+.carousel-hover-zone.next:hover{
+    background:linear-gradient(270deg, rgba(0,0,0,.45), rgba(0,0,0,0));
+}
+
+.carousel-hover-zone::after{
+    content:'‹';
+    position:absolute;
+    top:50%;
+    left:15px;
+    transform:translateY(-50%);
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(0,0,0,.55);
+    color:#fff;
+    font-size:26px;
+    line-height:1;
+    opacity:0;
+    transition:.3s;
+    pointer-events:none;
+}
+
+.carousel-hover-zone.next::after{
+    content:'›';
+    left:auto;
+    right:15px;
+}
+
+.carousel-hover-zone:hover::after{
+    opacity:1;
+    background:#f7901e;
 }
 
 /* ===== MOBILE (about-hero & about-block) ===== */
@@ -546,7 +606,7 @@ min-width:0;
 padding:20px 60px 60px 0;
 display:flex;
 flex-direction:column;
-gap:30px;
+gap:60px;
 }
 
 .about-content .about-block{
@@ -573,7 +633,7 @@ flex-direction:column;
 
 .about-content{
 padding:0 20px;
-gap:20px;
+gap:40px;
 }
 
 .about-sidebar{
@@ -840,9 +900,9 @@ border-radius:18px;
 
     color:#F7901E;
 
-    font-size:34px;
+    font-size:52px;
 
-    font-family:Georgia,serif;
+    font-family:Arial,sans-serif;
 
     margin-bottom:10px;
 }
@@ -1025,13 +1085,9 @@ box-shadow:0 15px 35px rgba(0,0,0,.35);
 flex:0 0 140px;
 width:140px;
 height:140px;
-border-radius:50%;
-background:#fff;
 display:flex;
 align-items:center;
 justify-content:center;
-overflow:hidden;
-padding:15px;
 }
 
 .logistics-logo img{
@@ -1300,7 +1356,7 @@ border-top:1px solid rgba(53,44,37,.6);
 }
 
 .caret{
-    font-size:11px;
+    font-size:17px;
     transition:.3s;
 }
 

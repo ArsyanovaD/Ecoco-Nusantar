@@ -1378,6 +1378,7 @@ transform:translate(-50%,-50%) scale(1.1);
     padding:100px;
     border-top:1px solid rgba(53,44,37,.6);
     text-align:justify;
+    scroll-margin-top:100px;
 }
 
 .packaging-option-header{

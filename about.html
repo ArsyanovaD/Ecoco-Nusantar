@@ -169,6 +169,8 @@
                 <img src="Assets/about/What We Offer 2.jpeg" alt="Charcoal product 2">
                 <img src="Assets/about/What We Offer 3.jpeg" alt="Charcoal product 3">
             </div>
+            <button type="button" class="carousel-hover-zone prev" aria-label="Previous image"></button>
+            <button type="button" class="carousel-hover-zone next" aria-label="Next image"></button>
         </div>
         <div class="carousel-dots-below" id="offerDots"></div>
     </div>
@@ -356,18 +358,22 @@ const sections = sectionIds
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
-const sectionObserver = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-links.forEach(link => link.classList.remove('active'));
-const activeLink = document.querySelector('.sidebar-link[href="#' + entry.target.id + '"]');
-if(activeLink) activeLink.classList.add('active');
+function updateActiveSidebar(){
+    const line = 140;
+    let currentId = sections[0].id;
+    sections.forEach(sec => {
+        if(sec.getBoundingClientRect().top <= line) currentId = sec.id;
+    });
+    const lastSection = sections[sections.length - 1];
+    if(lastSection && lastSection.getBoundingClientRect().bottom <= window.innerHeight){
+        currentId = lastSection.id;
+    }
+    links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + currentId));
 }
-});
-}, { threshold: 0.3 });
 
-sections.forEach(section => sectionObserver.observe(section));
-</script>
+window.addEventListener('scroll', updateActiveSidebar, { passive:true });
+window.addEventListener('resize', updateActiveSidebar);
+updateActiveSidebar();</script>
 
 <script>
 const hamburger = document.getElementById('hamburger');
@@ -428,9 +434,12 @@ document.querySelectorAll('.sidebar-link').forEach(link => {
 (function(){
     const track = document.querySelector('.carousel-track');
     const dotsContainer = document.getElementById('offerDots');
-    if(!track || !dotsContainer) return;
+    const frame = document.querySelector('.carousel-frame');
+    if(!track || !dotsContainer || !frame) return;
 
     const slides = Array.from(track.children);
+    const prevBtn = frame.querySelector('.carousel-hover-zone.prev');
+    const nextBtn = frame.querySelector('.carousel-hover-zone.next');
     let index = 0;
 
     slides.forEach((_, i) => {
@@ -454,6 +463,9 @@ document.querySelectorAll('.sidebar-link').forEach(link => {
         index = (i + slides.length) % slides.length;
         update();
     }
+
+    if(prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+    if(nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
 })();
 </script>
 

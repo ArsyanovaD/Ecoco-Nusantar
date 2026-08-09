@@ -494,6 +494,8 @@ transform:scale(1.05);
     font-size:16px;
 
     margin-bottom:28px;
+
+    text-align:justify;
 }
 
 .profile-text{
@@ -939,10 +941,27 @@ transform:translateX(0);
     background-size:cover;
     background-position:center;
 
-    border:1px solid rgba(255,255,255,.12);
+    border:1px solid #352C25;
     text-decoration:none;
 
     transition:.4s;
+}
+
+.info-header{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin:0 auto 55px;
+    width:100%;
+}
+
+.info-header h2{
+    color:#fff;
+    font-size:38px;
+    font-family:Georgia,serif;
+    font-weight:400;
+    max-width:520px;
 }
 
 .info-card:hover{
@@ -1037,6 +1056,18 @@ transform:translateX(0);
 
 .info-card:hover .info-link .arrow{
     transform:translateX(6px);
+}
+
+@media(max-width:900px){
+    .info-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .info-header h2{
+        font-size:28px;
+    }
 }
 
 /* ===== NEWS & ARTICLE SECTION ===== */
