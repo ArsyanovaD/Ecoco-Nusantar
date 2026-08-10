@@ -621,6 +621,23 @@ max-width:600px;
     text-align:justify;
 }
 
+.page-bbq .product-detail{
+    background:rgba(27,21,16,.6);
+}
+
+.page-bbq .video-section{
+    background:#110C08;
+}
+
+.page-bbq .spec-section{
+    background:rgba(27,21,16,.6);
+}
+
+.page-bbq .product-detail-text h2,
+.page-bbq .product-detail-text h2 span{
+    font-family:'Playfair Display',serif;
+}
+
 /* ===== SHISHA PAGE: longer video text frame ===== */
 .page-shisha .video-text,
 .page-bbq .video-text{
