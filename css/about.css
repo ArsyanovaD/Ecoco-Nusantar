@@ -53,6 +53,11 @@ height:85px;
     margin-top:10px;
 }
 
+#navbar,
+#navbar *{
+    font-family:'Poppins',sans-serif;
+}
+
 #navbar > nav{
     flex:1;
     display:flex;
@@ -74,6 +79,7 @@ color:#4a4a4a;
 font-size:17px;
 font-weight:500;
 transition:.3s;
+white-space:nowrap;
 }
 
 #navbar > nav a:hover{
@@ -1356,7 +1362,7 @@ border-top:1px solid rgba(53,44,37,.6);
 }
 
 .caret{
-    font-size:17px;
+    font-size:22px;
     transition:.3s;
 }
 

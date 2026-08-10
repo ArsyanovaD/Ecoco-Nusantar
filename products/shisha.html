@@ -12,9 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-shisha">
 
 <header id="navbar">
 
@@ -60,6 +62,15 @@
 
 </header>
 
+<!-- OUR PRODUCT HERO -->
+<section class="product-hero">
+    <div class="product-hero-overlay"></div>
+    <div class="product-hero-content">
+        <p class="small">PREMIUM CHARCOAL PRODUCTS FOR GLOBAL MARKETS</p>
+        <h1>OUR <span>PRODUCTS</span></h1>
+    </div>
+</section>
+
 <div class="product-page-wrap">
 
 <!-- PRODUCT: COCONUT SHISHA CHARCOAL BRIQUETTE -->
@@ -84,8 +95,8 @@
         </p>
 
         <div class="product-buttons">
-            <a href="Assets/catalogue/catalogue.pdf" class="spec-btn">View Specification</a>
-            <a href="#our-factory" class="list-link">View List Item</a>
+            <a href="#specification" class="spec-btn">View Specification</a>
+            <a href="#shape-size" class="list-link">View Shape & Size</a>
         </div>
     </div>
 
@@ -110,23 +121,13 @@
     </div>
 
     <div class="video-grid">
-        <a href="#" class="video-item">
-            <img src="Assets/video-production-1.jpg" alt="Video Production process 1">
-            <button class="play-btn" type="button" aria-label="Play video">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="#16100c">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-            </button>
-        </a>
+        <div class="video-item">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ep0afR1vCZw" title="Video Production process 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
-        <a href="#" class="video-item">
-            <img src="Assets/video-production-2.jpg" alt="Video Production process 2">
-            <button class="play-btn" type="button" aria-label="Play video">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="#16100c">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-            </button>
-        </a>
+        <div class="video-item">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BCEZrasP27s" title="Video Production process 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 
 </section>
@@ -196,42 +197,8 @@
 
 </section>
 
-<!-- VERIFIED QUALITY / LAB TEST REPORT -->
-<section class="verified-quality">
-
-    <div class="verified-header">
-        <h2>Verified Quality</h2>
-    </div>
-
-    <div class="verified-grid">
-
-        <div class="verified-text">
-            <h3 class="verified-title">Lab Test Report</h3>
-            <p>
-            Download official laboratory test results for each grade. Every
-            report verifies the purity, burn time, and ash content
-            standards behind Nusa Charcoal.
-            </p>
-        </div>
-
-        <div class="verified-preview">
-            <!-- Optional: preview image of the PDF cover -->
-            <!-- <img src="Assets/lab-report-preview.jpg" alt="Lab test report preview"> -->
-        </div>
-
-    </div>
-
-    <div class="verified-download-row">
-        <a href="Assets/documents/lab-test-report.pdf" download class="download-btn small">
-            <span class="download-icon" aria-hidden="true">⬇</span>
-            Download Now
-        </a>
-    </div>
-
-</section>
-
 <!-- SHAPE & SIZE -->
-<section class="shapesize-section">
+<section class="shapesize-section" id="shape-size">
 
     <div class="shapesize-header">
         <h2>Shape & Size</h2>
@@ -257,7 +224,7 @@
     </div>
 
     <!-- ROW 2: Flat -->
-    <div class="shapesize-row reverse">
+    <div class="shapesize-row">
         <div class="shapesize-content">
             <h3>Flat</h3>
             <ul class="shapesize-list">

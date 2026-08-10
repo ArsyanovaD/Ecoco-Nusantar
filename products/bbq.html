@@ -12,9 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-bbq">
 
 <header id="navbar">
 
@@ -60,6 +62,15 @@
 
 </header>
 
+<!-- OUR PRODUCT HERO -->
+<section class="product-hero">
+    <div class="product-hero-overlay"></div>
+    <div class="product-hero-content">
+        <p class="small">PREMIUM CHARCOAL PRODUCTS FOR GLOBAL MARKETS</p>
+        <h1>OUR <span>PRODUCTS</span></h1>
+    </div>
+</section>
+
 <div class="product-page-wrap">
 
 <!-- PRODUCT: BARBEQUE CHARCOAL BRIQUETTE -->
@@ -88,8 +99,8 @@
         </p>
 
         <div class="product-buttons">
-            <a href="Assets/catalogue/catalogue.pdf" class="spec-btn">View Specification</a>
-            <a href="#our-factory" class="list-link">View List Item</a>
+            <a href="#specification" class="spec-btn">View Specification</a>
+            <a href="#shape-size" class="list-link">View Shape & Size</a>
         </div>
     </div>
 
@@ -109,20 +120,18 @@
     </div>
 
     <div class="video-grid">
-        <a href="https://www.youtube.com/watch?v=xOerJ0ZVb_c" target="_blank" rel="noopener" class="video-item">
-            <img src="Assets/video/production-2.jpg" alt="BBQ charcoal production process">
-            <button type="button" class="play-btn" aria-label="Play production video">▶</button>
-        </a>
-        <a href="https://www.youtube.com/watch?v=xOerJ0ZVb_c" target="_blank" rel="noopener" class="video-item">
-            <img src="Assets/video/dropping-test-2.jpg" alt="BBQ charcoal dropping test">
-            <button type="button" class="play-btn" aria-label="Play dropping test video">▶</button>
-        </a>
+        <div class="video-item">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7g34qeYjz64" title="Video Production process 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-item">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wFut2zYOT7k" title="Video Production process 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 
 </section>
 
 <!-- SPECIFICATION: PHOTOS + SPEC TABLE -->
-<section class="spec-section">
+<section class="spec-section" id="specification">
     <div class="spec-header">
         <h2 class="spec-title">Specification</h2>
         <p class="spec-subtitle">Verified Quality</p>
@@ -130,17 +139,19 @@
 
     <div class="spec-layout">
         <div class="spec-photos">
-            <div class="spec-photo-main">
-                <img src="Assets/our product/bbq.png" alt="BBQ Charcoal Burning">
+            <div class="spec-stack show-0">
+                <div class="spec-stack-slides">
+                    <img class="slide-a" src="../Assets/spesification/Charcoal Briquette1.png" alt="BBQ Charcoal Burning">
+                    <img class="slide-b" src="../Assets/spesification/Charcoal Briquette2.png" alt="BBQ Charcoal Close Up">
+                </div>
+                <button type="button" class="spec-stack-zone prev" aria-label="Previous image"></button>
+                <button type="button" class="spec-stack-zone next" aria-label="Next image"></button>
             </div>
-            <div class="spec-photo-sub">
-                <img src="Assets/our product/bbq.png" alt="BBQ Charcoal Packaging">
-            </div>
+            <div class="spec-stack-dots"></div>
         </div>
 
-        
         <div class="spec-table-card">
-            <h3 class="spec-table-title">Barbeque Specification</h3>
+            <h3 class="spec-table-title">Barbecue Specification</h3>
             <ul class="spec-table-list">
                 <li><span>Moisture</span><span>5 - 7 %</span></li>
                 <li><span>Ash Content</span><span>5 - 8 %</span></li>
@@ -151,6 +162,97 @@
             </ul>
         </div>
     </div>
+</section>
+
+<!-- SHAPE & SIZE -->
+<section class="shapesize-section" id="shape-size">
+
+    <div class="shapesize-header">
+        <h2>Shape & Size</h2>
+        <p>Your Partner for Premium Private Label Charcoal</p>
+    </div>
+
+    <!-- ROW 1: Hexagonal -->
+    <div class="shapesize-row">
+        <div class="shapesize-media">
+            <img src="Assets/our product/bbq.png" alt="Hexagonal shaped charcoal briquette">
+        </div>
+
+        <div class="shapesize-content">
+            <h3>Hexagonal</h3>
+            <ul class="shapesize-list">
+                <li><span>5 × 5</span><span>CM</span></li>
+                <li><span>5 × 20</span><span>CM</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ROW 2: Pillow -->
+    <div class="shapesize-row">
+        <div class="shapesize-content">
+            <h3>Pillow</h3>
+            <ul class="shapesize-list">
+                <li><span>4 × 4 × 4</span><span>CM</span></li>
+            </ul>
+        </div>
+
+        <div class="shapesize-media">
+            <img src="Assets/our product/bbq.png" alt="Pillow shaped charcoal briquette">
+        </div>
+    </div>
+
+</section>
+
+<!-- PACKAGING OPTION -->
+<section class="packaging-option-section" id="packaging-option">
+
+    <div class="packaging-option-header">
+        <h2>Packaging Option</h2>
+        <p>Complete customization, tailored to your brand</p>
+    </div>
+
+    <ul class="packaging-option-grid">
+
+        <li class="packaging-option-card">
+            <div class="packaging-option-image">
+                <img src="Assets/packaging-bulk-loose.jpg" alt="Bulk Loose packaging">
+            </div>
+            <h3>Bulk Loose</h3>
+            <span class="packaging-option-tag">Industrial Bulk Packaging</span>
+            <p>
+            Designed for scale and bottom-line efficiency, this option uses only
+            inner plastic (10 kg) packed directly into the master box without
+            inner boxes. By stripping away inner boxes, it maximizes container
+            capacity and drives down shipping costs, making it the premier
+            choice for highly economical, high-volume shipments.
+            </p>
+        </li>
+
+        <li class="packaging-option-card">
+            <div class="packaging-option-image">
+                <img src="Assets/packaging-bulk.jpg" alt="Woven Bag packaging">
+            </div>
+            <h3>Woven Bag</h3>
+            <span class="packaging-option-tag">Retail-Ready Solutions</span>
+            <p>
+            Tailored for bulk distributors of natural wood charcoal, this
+            packaging solution utilizes heavy-duty woven polypropylene (PP)
+            bags to deliver uncompromising protection throughout the export
+            journey. Engineered for superior tear resistance and dependable
+            moisture defense, this configuration guarantees that your product
+            arrives in pristine condition and is ready for immediate,
+            large-scale deployment.
+            </p>
+        </li>
+
+    </ul>
+
+    <div class="packaging-option-custom">
+        <span class="packaging-option-line"></span>
+        <p>Custom Packaging Available</p>
+        <span class="packaging-option-line"></span>
+    </div>
+
 </section>
 
 </div><!-- end product-page-wrap -->
@@ -216,6 +318,45 @@ document.addEventListener('click', (e) => {
 </script>
 
 <script src="../javascript/script.js"></script>
+
+<script>
+(function(){
+    const stack = document.querySelector('.spec-stack');
+    const dotsContainer = document.querySelector('.spec-stack-dots');
+    if(!stack || !dotsContainer) return;
+
+    const slides = stack.querySelectorAll('.spec-stack-slides img');
+    const prevBtn = stack.querySelector('.spec-stack-zone.prev');
+    const nextBtn = stack.querySelector('.spec-stack-zone.next');
+    let index = 0;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.classList.add('spec-dot');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        if(i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    function update(){
+        stack.classList.remove('show-0', 'show-1');
+        stack.classList.add('show-' + index);
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    function goTo(i){
+        index = (i + slides.length) % slides.length;
+        update();
+    }
+
+    if(prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+    if(nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
+})();
+</script>
 
 </body>
 
