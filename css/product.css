@@ -618,11 +618,9 @@ max-width:600px;
 .page-bbq .product-detail-text p,
 .page-bbq .video-text p,
 .page-bbq .packaging-option-card p{
-    font-family:'Playfair Display',serif;
-    color:#ffffff;
-}
-
-.page-bbq .product-detail-text p{
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    color:#F7F1E7;
     text-align:justify;
 }
 

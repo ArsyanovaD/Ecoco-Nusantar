@@ -6,48 +6,56 @@
 <title>News & Article | Ecoco Nusantara</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/news.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/news.css?v=2">
 </head>
 <body>
 
 <!-- ============ NAVBAR ============ -->
 <header id="navbar">
-  <nav>
-    <div class="header-left">
-      <a href="index.html" class="logo">
-        <img src="assets/logo.png" alt="Ecoco Nusantara">
-      </a>
-    </div>
 
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="products/index.html">Our Product</a></li>
-      <li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
-      <li><a href="news.html" class="active">News &amp; Article</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<div class="logo">
+<img src="Assets/logo/logo.png" alt="Ecoco Nusantara logo">
+</div>
 
-    <div class="header-right">
-      <div class="lang-toggle">EN</div>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+<nav aria-label="Main navigation">
 
-  <!-- Mobile dropdown -->
-  <ul class="nav-dropdown" id="navDropdown">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="products/index.html">Our Product</a></li>
-    <li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
-    <li><a href="news.html" class="active">News &amp; Article</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<ul class="nav-list">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+
+<li class="nav-dropdown">
+<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Our Product <span class="caret" aria-hidden="true">▾</span></a>
+<ul class="dropdown-menu">
+<li><a href="products/shisha.html">Coconut Shisha Charcoal Briquette</a></li>
+<li><a href="products/bbq.html">Barbeque Charcoal Briquette</a></li>
+</ul>
+</li>
+
+<li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
+<li><a href="news.html" class="active">News &amp; Article</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<button class="lang-pill" type="button" aria-label="Change language">
+<span class="globe-icon" aria-hidden="true">🌐</span>
+<span>EN</span>
+</button>
+
+<button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
 </header>
 
 <!-- ============ HERO ============ -->
@@ -103,16 +111,42 @@
   </div>
 </footer>
 
+<script src="javascript/script.js"></script>
+
 <script>
 /* ================= HAMBURGER / MOBILE NAV ================= */
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const navDropdown = document.getElementById('navDropdown');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('#navbar > nav');
 
-hamburgerBtn.addEventListener('click', () => {
-    const isOpen = navDropdown.classList.toggle('open');
-    hamburgerBtn.classList.toggle('active');
+hamburger.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    hamburger.classList.toggle('active');
     document.body.classList.toggle('no-scroll');
-    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdown = toggle.closest('.nav-dropdown');
+
+        if(window.innerWidth <= 900){
+            const isOpen = dropdown.classList.toggle('mobile-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        } else {
+            const isOpen = dropdown.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        }
+    });
+});
+
+document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-dropdown.open').forEach(dropdown => {
+        if(!dropdown.contains(e.target)){
+            dropdown.classList.remove('open');
+            dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+        }
+    });
 });
 
 /* ================= NEWS DATA ================= */
