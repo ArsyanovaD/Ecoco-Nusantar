@@ -88,7 +88,6 @@ color:#f7901e;
 
 .active{
     color:#f7901e !important;
-    font-weight:600;
 }
 
 /* ===== HEADER RIGHT (language pill + hamburger) ===== */
@@ -1271,7 +1270,6 @@ display:block;
 #navbar > nav a.active{
 background:#f7901e;
 color:#fff !important;
-font-weight:600;
 }
 
 .nav-dropdown{
