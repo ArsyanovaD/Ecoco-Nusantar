@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News & Article | Ecoco Nusantara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar">
+  <nav>
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Ecoco Nusantara">
+      </a>
+    </div>
+
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products/index.html">Our Product</a></li>
+      <li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
+      <li><a href="news.html" class="active">News &amp; Article</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="header-right">
+      <div class="lang-toggle">EN</div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile dropdown -->
+  <ul class="nav-dropdown" id="navDropdown">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="products/index.html">Our Product</a></li>
+    <li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
+    <li><a href="news.html" class="active">News &amp; Article</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="news-hero">
+  <div class="news-hero-overlay"></div>
+  <div class="news-hero-content">
+    <p class="eyebrow"><span>THE</span> CHRONICLES</p>
+    <h1>News &amp; <span>Article</span></h1>
+    <p class="hero-desc">Every story we have published, reported first-hand, supporting our exploration, culture, practice, and inspiration.</p>
+  </div>
+</section>
+
+<!-- ============ NEWS SECTION ============ -->
+<section class="news-section">
+
+  <!-- Filter tabs -->
+  <div class="news-filters" id="newsFilters">
+    <button class="filter-pill active" data-filter="all">All</button>
+    <button class="filter-pill" data-filter="production">Lorem</button>
+    <button class="filter-pill" data-filter="export">Lorem</button>
+    <button class="filter-pill" data-filter="company">Lorem</button>
+    <button class="filter-pill" data-filter="event">Lorem</button>
+  </div>
+
+  <!-- Cards grid (rendered by inline script, same pattern as Manufacturing Process stages) -->
+  <div class="news-grid" id="newsGrid">
+    <!-- populated by JS -->
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination" id="pagination">
+    <button class="page-btn page-prev" id="pagePrev" aria-label="Previous page">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="page-numbers" id="pageNumbers">
+      <!-- populated by JS -->
+    </div>
+    <button class="page-btn page-next" id="pageNext" aria-label="Next page">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Ecoco Nusantara" class="footer-logo">
+      <span>ECOCO <b>NUSANTARA</b></span>
+    </div>
+    <p class="footer-copy">© 2025 Ecoco Nusantara. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* ================= HAMBURGER / MOBILE NAV ================= */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navDropdown = document.getElementById('navDropdown');
+
+hamburgerBtn.addEventListener('click', () => {
+    const isOpen = navDropdown.classList.toggle('open');
+    hamburgerBtn.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+});
+
+/* ================= NEWS DATA ================= */
+/* Same self-contained "array + render" pattern used on Manufacturing Process.html
+   (processStages / goToStage) so pagination no longer depends on the old
+   external news.js logic that broke when moving to another page. */
+const newsItems = [
+    { id: 1,  filter: 'production', tag: 'Lorem', date: 'October 17, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, nunc vitae aliquam...', image: 'assets/news/news-1.jpg', link: '#' },
+    { id: 2,  filter: 'export',     tag: 'Lorem', date: 'October 16, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 3,  filter: 'company',    tag: 'Lorem', date: 'October 15, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 4,  filter: 'event',      tag: 'Lorem', date: 'October 14, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 5,  filter: 'production', tag: 'Lorem', date: 'October 13, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 6,  filter: 'export',     tag: 'Lorem', date: 'October 12, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 7,  filter: 'company',    tag: 'Lorem', date: 'October 11, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 8,  filter: 'event',      tag: 'Lorem', date: 'October 10, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
+    { id: 9,  filter: 'production', tag: 'Lorem', date: 'October 9, 2025',  title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' }
+];
+
+const ITEMS_PER_PAGE = 6;
+
+const newsGrid = document.getElementById('newsGrid');
+const pageNumbers = document.getElementById('pageNumbers');
+const pagePrev = document.getElementById('pagePrev');
+const pageNext = document.getElementById('pageNext');
+const filterButtons = document.querySelectorAll('#newsFilters .filter-pill');
+
+let activeFilter = 'all';
+let currentPage = 1;
+
+function getFilteredItems() {
+    return activeFilter === 'all'
+        ? newsItems
+        : newsItems.filter(item => item.filter === activeFilter);
+}
+
+function getTotalPages() {
+    return Math.max(1, Math.ceil(getFilteredItems().length / ITEMS_PER_PAGE));
+}
+
+function renderCard(item) {
+    const article = document.createElement('article');
+    article.className = 'news-card';
+    article.dataset.page = String(currentPage);
+
+    const thumbHTML = item.image
+        ? `<img src="${item.image}" alt="${item.title}">`
+        : '';
+
+    article.innerHTML = `
+        <div class="news-thumb${item.image ? '' : ' placeholder'}">${thumbHTML}</div>
+        <div class="news-meta">
+            <span class="news-tag">${item.tag}</span>
+            <span class="news-date">${item.date}</span>
+        </div>
+        <a href="${item.link}" class="news-title">
+            <span>${item.title}</span>
+            <svg class="news-arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="news-excerpt">${item.excerpt}</p>
+    `;
+    return article;
+}
+
+function renderGrid() {
+    const filtered = getFilteredItems();
+    const totalPages = getTotalPages();
+
+    // keep currentPage valid whenever the filter changes the total page count
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const pageItems = filtered.slice(start, start + ITEMS_PER_PAGE);
+
+    newsGrid.innerHTML = '';
+    pageItems.forEach(item => newsGrid.appendChild(renderCard(item)));
+
+    renderPagination(totalPages);
+}
+
+function renderPagination(totalPages) {
+    pageNumbers.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'page-btn page-num' + (i === currentPage ? ' active' : '');
+        btn.dataset.page = String(i);
+        btn.textContent = String(i);
+        btn.addEventListener('click', () => goToPage(i));
+        pageNumbers.appendChild(btn);
+    }
+
+    pagePrev.disabled = currentPage === 1;
+    pageNext.disabled = currentPage === totalPages;
+}
+
+function goToPage(page) {
+    const totalPages = getTotalPages();
+    currentPage = Math.min(Math.max(page, 1), totalPages);
+    renderGrid();
+    document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function setFilter(filter) {
+    activeFilter = filter;
+    currentPage = 1;
+
+    filterButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+
+    renderGrid();
+}
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+});
+
+pagePrev.addEventListener('click', () => goToPage(currentPage - 1));
+pageNext.addEventListener('click', () => goToPage(currentPage + 1));
+
+renderGrid();
+</script>
+
+</body>
+</html>
