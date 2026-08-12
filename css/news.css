@@ -437,9 +437,9 @@ overflow:hidden;
 }
 
 .filter-pill.active {
-  background:#f7901e;
-  border-color:#f7901e;
-  color:#16100c;
+  background:#F99532;
+  border-color:#F99532;
+  color:#fff !important;
   font-weight:600;
 }
 
@@ -457,6 +457,7 @@ overflow:hidden;
   border:1px solid rgba(255,255,255,.1);
   border-radius:22px;
   padding:18px;
+  cursor:pointer;
   transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
@@ -479,11 +480,10 @@ overflow:hidden;
   width:100%;
   height:100%;
   object-fit:cover;
-  transition:transform .5s ease;
 }
 
 .news-card:hover .news-thumb img {
-  transform:scale(1.06);
+  transform:none;
 }
 
 .news-thumb.placeholder { background:#d9d9d9; }
@@ -523,6 +523,8 @@ overflow:hidden;
 }
 
 .news-title:hover { color:#f7901e; }
+
+.news-card:hover .news-title { color:#f7901e; }
 
 .news-arrow {
   flex-shrink:0;
@@ -580,40 +582,68 @@ overflow:hidden;
 .page-btn:hover { background:#f7901e; color:#fff; }
 
 .page-btn.active {
-  background:#f7901e;
-  color:#fff;
+  background:#F99532;
+  color:#fff !important;
 }
 
 /* ================= FOOTER ================= */
-.site-footer {
-  background:#0f0b08;
-  padding:36px 60px;
-  border-top:1px solid #2a2118;
+
+.footer{
+    background:#16100c;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:28px 100px;
 }
 
-.footer-inner {
-  max-width:1300px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:12px;
+.footer-container{
+    max-width:1300px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.footer-brand {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:14px;
-  letter-spacing:1px;
-  color:#cbbfae;
+.footer-logo{
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:1px;
 }
-.footer-logo { height:30px; }
 
-.footer-copy {
-  font-size:12px;
-  color:#77695a;
+.footer-logo .white{
+    color:#ffffff;
+}
+
+.footer-logo .orange{
+    color:#F7901E;
+    background:transparent;
+    margin-left:6px;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:2px;
+    padding:0;
+}
+
+.footer-copy{
+    color:#a7a7a7;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+.footer{
+    padding:25px 20px;
+}
+
+.footer-container{
+    flex-direction:column;
+    gap:18px;
+    text-align:center;
+}
+
+.footer-copy{
+    line-height:1.6;
+}
+
 }
 
 /* ================= RESPONSIVE ================= */

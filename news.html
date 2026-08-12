@@ -74,10 +74,10 @@
   <!-- Filter tabs -->
   <div class="news-filters" id="newsFilters">
     <button class="filter-pill active" data-filter="all">All</button>
-    <button class="filter-pill" data-filter="production">Lorem</button>
-    <button class="filter-pill" data-filter="export">Lorem</button>
-    <button class="filter-pill" data-filter="company">Lorem</button>
-    <button class="filter-pill" data-filter="event">Lorem</button>
+    <button class="filter-pill" data-filter="production">Production</button>
+    <button class="filter-pill" data-filter="export">Export</button>
+    <button class="filter-pill" data-filter="company">Company</button>
+    <button class="filter-pill" data-filter="event">Event</button>
   </div>
 
   <!-- Cards grid (rendered by inline script, same pattern as Manufacturing Process stages) -->
@@ -101,17 +101,25 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/logo.png" alt="Ecoco Nusantara" class="footer-logo">
-      <span>ECOCO <b>NUSANTARA</b></span>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <span class="white">ECOCO</span>
+            <span class="orange">NUSANTARA</span>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Ecoco Nusantara. Premium Quality from Indonesia. Est. 2025
+        </p>
+
     </div>
-    <p class="footer-copy">© 2025 Ecoco Nusantara. All Rights Reserved.</p>
-  </div>
+
 </footer>
 
 <script src="javascript/script.js"></script>
+<script src="javascript/articles.js"></script>
 
 <script>
 /* ================= HAMBURGER / MOBILE NAV ================= */
@@ -150,20 +158,18 @@ document.addEventListener('click', (e) => {
 });
 
 /* ================= NEWS DATA ================= */
-/* Same self-contained "array + render" pattern used on Manufacturing Process.html
-   (processStages / goToStage) so pagination no longer depends on the old
-   external news.js logic that broke when moving to another page. */
-const newsItems = [
-    { id: 1,  filter: 'production', tag: 'Lorem', date: 'October 17, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, nunc vitae aliquam...', image: 'assets/news/news-1.jpg', link: '#' },
-    { id: 2,  filter: 'export',     tag: 'Lorem', date: 'October 16, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 3,  filter: 'company',    tag: 'Lorem', date: 'October 15, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 4,  filter: 'event',      tag: 'Lorem', date: 'October 14, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 5,  filter: 'production', tag: 'Lorem', date: 'October 13, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 6,  filter: 'export',     tag: 'Lorem', date: 'October 12, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 7,  filter: 'company',    tag: 'Lorem', date: 'October 11, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 8,  filter: 'event',      tag: 'Lorem', date: 'October 10, 2025', title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' },
-    { id: 9,  filter: 'production', tag: 'Lorem', date: 'October 9, 2025',  title: 'Lorem Ipsum Lorem Ipsum', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...', image: '', link: '#' }
-];
+/* Card data is derived from the shared article data in javascript/articles.js
+   so the listing always matches the article detail pages (article.html?id=N). */
+const newsItems = articles.map(article => ({
+    id: article.id,
+    filter: article.filter,
+    tag: article.category,
+    date: article.date,
+    title: article.title,
+    excerpt: article.intro,
+    image: article.image,
+    link: 'article.html?id=' + article.id
+}));
 
 const ITEMS_PER_PAGE = 6;
 
@@ -187,27 +193,28 @@ function getTotalPages() {
 }
 
 function renderCard(item) {
-    const article = document.createElement('article');
-    article.className = 'news-card';
-    article.dataset.page = String(currentPage);
+    const card = document.createElement('a');
+    card.className = 'news-card';
+    card.href = item.link;
+    card.dataset.page = String(currentPage);
 
     const thumbHTML = item.image
         ? `<img src="${item.image}" alt="${item.title}">`
         : '';
 
-    article.innerHTML = `
+    card.innerHTML = `
         <div class="news-thumb${item.image ? '' : ' placeholder'}">${thumbHTML}</div>
         <div class="news-meta">
             <span class="news-tag">${item.tag}</span>
             <span class="news-date">${item.date}</span>
         </div>
-        <a href="${item.link}" class="news-title">
+        <span class="news-title">
             <span>${item.title}</span>
             <svg class="news-arrow" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        </span>
         <p class="news-excerpt">${item.excerpt}</p>
     `;
-    return article;
+    return card;
 }
 
 function renderGrid() {
