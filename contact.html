@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Ecoco Nusantara</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/base.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -119,6 +122,19 @@
                 </div>
             </li>
 
+            <li class="contact-info-item">
+                <span class="contact-info-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f7901e" stroke-width="1.6">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m3 7 9 6 9-6"/>
+                    </svg>
+                </span>
+                <div class="contact-info-text">
+                    <h3>Email</h3>
+                    <p>arsyanovadewanto@gmail.com</p>
+                </div>
+            </li>
+
         </ul>
 
         <div class="contact-order-box">
@@ -131,7 +147,10 @@
     <div class="contact-form-card">
         <h2 class="contact-form-title">Send us a message</h2>
 
-        <form class="contact-form">
+        <form class="contact-form" method="POST" action="https://formsubmit.co/arsyanovadewanto@gmail.com">
+
+            <input type="hidden" name="_subject" value="New message from Ecoco Nusantara website">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="contact-form-row">
                 <div class="contact-form-field">
@@ -139,7 +158,7 @@
                     <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
                 </div>
                 <div class="contact-form-field">
-                    <label for="cf-company">Company</label>
+                    <label for="cf-company">Company <span class="optional-hint">(optional)</span></label>
                     <input type="text" id="cf-company" name="company" placeholder="Company name">
                 </div>
             </div>
@@ -147,7 +166,7 @@
             <div class="contact-form-row">
                 <div class="contact-form-field">
                     <label for="cf-email">Email *</label>
-                    <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+                    <input type="email" id="cf-email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="contact-form-field">
                     <label for="cf-phone">WhatsApp / Phone</label>
@@ -166,6 +185,8 @@
             </div>
 
             <button type="submit" class="contact-submit-btn">Send Message</button>
+
+            <p class="contact-form-status" role="status" aria-live="polite"></p>
 
         </form>
     </div>
@@ -229,6 +250,45 @@ document.addEventListener('click', (e) => {
             dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
         }
     });
+});
+</script>
+
+<script>
+const contactForm = document.querySelector('.contact-form');
+const contactStatus = document.querySelector('.contact-form-status');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+    }
+
+    const data = Object.fromEntries(new FormData(contactForm));
+
+    try {
+        const res = await fetch('https://formsubmit.co/ajax/arsyanovadewanto@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+            contactForm.reset();
+            contactStatus.textContent = 'Thank you! Your message has been sent successfully.';
+            contactStatus.classList.remove('error');
+        } else {
+            contactStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+            contactStatus.classList.add('error');
+        }
+    } catch (err) {
+        contactStatus.textContent = 'Network error. Please try again later.';
+        contactStatus.classList.add('error');
+    }
 });
 </script>
 

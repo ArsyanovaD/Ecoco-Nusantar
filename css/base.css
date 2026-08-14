@@ -1,0 +1,604 @@
+body{
+    overflow-x:clip;
+}
+
+@media(min-width:901px){
+
+/* ===== NAVBAR ===== */
+header{
+    padding:clamp(10px,.7vw,12px) clamp(16px,4.17vw,60px);
+    height:clamp(70px,6.04vw,87px);
+}
+
+header.scrolled{
+    padding:clamp(12px,.83vw,12px) clamp(16px,4.17vw,60px);
+}
+
+.logo{
+    margin-left:clamp(20px,2.78vw,40px);
+    margin-top:clamp(6px,.7vw,10px);
+}
+
+.logo img{
+    width:clamp(60px,5.9vw,85px);
+    height:clamp(60px,5.9vw,85px);
+}
+
+.nav-list{
+    gap:clamp(16px,2.92vw,42px);
+}
+
+#navbar > nav a{
+    font-size:clamp(14px,1.18vw,17px);
+}
+
+.header-right{
+    gap:clamp(10px,1.11vw,16px);
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    padding:clamp(20px,2vw,28px) clamp(20px,6.94vw,100px);
+}
+
+.footer-container{
+    max-width:min(1300px,92vw);
+}
+
+/* ===== HOME: HERO ===== */
+.hero{
+    padding-left:clamp(24px,6.25vw,90px);
+}
+
+.content{
+    max-width:min(700px,80vw);
+}
+
+.content h1{
+    font-size:clamp(40px,5vw,72px);
+}
+
+.content h3,
+.content .hero-tagline{
+    font-size:clamp(18px,1.88vw,27px);
+}
+
+.desc{
+    line-height:clamp(24px,2.08vw,30px);
+}
+
+/* ===== HOME: PARTNERS ===== */
+.partners{
+    padding:clamp(60px,6.25vw,90px) clamp(20px,6.94vw,100px);
+}
+
+.sub-title{
+    font-size:clamp(20px,1.94vw,28px);
+}
+
+.partners h2{
+    font-size:clamp(20px,1.8vw,26px);
+    margin-bottom:clamp(36px,4.17vw,60px);
+}
+
+.partner-grid{
+    max-width:min(1100px,92vw);
+}
+
+.partner-card{
+    height:clamp(130px,11.8vw,190px);
+}
+
+/* ===== HOME: COMPANY PROFILE ===== */
+.company-profile{
+    padding:clamp(80px,8.33vw,120px) clamp(20px,6.94vw,100px);
+    gap:clamp(40px,6.25vw,90px);
+}
+
+.profile-text h2{
+    font-size:clamp(34px,4.03vw,58px);
+}
+
+.profile-text p{
+    font-size:clamp(15px,1.11vw,16px);
+}
+
+.learn-more{
+    font-size:clamp(16px,1.25vw,18px);
+}
+
+/* ===== HOME: WHY CHOOSE US ===== */
+.why-choose{
+    padding:clamp(70px,7.64vw,110px) clamp(20px,6.94vw,100px);
+}
+
+.why-header{
+    max-width:min(1300px,92vw);
+}
+
+.why-header h2{
+    font-size:clamp(24px,2.64vw,38px);
+}
+
+.why-grid{
+    max-width:min(1300px,92vw);
+}
+
+.why-icon{
+    width:clamp(64px,5.56vw,80px);
+    height:clamp(64px,5.56vw,80px);
+}
+
+/* ===== HOME: OUR PRODUCTS ===== */
+.our-products{
+    padding:clamp(70px,7.64vw,110px) clamp(20px,6.94vw,100px);
+}
+
+.products-header{
+    max-width:min(1300px,92vw);
+}
+
+.products-header h2{
+    font-size:clamp(24px,2.64vw,38px);
+}
+
+.products-grid{
+    max-width:min(1300px,92vw);
+}
+
+.product-title{
+    font-size:clamp(18px,1.67vw,24px);
+}
+
+/* ===== HOME: INFO CARDS ===== */
+.info-cards{
+    padding:clamp(60px,5.56vw,80px) clamp(20px,6.94vw,100px);
+}
+
+.info-cards-inner{
+    max-width:min(1800px,96vw);
+}
+
+.info-card{
+    min-height:clamp(280px,23.6vw,360px);
+}
+
+.info-header h2{
+    font-size:clamp(24px,2.64vw,38px);
+}
+
+.info-title{
+    font-size:clamp(18px,1.8vw,26px);
+}
+
+/* ===== HOME: NEWS ===== */
+.news-section{
+    padding:clamp(40px,3.47vw,50px) clamp(20px,6.94vw,100px) clamp(50px,4.86vw,70px);
+}
+
+.news-header{
+    max-width:min(1300px,92vw);
+    margin:0 auto clamp(16px,1.67vw,24px);
+    align-items:flex-start;
+}
+
+.news-header h2{
+    font-size:clamp(24px,2.64vw,38px);
+}
+
+.news-header .sub-title-left{
+    margin-bottom:clamp(6px,.55vw,8px);
+}
+
+.news-section:has(.news-header) .news-grid{
+    max-width:min(1300px,92vw);
+}
+
+.news-title{
+    font-size:clamp(15px,1.32vw,19px);
+}
+
+/* ===== HOME: CATALOG ===== */
+.catalog-section{
+    padding:clamp(90px,9.72vw,140px) 20px;
+}
+
+.catalog-content h2{
+    font-size:clamp(36px,4.72vw,68px);
+}
+
+.catalog-desc{
+    font-size:clamp(18px,1.67vw,24px);
+}
+
+.catalog-info{
+    font-size:clamp(15px,1.25vw,18px);
+}
+
+.catalog-file{
+    max-width:min(700px,88vw);
+}
+
+.file-text h4{
+    font-size:clamp(16px,1.39vw,20px);
+}
+
+.download-btn{
+    font-size:clamp(17px,1.53vw,22px);
+    padding:clamp(16px,1.39vw,20px) clamp(34px,3.82vw,55px);
+}
+
+/* ===== ABOUT: HERO + BLOCKS ===== */
+.about-hero-content h1{
+    font-size:clamp(34px,4.44vw,64px);
+    margin-top:clamp(50px,5.56vw,80px);
+}
+
+.about-block{
+    padding:clamp(80px,8.33vw,120px) clamp(20px,6.94vw,100px);
+    gap:clamp(40px,6.25vw,90px);
+}
+
+.about-text h2{
+    font-size:clamp(26px,3.06vw,44px);
+}
+
+.about-text p{
+    font-size:clamp(15px,1.11vw,16px);
+}
+
+.about-media:not(.carousel-wrap){
+    height:auto;
+    aspect-ratio:498.53/344;
+}
+
+/* ===== ABOUT: SIDEBAR + CONTENT ===== */
+.about-sidebar{
+    flex:0 0 clamp(180px,15vw,220px);
+}
+
+.about-content{
+    padding:20px clamp(20px,4.17vw,60px) 60px 0;
+}
+
+.about-content .about-block{
+    padding:clamp(30px,3.47vw,50px);
+}
+
+/* ===== ABOUT: FACTORY ===== */
+.factory-banner{
+    min-height:clamp(480px,45vw,650px);
+}
+
+.factory-banner-content{
+    height:clamp(480px,45vw,650px);
+    padding:clamp(30px,3.82vw,55px);
+}
+
+.factory-banner-text h2{
+    font-size:clamp(30px,3.89vw,56px);
+}
+
+.facility-panel{
+    right:clamp(20px,3.82vw,55px);
+    bottom:clamp(20px,3.82vw,55px);
+}
+
+.facility-card img{
+    height:clamp(130px,11.8vw,190px);
+}
+
+.stat-item h3{
+    font-size:clamp(32px,3.6vw,52px);
+}
+
+.factory-map{
+    min-height:clamp(400px,36vw,520px);
+}
+
+.factory-map h3{
+    font-size:clamp(24px,2.64vw,38px);
+}
+
+.factory-map-media > img{
+    height:clamp(300px,29vw,420px);
+}
+
+/* ===== ABOUT: LOGISTICS + GALLERY ===== */
+.logistics-section h2{
+    font-size:clamp(20px,2.08vw,30px);
+}
+
+.logistics-card{
+    padding:clamp(24px,2.43vw,35px);
+    gap:clamp(20px,2.43vw,35px);
+}
+
+.logistics-logo{
+    flex:0 0 clamp(100px,9.72vw,140px);
+    width:clamp(100px,9.72vw,140px);
+    height:clamp(100px,9.72vw,140px);
+}
+
+.gallery-section h2{
+    font-size:clamp(20px,2.08vw,30px);
+}
+
+.gallery-grid{
+    grid-template-rows:clamp(240px,21vw,300px) clamp(190px,17.4vw,250px) clamp(190px,17.4vw,250px);
+}
+
+/* ===== PRODUCT: HERO ===== */
+.product-hero-content h1{
+    font-size:clamp(34px,4.44vw,64px);
+    margin-top:clamp(50px,5.56vw,80px);
+}
+
+/* ===== PRODUCT: DETAIL ===== */
+.product-detail{
+    padding:clamp(60px,6.94vw,100px) clamp(20px,6.94vw,100px);
+    gap:clamp(40px,6.25vw,90px);
+}
+
+.product-page-wrap > .product-detail:first-child{
+    padding-top:clamp(60px,6.94vw,100px);
+}
+
+.product-detail-media img{
+    height:clamp(280px,31.25vw,480px);
+}
+
+.product-detail-text h2{
+    font-size:clamp(24px,2.78vw,40px);
+}
+
+.product-detail-text p{
+    font-size:clamp(15px,1.11vw,16px);
+}
+
+/* ===== PRODUCT: SHISHA/BBQ SPECIFIC ===== */
+.page-shisha .video-text,
+.page-bbq .video-text{
+    flex:0 0 clamp(320px,33vw,480px);
+    max-width:clamp(320px,33vw,480px);
+}
+
+.page-shisha .video-grid,
+.page-bbq .video-grid{
+    max-width:min(720px,90vw);
+}
+
+.page-bbq .packaging-option-grid{
+    max-width:min(1200px,92vw);
+}
+
+/* ===== PRODUCT: VIDEO ===== */
+.video-section{
+    padding:clamp(60px,6.94vw,100px) clamp(20px,6.94vw,100px);
+    gap:clamp(40px,5.56vw,80px);
+}
+
+.video-text{
+    flex:0 0 clamp(280px,26.4vw,380px);
+    max-width:clamp(280px,26.4vw,380px);
+}
+
+.video-text h2{
+    font-size:clamp(22px,2.22vw,32px);
+}
+
+.video-grid{
+    max-width:min(560px,90vw);
+}
+
+/* ===== PRODUCT: SPEC ===== */
+.spec-section{
+    padding:clamp(60px,6.94vw,100px) clamp(20px,6.94vw,100px);
+}
+
+.spec-title{
+    font-size:clamp(22px,2.36vw,34px);
+}
+
+.grade-grid{
+    max-width:min(1100px,92vw);
+    gap:clamp(24px,2.78vw,40px);
+}
+
+.grade-card{
+    height:clamp(600px,53.5vw,770px);
+}
+
+.grade-image{
+    height:clamp(160px,14.6vw,230px);
+}
+
+.spec-layout{
+    gap:clamp(40px,6.94vw,100px);
+    max-width:min(1100px,92vw);
+}
+
+.spec-photos{
+    max-width:clamp(340px,33vw,480px);
+}
+
+.spec-table-card{
+    flex:0 0 clamp(280px,26.4vw,380px);
+}
+
+/* ===== PRODUCT: VERIFIED QUALITY ===== */
+.verified-quality{
+    padding:clamp(60px,6.94vw,100px) clamp(20px,6.94vw,100px);
+}
+
+.verified-header h2{
+    font-size:clamp(22px,2.36vw,34px);
+}
+
+.verified-grid{
+    max-width:min(1200px,92vw);
+    gap:clamp(36px,4.86vw,70px);
+}
+
+.verified-title{
+    font-size:clamp(18px,1.8vw,26px);
+}
+
+.verified-download-row{
+    max-width:min(1200px,92vw);
+}
+
+/* ===== PRODUCT: SHAPE & SIZE ===== */
+.shapesize-section{
+    padding:clamp(60px,6.94vw,100px) clamp(20px,6.94vw,100px);
+}
+
+.shapesize-header h2{
+    font-size:clamp(22px,2.36vw,34px);
+}
+
+.shapesize-row{
+    gap:clamp(40px,5.56vw,80px);
+    max-width:min(1200px,92vw);
+}
+
+.shapesize-media img{
+    height:clamp(220px,22.2vw,340px);
+}
+
+.shapesize-content h3{
+    font-size:clamp(20px,2.08vw,30px);
+}
+
+/* ===== PRODUCT: PACKAGING OPTION ===== */
+.packaging-option-section{
+    padding:clamp(60px,6.94vw,100px) clamp(20px,6.94vw,100px);
+}
+
+.packaging-option-header h2{
+    font-size:clamp(22px,2.36vw,34px);
+}
+
+.packaging-option-grid{
+    gap:clamp(24px,3.13vw,45px);
+    max-width:min(1200px,92vw);
+}
+
+.packaging-option-custom{
+    max-width:min(900px,92vw);
+}
+
+/* ===== MANUFACTURING PROCESS ===== */
+.process-hero{
+    padding:clamp(120px,12vw,170px) clamp(20px,6.94vw,100px) clamp(40px,3.82vw,55px);
+}
+
+.process-title{
+    font-size:clamp(26px,2.92vw,42px);
+}
+
+.process-tabs-section{
+    padding:clamp(40px,3.13vw,45px) clamp(20px,6.94vw,100px) clamp(60px,6.94vw,100px);
+}
+
+.process-progress{
+    margin-bottom:clamp(36px,4.17vw,60px);
+}
+
+.process-content{
+    width:min(1290px,92vw);
+    height:clamp(500px,47.2vw,680px);
+    gap:clamp(40px,5.56vw,80px);
+    padding:clamp(30px,3.47vw,50px);
+}
+
+.process-text-body{
+    margin-top:clamp(40px,9.72vw,140px);
+}
+
+.process-text h2{
+    font-size:clamp(22px,2.22vw,32px);
+}
+
+.moq-section{
+    padding:clamp(60px,6.25vw,90px) clamp(20px,6.94vw,100px) clamp(80px,8.33vw,120px);
+}
+
+.moq-title{
+    font-size:clamp(24px,2.64vw,38px);
+}
+
+.moq-grid{
+    gap:clamp(40px,6.25vw,90px);
+}
+
+/* ===== CONTACT ===== */
+.contact-hero{
+    padding:clamp(140px,13.9vw,200px) clamp(20px,6.94vw,100px) clamp(50px,4.86vw,70px);
+}
+
+.contact-title{
+    font-size:clamp(26px,3.06vw,44px);
+}
+
+.contact-main{
+    padding:clamp(50px,4.86vw,70px) clamp(20px,6.94vw,100px) clamp(80px,8.33vw,120px);
+    gap:clamp(40px,6.25vw,90px);
+}
+
+.contact-info-title{
+    font-size:clamp(18px,1.67vw,24px);
+}
+
+.contact-form-card{
+    padding:clamp(24px,2.78vw,40px);
+}
+
+/* ===== NEWS ===== */
+.news-hero{
+    min-height:clamp(420px,36vw,520px);
+}
+
+.news-hero-content h1{
+    font-size:clamp(30px,3.6vw,52px);
+}
+
+.news-section:has(.news-filters){
+    padding:clamp(60px,5.56vw,80px) clamp(20px,6.94vw,100px) clamp(80px,8.33vw,120px);
+}
+
+/* ===== ARTICLE ===== */
+.article-page{
+    padding:clamp(110px,10.4vw,150px) clamp(24px,4.17vw,60px) clamp(80px,8.33vw,120px);
+}
+
+.article-container{
+    max-width:min(1240px,94vw);
+}
+
+.article-title{
+    font-size:clamp(28px,3.19vw,46px);
+}
+
+.article-intro{
+    font-size:clamp(17px,1.39vw,20px);
+}
+
+.article-body h2{
+    font-size:clamp(20px,1.8vw,26px);
+}
+
+.article-body p{
+    font-size:clamp(14px,1.08vw,15.5px);
+}
+
+.article-layout{
+    grid-template-columns:minmax(0,1fr) clamp(260px,23.6vw,340px);
+    gap:clamp(36px,4.86vw,70px);
+}
+
+.article-sidebar{
+    padding:clamp(24px,2.36vw,34px);
+}
+
+}

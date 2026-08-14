@@ -572,6 +572,7 @@ transform:scale(1.1);
     width:1290px;
     height:680px;
     max-width:100%;
+    margin-inline:auto;
 
     background:rgba(17,12,8,.4);
     border:1px solid rgba(255,255,255,.15);

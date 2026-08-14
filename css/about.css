@@ -927,7 +927,6 @@ border-radius:18px;
 }
 
 /* ---------- MAP ---------- */
-
 .factory-map{
 
     margin-top:30px;
@@ -943,18 +942,6 @@ border-radius:18px;
     background:#1b130e;
 
     border:1px solid rgba(255,255,255,.08);
-}
-
-.factory-map::before{
-
-    content:"";
-
-    position:absolute;
-    inset:0;
-
-    background:url("Assets/about/indonesia-map.png") center/92% no-repeat;
-
-    opacity:.85;
 }
 
 .factory-map>*{
@@ -979,7 +966,31 @@ border-radius:18px;
 
     font-family:Georgia,serif;
 
-    margin:8px 40px;
+    margin:8px 40px 0;
+}
+
+.factory-map-media{
+
+    position:relative;
+
+    margin:30px 40px 40px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.factory-map-media > img{
+
+    display:block;
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
 }
 
 /* ---------- MOBILE ---------- */
@@ -1042,6 +1053,35 @@ border-radius:18px;
     border-right:none;
 
     border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.factory-map{
+
+    min-height:auto;
+}
+
+.factory-map .about-label{
+
+    padding:24px 20px 0;
+}
+
+.factory-map h3{
+
+    font-size:30px;
+
+    margin:8px 20px 0;
+}
+
+.factory-map-media{
+
+    margin:22px 20px 24px;
+
+    border-radius:12px;
+}
+
+.factory-map-media > img{
+
+    height:280px;
 }
 }
 
@@ -1140,6 +1180,8 @@ font-size:14px;
 
 /* ===== OUR GALLERY ===== */
 .gallery-section{
+width:100%;
+margin:0 auto;
 padding:0;
 }
 
@@ -1149,35 +1191,91 @@ font-size:30px;
 font-family:Georgia,serif;
 font-weight:400;
 margin-top:10px;
-margin-bottom:30px;
+margin-bottom:18px;
 }
 
 .gallery-grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:14px;
+grid-template-columns:1.8fr 1fr 1fr 1.15fr;
+grid-template-rows:300px 250px 250px;
+gap:12px;
 list-style:none;
 }
 
 .gallery-item{
-border-radius:14px;
+position:relative;
+border-radius:16px;
 overflow:hidden;
-height:180px;
 }
 
 .gallery-item img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.4s;
+display:block;
+transition:transform .5s ease;
 }
 
 .gallery-item:hover img{
-transform:scale(1.08);
+transform:scale(1.05);
 }
 
-/* ===== MOBILE (logistics & gallery) ===== */
+.gallery-item::after{
+content:"";
+position:absolute;
+inset:0;
+border:2px solid rgba(249,149,50,0);
+border-radius:16px;
+pointer-events:none;
+transition:border-color .4s;
+}
+
+.gallery-item:hover::after{
+border-color:rgba(249,149,50,.45);
+}
+
+.gallery-1{
+grid-column:1;
+grid-row:1/span 3;
+}
+
+.gallery-2{
+grid-column:2;
+grid-row:1;
+}
+
+.gallery-3{
+grid-column:3/span 2;
+grid-row:1;
+}
+
+.gallery-4{
+grid-column:2;
+grid-row:2;
+}
+
+.gallery-5{
+grid-column:3;
+grid-row:2;
+}
+
+.gallery-6{
+grid-column:4;
+grid-row:2/span 2;
+}
+
+.gallery-7{
+grid-column:2/span 2;
+grid-row:3;
+}
+
+/* ===== TABLET (logistics & gallery) ===== */
 @media(max-width:900px){
+.gallery-section{
+margin-right:0;
+padding:0;
+}
+
 .logistics-card{
 flex-direction:column;
 text-align:center;
@@ -1192,6 +1290,91 @@ margin-top:10px;
 
 .gallery-grid{
 grid-template-columns:repeat(2,1fr);
+grid-template-rows:220px 220px 200px 200px 200px;
+gap:10px;
+}
+
+.gallery-1{
+grid-column:1;
+grid-row:1/span 2;
+}
+
+.gallery-2{
+grid-column:2;
+grid-row:1;
+}
+
+.gallery-3{
+grid-column:2;
+grid-row:2;
+}
+
+.gallery-4{
+grid-column:1;
+grid-row:3;
+}
+
+.gallery-5{
+grid-column:2;
+grid-row:3;
+}
+
+.gallery-6{
+grid-column:1;
+grid-row:4/span 2;
+}
+
+.gallery-7{
+grid-column:2;
+grid-row:4/span 2;
+}
+}
+
+/* ===== MOBILE (gallery) ===== */
+@media(max-width:600px){
+.gallery-grid{
+grid-template-columns:1fr;
+grid-template-rows:none;
+gap:10px;
+}
+
+.gallery-1,
+.gallery-2,
+.gallery-3,
+.gallery-4,
+.gallery-5,
+.gallery-6,
+.gallery-7{
+grid-column:auto;
+grid-row:auto;
+}
+
+.gallery-1{
+height:440px;
+}
+
+.gallery-2{
+height:240px;
+}
+
+.gallery-3{
+height:240px;
+}
+
+.gallery-4{
+height:240px;
+}
+
+.gallery-5{
+height:240px;
+}
+
+.gallery-6{
+height:400px;
+}
+
+.gallery-7{
+height:300px;
 }
 }
 

@@ -589,6 +589,13 @@ transform:scale(1.1);
     margin-bottom:8px;
 }
 
+.contact-form-field label .optional-hint{
+    font-weight:400;
+    text-transform:none;
+    letter-spacing:0;
+    color:#8a8a8a;
+}
+
 .contact-form-field input,
 .contact-form-field textarea{
     width:100%;
@@ -640,6 +647,20 @@ transform:scale(1.1);
 .contact-submit-btn:hover{
     transform:translateY(-3px);
     box-shadow:0 15px 35px rgba(255,102,0,.4);
+}
+
+.contact-form-status{
+    margin-top:16px;
+    text-align:center;
+    font-size:14px;
+    font-weight:500;
+    font-family:Poppins,sans-serif;
+    color:#1b8f3c;
+    min-height:20px;
+}
+
+.contact-form-status.error{
+    color:#d93025;
 }
 
 /* ===============================================================
