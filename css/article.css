@@ -356,7 +356,7 @@
 }
 
 /* Mobile: stack everything vertically, article first, sidebar below */
-@media(max-width:768px){
+@media(max-width:900px){
     .article-page{
         padding:120px 24px 70px;
     }
@@ -393,5 +393,29 @@
 
     .article-sidebar{
         padding:26px;
+    }
+
+    .article-body p{
+        text-align:left;
+        line-height:1.85;
+    }
+
+    .article-meta{
+        flex-wrap:wrap;
+    }
+
+    .article-back{
+        margin-bottom:28px;
+    }
+}
+
+@media(max-width:480px){
+    .article-page{
+        padding:110px 20px 60px;
+    }
+
+    .article-title{
+        font-size:25px;
+        line-height:1.3;
     }
 }

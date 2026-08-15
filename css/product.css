@@ -552,6 +552,7 @@ overflow:hidden;
 
     .product-hero-content h1{
         font-size:40px;
+        margin-top:40px;
     }
 }
 
@@ -725,6 +726,10 @@ color:#f7901e;
 flex-direction:column;
 padding:70px 20px;
 gap:40px;
+}
+
+.product-page-wrap > .product-detail:first-child{
+padding-top:70px;
 }
 
 .product-detail-text h2{
@@ -959,6 +964,16 @@ transform:translate(-50%,-50%) scale(1.1);
     .video-text{
         max-width:100%;
         flex:none;
+    }
+
+    .page-shisha .video-text,
+    .page-bbq .video-text{
+        flex:0 0 auto;
+        max-width:100%;
+    }
+
+    .video-text p{
+        text-align:left;
     }
 
     .video-grid{
@@ -1320,6 +1335,10 @@ transform:translate(-50%,-50%) scale(1.1);
         grid-template-columns:1fr;
     }
 
+    .grade-card{
+        height:auto;
+    }
+
     .spec-layout{
         flex-direction:column;
         gap:80px;
@@ -1488,6 +1507,7 @@ transform:translate(-50%,-50%) scale(1.1);
 
     .verified-text p{
         max-width:100%;
+        text-align:left;
     }
 
     .verified-download-row{
@@ -1782,5 +1802,16 @@ transform:translate(-50%,-50%) scale(1.1);
         font-size:15px;
         white-space:normal;
         text-align:center;
+    }
+}
+
+/* ===== HP KECIL (<=480px) ===== */
+@media(max-width:480px){
+    .video-text h2{
+        font-size:26px;
+    }
+
+    .spec-table-card{
+        padding:26px 20px;
     }
 }

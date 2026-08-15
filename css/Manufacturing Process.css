@@ -708,6 +708,14 @@ transform:scale(1.1);
         font-size:26px;
     }
 
+    .process-text-body{
+        margin-top:0;
+    }
+
+    .process-text p{
+        text-align:left;
+    }
+
 }
 
 /* ===================================================================
@@ -956,5 +964,30 @@ transform:scale(1.1);
 
     .moq-detail-value{
         text-align:right;
+        white-space:normal;
+    }
+}
+
+/* ===== HP KECIL (<=480px) ===== */
+@media(max-width:480px){
+
+    .process-title{
+        font-size:24px;
+    }
+
+    .process-content{
+        padding:20px;
+    }
+
+    .moq-title{
+        font-size:24px;
+    }
+
+    .moq-card{
+        padding:22px 18px;
+    }
+
+    .moq-detail-list li{
+        gap:10px;
     }
 }

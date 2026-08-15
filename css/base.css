@@ -2,6 +2,11 @@ body{
     overflow-x:clip;
 }
 
+/* ===== NAVBAR LOGO (consistency fix) ===== */
+.logo img{
+    display:inline;
+}
+
 @media(min-width:901px){
 
 /* ===== NAVBAR ===== */
@@ -601,4 +606,72 @@ header.scrolled{
     padding:clamp(24px,2.36vw,34px);
 }
 
+}
+
+/* ============================================================
+   TAMBAHAN LAYOUT MOBILE BERSAMA (<=900px)
+   Berlaku di semua halaman. Dimuat paling akhir sehingga
+   menang pada selektor yang spesifisitasnya sama dengan CSS
+   halaman masing-masing. Blok desktop (>=901px) di atas
+   TIDAK diubah.
+============================================================ */
+@media(max-width:900px){
+    .logo{
+        margin-left:0;
+        margin-top:0;
+    }
+
+    .logo img{
+        width:clamp(46px,13.5vw,58px);
+        height:clamp(46px,13.5vw,58px);
+    }
+
+    header.scrolled{
+        padding:20px;
+    }
+
+    /* ===== MOBILE NAV MENU (rata tengah, konsisten) ===== */
+    #navbar > nav{
+        padding:90px 20px 40px;
+    }
+
+    #navbar > nav.open{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .nav-list{
+        margin:auto 0;
+        gap:6px;
+    }
+
+    #navbar > nav a{
+        text-align:center;
+        padding:12px 20px;
+        margin-bottom:0;
+    }
+
+    .dropdown-toggle{
+        justify-content:center;
+        gap:6px;
+    }
+
+    .dropdown-menu{
+        min-width:0;
+        width:100%;
+    }
+
+    .dropdown-menu a{
+        white-space:normal;
+    }
+
+    .footer{
+        padding:25px 20px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        gap:18px;
+        text-align:center;
+    }
 }

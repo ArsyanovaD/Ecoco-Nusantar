@@ -533,6 +533,7 @@ height:50vh;
 
 .about-hero-content h1{
 font-size:40px;
+margin-top:40px;
 }
 
 .about-block,
@@ -546,8 +547,17 @@ gap:40px;
 font-size:30px;
 }
 
+.about-text p{
+text-align:left;
+}
+
 .about-media img{
-    height:280px;
+    height:100%;
+}
+
+.about-media:not(.carousel-wrap){
+    height:auto;
+    aspect-ratio:498.53 / 344;
 }
 
 .about-media{
@@ -637,7 +647,7 @@ flex-direction:column;
 }
 
 .about-content{
-padding:0 20px;
+padding:0 20px 50px;
 gap:40px;
 }
 
@@ -1040,7 +1050,8 @@ border-radius:18px;
 
 .facility-card img{
 
-    height:220px;
+    height:auto;
+    aspect-ratio:4 / 3;
 }
 
 .factory-stats{
@@ -1053,6 +1064,11 @@ border-radius:18px;
     border-right:none;
 
     border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.stat-item h3{
+
+    font-size:40px;
 }
 
 .factory-map{
@@ -1081,7 +1097,8 @@ border-radius:18px;
 
 .factory-map-media > img{
 
-    height:280px;
+    height:auto;
+    aspect-ratio:16 / 9;
 }
 }
 

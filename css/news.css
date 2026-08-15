@@ -50,7 +50,7 @@ height:85px;
 
 .logo{
     margin-left:40px;
-    margin-top:3px;
+    margin-top:10px;
 }
 
 #navbar > nav{
@@ -656,6 +656,13 @@ overflow:hidden;
   .news-hero { height:45vh; min-height:400px; }
   .news-hero-content h1 { font-size:36px; }
 
-  .news-grid { grid-template-columns:1fr; }
-  .news-section { padding:50px 24px 70px; }
+  .news-grid { grid-template-columns:1fr; gap:18px; }
+  .news-section { padding:50px 20px 70px; }
+  .news-filters { margin-bottom:32px; }
+  .pagination { margin-top:40px; }
+}
+
+@media (max-width: 480px) {
+  .news-hero { min-height:340px; }
+  .news-hero-content h1 { font-size:30px; }
 }
