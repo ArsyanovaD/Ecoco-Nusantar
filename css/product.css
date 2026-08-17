@@ -1122,6 +1122,10 @@ transform:translate(-50%,-50%) scale(1.1);
     font-weight:600;
 }
 
+.grade-list li span:last-child .highlight{
+    color:#F99532 !important;
+}
+
 /* ----- BBQ layout: photos + spec table ----- */
 .spec-layout{
     display:flex;
@@ -1570,13 +1574,13 @@ transform:translate(-50%,-50%) scale(1.1);
     flex:0 0 46%;
     max-width:46%;
     border-radius:16px;
-    overflow:hidden;
 }
 
 .shapesize-media img{
     width:100%;
     height:auto;
     display:block;
+    border-radius:16px;
 }
 
 .shapesize-content{
