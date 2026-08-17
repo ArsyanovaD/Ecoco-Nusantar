@@ -37,6 +37,16 @@ header.scrolled{
     font-size:clamp(14px,1.18vw,17px);
 }
 
+.nav-dropdown .dropdown-toggle{
+    display:inline;
+}
+
+.nav-dropdown .caret{
+    margin-left:6px;
+    line-height:1;
+    vertical-align:middle;
+}
+
 .header-right{
     gap:clamp(10px,1.11vw,16px);
 }
@@ -184,7 +194,7 @@ header.scrolled{
 .news-header{
     max-width:min(1300px,92vw);
     margin:0 auto clamp(16px,1.67vw,24px);
-    align-items:flex-start;
+    align-items:center;
 }
 
 .news-header h2{
@@ -468,7 +478,7 @@ header.scrolled{
 }
 
 .shapesize-media img{
-    height:clamp(220px,22.2vw,340px);
+    height:auto;
 }
 
 .shapesize-content h3{

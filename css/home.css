@@ -745,7 +745,7 @@ transform:translateX(0);
 .why-header{
     display:flex;
     justify-content:space-between;
-    align-items:flex-end;
+    align-items:center;
     max-width:1300px;
     margin:0 auto 55px;
 }
@@ -1130,7 +1130,7 @@ transform:translateX(0);
 .news-header{
     display:flex;
     justify-content:space-between;
-    align-items:flex-end;
+    align-items:center;
     max-width:1300px;
     margin:0 auto 55px;
 }

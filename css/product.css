@@ -1066,7 +1066,8 @@ transform:translate(-50%,-50%) scale(1.1);
 .grade-image img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
+    object-position:center;
     transition:.5s;
 }
 
@@ -1574,8 +1575,7 @@ transform:translate(-50%,-50%) scale(1.1);
 
 .shapesize-media img{
     width:100%;
-    height:320px;
-    object-fit:cover;
+    height:auto;
     display:block;
 }
 
