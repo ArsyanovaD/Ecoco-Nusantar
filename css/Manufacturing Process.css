@@ -460,8 +460,24 @@ transform:scale(1.1);
    PROCESS HERO
 =================================================================== */
 .process-hero{
-    background:#16100c;
-    padding:170px 100px 55px;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/Assets/hero/hero3.png");
+    background-size:cover;
+    background-position:center 60%;
+    padding:170px 100px 80px;
+    position:relative;
+    overflow:hidden;
+}
+
+.process-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(22,16,12,0) 40%, #16100c 100%);
+    z-index:1;
+}
+
+.process-hero > *:not(.process-hero-overlay){
+    position:relative;
+    z-index:2;
 }
 
 .process-title{
@@ -511,12 +527,12 @@ transform:scale(1.1);
     align-items:center;
     gap:8px;
 
-    background:transparent;
+    background:#110C08;
     border:1px solid rgba(255,255,255,.15);
     cursor:pointer;
 
     color:#8f8f8f;
-    font-family:'Plus Jakarta Sans',sans-serif;
+    font-family:'Inclusive Sans',sans-serif;
     font-size:13.5px;
     font-weight:500;
 
@@ -528,6 +544,7 @@ transform:scale(1.1);
 }
 
 .process-tab-num{
+    font-family:'Inclusive Sans',sans-serif;
     font-weight:700;
 }
 
