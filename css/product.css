@@ -634,6 +634,18 @@ max-width:600px;
 }
 
 .page-bbq .spec-section{
+    background:#110C08;
+}
+
+.page-bbq .shapesize-section{
+    background:rgba(27,21,16,.6);
+}
+
+.page-bbq .packaging-option-section{
+    background:#110C08;
+}
+
+.page-bbq .spec-table-card{
     background:rgba(27,21,16,.6);
 }
 
@@ -642,21 +654,87 @@ max-width:600px;
     font-family:'Playfair Display',serif;
 }
 
+/* ===== HARDWOOD PAGE ===== */
+.page-hardwood .product-detail-text p,
+.page-hardwood .video-text p,
+.page-hardwood .packaging-option-card p{
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    color:#F7F1E7;
+    text-align:justify;
+}
+
+.page-hardwood .product-detail{
+    background:rgba(27,21,16,.6);
+}
+
+.page-hardwood .spec-section{
+    background:rgba(27,21,16,.6);
+}
+
+.page-hardwood .video-section{
+    background:#110C08;
+}
+
+.page-hardwood .shapesize-section{
+    background:#110C08;
+}
+
+.page-hardwood .packaging-option-section{
+    background:rgba(27,21,16,.6);
+}
+
+@media(min-width:901px){
+    .page-hardwood .packaging-option-grid{
+        display:flex;
+        justify-content:center;
+        gap:45px;
+        max-width:1200px;
+    }
+
+    .page-hardwood .packaging-option-card{
+        flex:0 0 calc((100% - 45px) / 2);
+    }
+
+    .page-hardwood .packaging-option-card p{
+        text-align:justify;
+        max-width:340px;
+    }
+}
+
+.page-hardwood .product-detail-text h2,
+.page-hardwood .product-detail-text h2 span{
+    font-family:'Playfair Display',serif;
+}
+
+.product-highlight{
+    color:#f7901e;
+    font-family:'Poppins',sans-serif;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.3px;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
 /* ===== SHISHA PAGE: longer video text frame ===== */
 .page-shisha .video-text,
-.page-bbq .video-text{
+.page-bbq .video-text,
+.page-hardwood .video-text{
     flex:0 0 480px;
     max-width:480px;
 }
 
 /* ===== SHISHA PAGE: bigger square video frames ===== */
 .page-shisha .video-grid,
-.page-bbq .video-grid{
+.page-bbq .video-grid,
+.page-hardwood .video-grid{
     max-width:720px;
 }
 
 .page-shisha .video-item,
-.page-bbq .video-item{
+.page-bbq .video-item,
+.page-hardwood .video-item{
     aspect-ratio:1 / 1;
     border-radius:16px;
 }
@@ -967,7 +1045,8 @@ transform:translate(-50%,-50%) scale(1.1);
     }
 
     .page-shisha .video-text,
-    .page-bbq .video-text{
+    .page-bbq .video-text,
+    .page-hardwood .video-text{
         flex:0 0 auto;
         max-width:100%;
     }
@@ -1124,6 +1203,7 @@ transform:translate(-50%,-50%) scale(1.1);
 
 .grade-list li span:last-child .highlight{
     color:#F99532 !important;
+    font-weight:700;
 }
 
 /* ----- BBQ layout: photos + spec table ----- */
@@ -1324,6 +1404,11 @@ transform:translate(-50%,-50%) scale(1.1);
     color:#fff;
     font-family:'Inter',sans-serif;
     font-weight:600;
+}
+
+.spec-table-list li span:last-child .highlight{
+    color:#F99532 !important;
+    font-weight:700;
 }
 
 /* ===== MOBILE ===== */

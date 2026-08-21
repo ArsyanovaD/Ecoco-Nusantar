@@ -634,14 +634,16 @@ transform:scale(1.1);
 .process-tagline{
     display:block;
     color:#f7901e;
-    font-family:'Playfair Display',serif;
+    font-family:'Cormorant Garamond',serif;
     font-style:italic;
-    font-size:15px;
+    font-weight:700;
+    font-size:18px;
     margin-bottom:20px;
 }
 
 .process-text p{
     color:#ffffff;
+    font-family:'Inter',sans-serif;
     font-size:14.5px;
     line-height:1.9;
     margin-bottom:36px;
