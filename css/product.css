@@ -756,14 +756,17 @@ max-width:600px;
     border-radius:16px;
 }
 
-/* ===== SHISHA PAGE: alternating section backgrounds ===== */
-.page-shisha .product-detail,
-.page-shisha .spec-section{
+/* ===== SHISHA PAGE: section backgrounds matching HARDWOOD ===== */
+.page-shisha .product-detail{
     background:rgba(27,21,16,.6);
 }
 
-.page-shisha .shapesize-section{
+.page-shisha .spec-section{
     background:#110C08;
+}
+
+.page-shisha .shapesize-section{
+    background:rgba(27,21,16,.6);
 }
 
 .page-shisha .video-section,
@@ -772,6 +775,10 @@ max-width:600px;
 }
 
 .page-shisha .packaging-option-section{
+    background:#110C08;
+}
+
+.page-shisha .grade-card{
     background:rgba(27,21,16,.6);
 }
 

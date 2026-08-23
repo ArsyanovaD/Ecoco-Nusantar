@@ -75,15 +75,6 @@
 <!-- ============ NEWS SECTION ============ -->
 <section class="news-section">
 
-  <!-- Filter tabs -->
-  <div class="news-filters" id="newsFilters">
-    <button class="filter-pill active" data-filter="all">All</button>
-    <button class="filter-pill" data-filter="production">Production</button>
-    <button class="filter-pill" data-filter="export">Export</button>
-    <button class="filter-pill" data-filter="company">Company</button>
-    <button class="filter-pill" data-filter="event">Event</button>
-  </div>
-
   <!-- Cards grid (rendered by inline script, same pattern as Manufacturing Process stages) -->
   <div class="news-grid" id="newsGrid">
     <!-- populated by JS -->
@@ -123,7 +114,7 @@
 </footer>
 
 <script src="javascript/script.js"></script>
-<script src="javascript/articles.js?v=5"></script>
+<script src="javascript/articles.js?v=8"></script>
 
 <script>
 /* ================= HAMBURGER / MOBILE NAV ================= */
@@ -166,14 +157,12 @@ document.addEventListener('click', (e) => {
    so the listing always matches the article detail pages (article.html?id=N). */
 const newsItems = articles.map(article => ({
     id: article.id,
-    filter: article.filter,
-    tag: article.category,
     date: article.date,
     title: article.title,
     excerpt: article.intro,
     image: article.image,
     link: 'article.html?id=' + article.id
-}));
+})).sort((a, b) => (new Date(b.date) - new Date(a.date)) || (b.id - a.id));
 
 const ITEMS_PER_PAGE = 6;
 
@@ -181,19 +170,11 @@ const newsGrid = document.getElementById('newsGrid');
 const pageNumbers = document.getElementById('pageNumbers');
 const pagePrev = document.getElementById('pagePrev');
 const pageNext = document.getElementById('pageNext');
-const filterButtons = document.querySelectorAll('#newsFilters .filter-pill');
 
-let activeFilter = 'all';
 let currentPage = 1;
 
-function getFilteredItems() {
-    return activeFilter === 'all'
-        ? newsItems
-        : newsItems.filter(item => item.filter === activeFilter);
-}
-
 function getTotalPages() {
-    return Math.max(1, Math.ceil(getFilteredItems().length / ITEMS_PER_PAGE));
+    return Math.max(1, Math.ceil(newsItems.length / ITEMS_PER_PAGE));
 }
 
 function renderCard(item) {
@@ -209,7 +190,6 @@ function renderCard(item) {
     card.innerHTML = `
         <div class="news-thumb${item.image ? '' : ' placeholder'}">${thumbHTML}</div>
         <div class="news-meta">
-            <span class="news-tag">${item.tag}</span>
             <span class="news-date">${item.date}</span>
         </div>
         <span class="news-title">
@@ -222,19 +202,18 @@ function renderCard(item) {
 }
 
 function renderGrid() {
-    const filtered = getFilteredItems();
     const totalPages = getTotalPages();
 
-    // keep currentPage valid whenever the filter changes the total page count
+    // keep currentPage valid whenever the total page count changes
     if (currentPage > totalPages) currentPage = totalPages;
     if (currentPage < 1) currentPage = 1;
 
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    const pageItems = filtered.slice(start, start + ITEMS_PER_PAGE);
+    const pageItems = newsItems.slice(start, start + ITEMS_PER_PAGE);
 
     newsGrid.innerHTML = '';
 
-    if (filtered.length === 0) {
+    if (newsItems.length === 0) {
         newsGrid.innerHTML = '<p class="news-empty">No articles yet. Stay tuned, our first story is on the way!</p>';
     }
 
@@ -266,21 +245,6 @@ function goToPage(page) {
     renderGrid();
     document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
-function setFilter(filter) {
-    activeFilter = filter;
-    currentPage = 1;
-
-    filterButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === filter);
-    });
-
-    renderGrid();
-}
-
-filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => setFilter(btn.dataset.filter));
-});
 
 pagePrev.addEventListener('click', () => goToPage(currentPage - 1));
 pageNext.addEventListener('click', () => goToPage(currentPage + 1));

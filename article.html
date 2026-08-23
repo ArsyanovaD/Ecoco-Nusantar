@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/news.css?v=8">
-<link rel="stylesheet" href="css/article.css?v=1">
+<link rel="stylesheet" href="css/article.css?v=3">
 <link rel="stylesheet" href="css/base.css?v=7">
 </head>
 <body>
@@ -74,7 +74,6 @@
 </a>
 
 <div class="article-header">
-<span class="article-category" id="aCategory"></span>
 <h1 class="article-title" id="aTitle"></h1>
 <div class="article-meta" id="aMeta"></div>
 
@@ -142,7 +141,7 @@
 </footer>
 
 <script src="javascript/script.js"></script>
-<script src="javascript/articles.js?v=5"></script>
+<script src="javascript/articles.js?v=8"></script>
 
 <script>
 /* ================= HAMBURGER / MOBILE NAV ================= */
@@ -191,7 +190,6 @@ if (!article) {
 
 document.title = article.title + ' | Ecoco Nusantara';
 
-document.getElementById('aCategory').textContent = article.category;
 document.getElementById('aTitle').textContent = article.title;
 document.getElementById('aMeta').innerHTML = '<span class="article-meta-author">Ecoco Nusantara Team</span><span class="article-meta-sep" aria-hidden="true">—</span><span class="article-meta-date">' + article.date + '</span>';
 
@@ -204,9 +202,11 @@ document.getElementById('aIntro').textContent = article.intro;
 const sectionsEl = document.getElementById('aSections');
 sectionsEl.innerHTML = '';
 article.sections.forEach(section => {
-    const heading = document.createElement('h2');
-    heading.textContent = section.heading;
-    sectionsEl.appendChild(heading);
+    if (section.heading) {
+        const heading = document.createElement('h2');
+        heading.textContent = section.heading;
+        sectionsEl.appendChild(heading);
+    }
 
     section.paragraphs.forEach(text => {
         const p = document.createElement('p');
@@ -224,6 +224,8 @@ document.getElementById('aConclusion').textContent = article.conclusion;
 /* ================= LATEST ARTICLES SIDEBAR ================= */
 const sidebarEl = document.getElementById('aSidebar');
 articles
+    .slice()
+    .sort((a, b) => (new Date(b.date) - new Date(a.date)) || (b.id - a.id))
     .filter(a => a.id !== article.id)
     .slice(0, 5)
     .forEach(item => {
@@ -233,7 +235,7 @@ articles
         card.innerHTML = `
             <div class="sidebar-card-thumb"><img src="${item.image}" alt="${item.title}"></div>
             <div class="sidebar-card-body">
-                <span class="sidebar-card-meta">${item.date}  ·  ${item.category}</span>
+                <span class="sidebar-card-meta">${item.date}</span>
                 <h4 class="sidebar-card-title">${item.title}</h4>
             </div>
         `;

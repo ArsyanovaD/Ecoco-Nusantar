@@ -37,7 +37,7 @@ const articles = [
     {
         id: 1,
         filter: 'production',
-        category: 'ARTICLES #1',
+        category: 'Production',
         title: 'Inside the Kiln: The Science Behind Long-Burning Shisha & BBQ Briquettes',
         date: 'August 22, 2026',
         readTime: '5 min read',
@@ -83,7 +83,7 @@ const articles = [
     {
         id: 2,
         filter: 'company',
-        category: 'ARTICLES #2',
+        category: 'Company',
         title: 'Trusted Charcoal Supplier : A Guide for Global Buyers',
         date: 'August 22, 2026',
         readTime: '4 min read',
@@ -101,5 +101,86 @@ const articles = [
             }
         ],
         conclusion: 'By aligning exceptional product performance with operational reliability and sustainable practices, Ecoco Nusantara transcends the traditional buyer-vendor relationship. The company remains dedicated to forging resilient, long-term alliances with global importers who refuse to compromise on quality, efficiency, and integrity.'
+    },
+    {
+        id: 3,
+        filter: 'production',
+        category: 'Production',
+        title: 'Hexagonal vs. Cube vs. Flat\nChoosing the Right Briquette Shape for Your Market',
+        date: 'August 23, 2026',
+        readTime: '4 min read',
+        image: '/Assets/barbeque/bbq-hexagonal-briquette.jpg.jpeg',
+        intro: 'When sourcing premium charcoal briquettes for global distribution, importers often focus heavily on raw materials and chemical specifications such as fixed carbon and ash content.',
+        sections: [
+            {
+                heading: '',
+                paragraphs: [
+                    { html: 'When sourcing premium charcoal briquettes for global distribution, importers often focus heavily on raw materials and chemical specifications such as fixed carbon and ash content. However, the physical geometry of the briquette is equally critical to its overall performance. <strong>The shape of the charcoal dictates airflow dynamics, heat distribution, and ignition speed, making certain profiles inherently better suited for specific applications.</strong> Understanding the functional differences between hexagonal, cube, and flat briquettes allows wholesale buyers to align their inventory with the exact needs of their target demographic.' },
+                    { html: '<strong>Cube briquettes</strong> are the undisputed standard for the international shisha and hookah industry. Their uniform, flat sides provide maximum surface area contact when placed on hookah foil or heat management devices, ensuring an even and consistent transfer of heat to the shisha tobacco. Because they are densely compressed into precise dimensions, cubes offer an exceptionally long, stable, and predictable burn time. Furthermore, the geometric stability of a cube prevents it from rolling during use, which enhances safety and ash retention, making it the preferred choice for premium lounges and dedicated hookah enthusiasts.' },
+                    { html: '<strong>Hexagonal briquettes</strong> are engineered primarily for heavy-duty grilling, professional barbecue, and commercial kitchen applications. Many hexagonal profiles are manufactured with a hollow center core, which creates a unique chimney effect that maximizes internal airflow through the briquette. This specialized aerodynamic design promotes a hotter, more efficient burn and allows the charcoal to reach peak culinary temperatures rapidly. The elongated, angular shape is perfect for stacking in kamado grills or large smokers, providing a steady, long-lasting heat source that handles thick cuts of meat with ease.' },
+                    { html: '<strong>Flat or pillow-shaped briquettes</strong> are designed for convenience, fast ignition, and direct high-heat grilling. Their curved, broad surfaces allow for maximum oxygen exposure across the exterior, meaning they light much faster than denser, flat-sided geometric shapes. This makes them highly attractive to the casual consumer market, where backyard grillers prioritize speed and ease of use over marathon burn times. While they may not last as long as a tightly compressed cube or a dense hexagonal log, flat briquettes deliver a powerful, immediate sear that is ideal for burgers, thin steaks, and quick cooking sessions.' }
+                ]
+            },
+            {
+                heading: 'What kind of shape works best in your market?',
+                paragraphs: []
+            }
+        ],
+        conclusion: 'Selecting the right briquette shape comes down to matching the physical properties of the charcoal with the intended end-use of your consumers. Cube briquettes deliver the structural stability and slow, even heat required for premium shisha sessions. Hexagonal briquettes provide superior airflow and intense, prolonged heat for professional barbecue and smoking applications. Meanwhile, flat or pillow briquettes offer quick ignition and immediate high heat for casual, everyday grilling. By understanding these airflow and heat dynamics, importers can strategically tailor their product offerings to perfectly satisfy the demands of their specific markets.'
+    },
+    {
+        id: 4,
+        filter: 'export',
+        category: 'Export',
+        title: 'From Waste to Warmth: The Eco-Friendly Journey of Indonesian Coconut Shell Briquettes',
+        date: 'August 23, 2026',
+        readTime: '4 min read',
+        image: '/Assets/manufacturing/manufacturing1.png',
+        intro: 'The global push for sustainability has fundamentally shifted how industries and consumers evaluate their energy sources.',
+        sections: [
+            {
+                heading: '',
+                paragraphs: [
+                    'The global push for sustainability has fundamentally shifted how industries and consumers evaluate their energy sources. In the charcoal and barbecue sector, the demand for eco-friendly alternatives to traditional timber-based fuels has never been higher. Indonesia, as one of the world\'s leading agricultural producers, plays a pivotal role in this green energy movement by transforming a forgotten byproduct into a high-performance fuel source. Through innovative upcycling, coconut shell briquettes have emerged as a premier, environmentally responsible solution that simultaneously combats agricultural waste and halts deforestation.',
+                    'Traditionally, coconut shells were treated as agricultural refuse. In many rural processing regions, massive quantities of discarded shells were left to decompose or disposed of through open burning. This open-air combustion releases significant amounts of carbon dioxide and methane directly into the atmosphere, creating localized air pollution and contributing to greenhouse gas emissions. By systematically collecting these discarded shells from local copra and coconut oil industries, manufacturers channel a waste stream into a valuable, carbon-neutral resource, preventing unnecessary environmental degradation at the source.',
+                    'The manufacturing process further amplifies this eco-friendly lifecycle. Once collected, the shells undergo a controlled carbonization process, converting organic biomass into dense, high-purity char without the use of chemical accelerators or synthetic binders. The resulting material is crushed, mixed with natural binding agents derived from cassava starch, and hydraulically compressed into uniform briquettes. This clean production cycle yields a product with exceptionally high fixed carbon and minimal ash, proving that ecological sustainability and elite product performance can go hand in hand.'
+                ]
+            },
+            {
+                heading: 'What are the competitive advantages of Indonesian coconut products in the international market?',
+                paragraphs: [
+                    'As one of the world\'s largest coconut-producing nations, Indonesia provides a continuous supply of naturally dense tropical coconut shells which yield exceptional hardness, high calorific value, and remarkably long burning times. This raw material superiority results in briquettes with high fixed carbon levels exceeding 80% for intense heat, minimal ash content under 3% to prevent clogged airflow, and an odorless, smokeless burn that preserves the pure taste of shisha tobacco and food. Furthermore, decades of industry maturation have given local factories advanced technical expertise in hydraulic compression and moisture control to deliver uniform shapes with low breakage rates. Combined with eco-friendly agricultural upcycling that requires zero tree cutting and a robust export infrastructure experienced in international logistics, Indonesian coconut charcoal offers global buyers unmatched reliability and sustainability.'
+                ]
+            }
+        ],
+        conclusion: ''
+    },
+    {
+        id: 5,
+        filter: 'production',
+        category: 'Production',
+        title: 'The Truth About Binders: Natural Tapioca vs. Chemical Additives in Charcoal Briquettes',
+        date: 'August 23, 2026',
+        readTime: '4 min read',
+        image: '/Assets/manufacturing/manufacturing2.webp',
+        intro: 'When evaluating charcoal briquettes for export, buyers frequently scrutinize fixed carbon, ash content, and moisture levels while overlooking a critical component of manufacturing: the binding agent.',
+        sections: [
+            {
+                heading: '',
+                paragraphs: [
+                    { html: 'When evaluating charcoal briquettes for export, buyers frequently scrutinize fixed carbon, ash content, and moisture levels while overlooking a critical component of manufacturing: <strong>the binding agent</strong>. Because loose coconut shell charcoal cannot hold its shape on its own, a binder is necessary to hold the material together under high hydraulic pressure. However, the type of binder used separates premium, export-grade charcoal from cheap, low-quality alternatives. Understanding the difference between <strong>food-grade natural binders</strong> and <strong>harmful chemical additives</strong> is essential for importers protecting their brand reputation and consumer safety.' },
+                    { html: 'Inferior manufacturers often cut production costs by utilizing <strong>chemical accelerators, petroleum-based glues, or synthetic adhesives</strong>. While these artificial binders are inexpensive and speed up factory production, they release toxic fumes, pungent odors, and chemical residues upon ignition. For shisha smokers, these invisible toxins are the primary culprit behind <strong>harsh smoke, unpleasant tastes, and severe headaches</strong>. In a barbecue setting, synthetic binders contaminate food with chemical off-flavors, making cheap briquettes a hazard to both health and culinary quality.' },
+                    { html: 'In stark contrast, responsible Indonesian manufacturers utilize <strong>100% natural, food-grade binders such as tapioca starch</strong>. Sourced directly from sustainably grown cassava, tapioca starch possesses superior adhesive qualities when mixed with coconut shell charcoal and subjected to intense hydraulic compression. Because it is completely organic and neutral, a natural starch binder burns cleanly without interfering with the combustion process. It ensures an entirely <strong>odorless and smokeless lighting experience</strong>, allowing the pure, natural profile of the charcoal to shine through without unwanted chemical interference.' },
+                    { html: 'For global importers and educated buyers, vetting a supplier\u2019s binding agents represents a critical checkpoint in quality assurance. Selecting briquettes bound exclusively with <strong>food-grade natural tapioca</strong> ensures a completely odorless combustion process, delivering a safe, headache-free shisha experience and a pristine burn for culinary professionals. By rejecting inferior shortcuts in favor of premium binding standards, manufacturers provide a pure, unadulterated fuel that satisfies the rigorous performance expectations of today\u2019s discerning market.' }
+                ]
+            },
+            {
+                heading: 'A natural binder is the key to great quality coconut shell charcoal',
+                paragraphs: [
+                    { html: 'The integrity of a charcoal briquette extends far beyond its raw carbon content; the binding agent dictates its purity, safety, and smoking performance. By prioritizing <strong>100% natural tapioca over hazardous chemical additives</strong>, global importers can protect their brand reputation, eliminate toxic consumer complaints, and secure a lasting competitive advantage in the premium eco-friendly market.' }
+                ]
+            }
+        ],
+        conclusion: ''
     }
 ];
