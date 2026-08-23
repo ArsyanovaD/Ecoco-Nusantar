@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
-    <link rel="stylesheet" href="/css/contact.css">
-    <link rel="stylesheet" href="/css/base.css?v=5">
+    <link rel="stylesheet" href="/css/contact.css?v=3">
+    <link rel="stylesheet" href="/css/base.css?v=7">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -293,6 +293,33 @@ contactForm.addEventListener('submit', async (e) => {
         contactStatus.classList.add('error');
     }
 });
+</script>
+
+<script>
+// Equalize card heights on load: stretch the message textarea so the
+// "Send us a message" card matches the "Contact Information" card height.
+(function(){
+    const info = document.querySelector('.contact-info');
+    const card = document.querySelector('.contact-form-card');
+    const ta = document.getElementById('cf-message');
+
+    function balanceCards(){
+        if(window.innerWidth <= 900 || !info || !card || !ta){
+            ta.style.height = '';
+            return;
+        }
+
+        ta.style.height = '';
+        const diff = info.offsetHeight - card.offsetHeight;
+
+        if(diff > 0){
+            ta.style.height = (ta.offsetHeight + diff) + 'px';
+        }
+    }
+
+    window.addEventListener('load', balanceCards);
+    window.addEventListener('resize', balanceCards);
+})();
 </script>
 
 <script src="../javascript/script.js"></script>

@@ -11,9 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/news.css?v=4">
+<link rel="stylesheet" href="css/news.css?v=8">
 <link rel="stylesheet" href="css/article.css?v=1">
-<link rel="stylesheet" href="css/base.css?v=5">
+<link rel="stylesheet" href="css/base.css?v=7">
 </head>
 <body>
 
@@ -142,7 +142,7 @@
 </footer>
 
 <script src="javascript/script.js"></script>
-<script src="javascript/articles.js"></script>
+<script src="javascript/articles.js?v=5"></script>
 
 <script>
 /* ================= HAMBURGER / MOBILE NAV ================= */
@@ -185,6 +185,10 @@ const params = new URLSearchParams(location.search);
 const requestedId = parseInt(params.get('id'), 10);
 const article = articles.find(a => a.id === requestedId) || articles[0];
 
+if (!article) {
+    location.href = 'news.html';
+}
+
 document.title = article.title + ' | Ecoco Nusantara';
 
 document.getElementById('aCategory').textContent = article.category;
@@ -206,7 +210,11 @@ article.sections.forEach(section => {
 
     section.paragraphs.forEach(text => {
         const p = document.createElement('p');
-        p.textContent = text;
+        if (typeof text === 'string') {
+            p.textContent = text;
+        } else {
+            p.innerHTML = text.html;
+        }
         sectionsEl.appendChild(p);
     });
 });

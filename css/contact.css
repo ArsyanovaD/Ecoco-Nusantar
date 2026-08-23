@@ -493,11 +493,19 @@ transform:scale(1.1);
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:90px;
+    align-items:start;
 
     border-top:1px solid rgba(53,44,37,.6);
 }
 
 /* ----- LEFT: CONTACT INFORMATION ----- */
+.contact-info{
+    background:#110C08;
+    border:1px solid rgba(247,144,30,.2);
+    border-radius:20px;
+    padding:40px;
+}
+
 .contact-info-title{
     color:#fff;
     font-family:Georgia,serif;
@@ -705,6 +713,10 @@ transform:scale(1.1);
     }
 
     .contact-form-card{
+        padding:28px 24px;
+    }
+
+    .contact-info{
         padding:28px 24px;
     }
 

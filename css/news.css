@@ -407,6 +407,10 @@ overflow:hidden;
   padding:80px 100px 120px;
 }
 
+.news-section:has(.news-filters) {
+  background:#110C08;
+}
+
 /* Filter pills */
 .news-filters {
   display:flex;
@@ -416,7 +420,7 @@ overflow:hidden;
 }
 
 .filter-pill {
-  background:transparent;
+  background:#110C08;
   border:1px solid #4a3d31;
   color:#cbbfae;
   font-size:14px;
@@ -448,7 +452,7 @@ overflow:hidden;
 .news-card {
   display:flex;
   flex-direction:column;
-  background:#1c140f;
+  background:#110C08;
   border:1px solid rgba(255,255,255,.1);
   border-radius:22px;
   padding:18px;
@@ -660,4 +664,12 @@ overflow:hidden;
 @media (max-width: 480px) {
   .news-hero { min-height:340px; }
   .news-hero-content h1 { font-size:30px; }
+}
+/* ===== EMPTY STATE (no articles yet) ===== */
+.news-empty{
+  grid-column:1 / -1;
+  text-align:center;
+  color:#c7c7c7;
+  font-size:17px;
+  padding:70px 20px;
 }

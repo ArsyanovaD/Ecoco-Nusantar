@@ -37,6 +37,30 @@ header.scrolled{
     font-size:clamp(14px,1.18vw,17px);
 }
 
+/* ===== NAV LINK UNDERLINE ANIMATION (from home, applied globally) ===== */
+#navbar > nav a{
+    position:relative;
+    padding-bottom:4px;
+}
+
+#navbar > nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-2px;
+    width:0;
+    height:2px;
+    background:#f7901e;
+    border-radius:2px;
+    transform:translateX(-50%);
+    transition:width .35s cubic-bezier(.4,0,.2,1);
+}
+
+#navbar > nav a:hover::after,
+#navbar > nav a.active::after{
+    width:100%;
+}
+
 .nav-dropdown .dropdown-toggle{
     display:inline;
 }
@@ -378,7 +402,6 @@ header.scrolled{
     max-width:clamp(320px,33vw,480px);
 }
 
-.page-shisha .video-grid,
 .page-bbq .video-grid{
     max-width:min(720px,90vw);
 }
