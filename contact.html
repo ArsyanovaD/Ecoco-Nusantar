@@ -29,21 +29,21 @@
 <nav aria-label="Main navigation">
 
 <ul class="nav-list">
-<li><a href="../index.html">Home</a></li>
-<li><a href="../about.html">About Us</a></li>
+<li><a href="../index.html" data-i18n="nav_home">Home</a></li>
+<li><a href="../about.html" data-i18n="nav_about">About Us</a></li>
 
 <li class="nav-dropdown">
-<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Our Product <span class="caret" aria-hidden="true">▾</span></a>
+<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="nav_product">Our Product <span class="caret" aria-hidden="true">▾</span></a>
 <ul class="dropdown-menu">
-<li><a href="products/shisha.html">Coconut Shisha Charcoal Briquette</a></li>
-<li><a href="products/bbq.html">Barbeque Charcoal Briquette</a></li>
-<li><a href="products/hardwood.html">Hardwood Charcoal</a></li>
+<li><a href="products/shisha.html" data-i18n="nav_shisha">Coconut Shisha Charcoal Briquette</a></li>
+<li><a href="products/bbq.html" data-i18n="nav_bbq">Barbeque Charcoal Briquette</a></li>
+<li><a href="products/hardwood.html" data-i18n="nav_hardwood">Hardwood Charcoal</a></li>
 </ul>
 </li>
 
-<li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
-<li><a href="news.html">News & Article</a></li>
-<li><a href="contact.html" class="active">Contact</a></li>
+<li><a href="Manufacturing Process.html" data-i18n="nav_manufacturing">Manufacturing Process</a></li>
+<li><a href="news.html" data-i18n="nav_news">News & Article</a></li>
+<li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
 </ul>
 
 </nav>
@@ -68,9 +68,9 @@
 <!-- CONTACT HERO -->
 <section class="contact-hero">
     <div class="contact-hero-overlay"></div>
-    <span class="contact-eyebrow">Contact Us</span>
-    <h1 class="contact-title">Let's start a <span class="highlight">Partnership.</span></h1>
-    <p class="contact-subtitle">
+    <span class="contact-eyebrow" data-i18n="contact_hero_label">Contact Us</span>
+    <h1 class="contact-title" data-i18n="contact_hero_heading">Let's start a <span class="highlight">Partnership.</span></h1>
+    <p class="contact-subtitle" data-i18n="contact_hero_sub">
         Reach out for wholesale orders, OEM packaging, or custom
         specifications. Our team replies within one business day.
     </p>
@@ -81,7 +81,7 @@
 
     <!-- LEFT: CONTACT INFORMATION -->
     <div class="contact-info">
-        <h2 class="contact-info-title">Contact Information</h2>
+        <h2 class="contact-info-title" data-i18n="contact_info_title">Contact Information</h2>
 
         <ul class="contact-info-list">
 
@@ -93,7 +93,7 @@
                     </svg>
                 </span>
                 <div class="contact-info-text">
-                    <h3>Head Office</h3>
+                    <h3 data-i18n="contact_info_office">Head Office</h3>
                     <p>SOVEREIGN PLAZA <br> RT.1/RW.2, CILANDAK BAR., KEC. CILANDAK, KOTA JAKARTA SELATAN, DAERAH KHUSUS IBUKOTA JAKARTA 12430, INDONESIA</p>
                 </div>
             </li>
@@ -108,7 +108,7 @@
                     </svg>
                 </span>
                 <div class="contact-info-text">
-                    <h3>Manufactured In</h3>
+                    <h3 data-i18n="contact_info_factory">Manufactured In</h3>
                     <p>Tegal, Jawa, Indonesia</p>
                 </div>
             </li>
@@ -120,7 +120,7 @@
                     </svg>
                 </span>
                 <div class="contact-info-text">
-                    <h3>WhatsApp</h3>
+                    <h3 data-i18n="contact_info_whatsapp">WhatsApp</h3>
                     <p>+62 821-1425-4329</p>
                 </div>
             </li>
@@ -133,7 +133,7 @@
                     </svg>
                 </span>
                 <div class="contact-info-text">
-                    <h3>Email</h3>
+                    <h3 data-i18n="contact_info_email">Email</h3>
                     <p>business@ecoconusantara.com<br>sales@ecoconusantara.com</p>
                 </div>
             </li>
@@ -141,14 +141,14 @@
         </ul>
 
         <div class="contact-order-box">
-            <h4>Ready to order?</h4>
-            <p>Use the form or WhatsApp us directly. We respond within one business day and can arrange samples upon request.</p>
+            <h4 data-i18n="contact_order_box_title">Ready to order?</h4>
+            <p data-i18n="contact_order_box_desc">Use the form or WhatsApp us directly. We respond within one business day and can arrange samples upon request.</p>
         </div>
     </div>
 
     <!-- RIGHT: SEND MESSAGE FORM -->
     <div class="contact-form-card">
-        <h2 class="contact-form-title">Send us a message</h2>
+        <h2 class="contact-form-title" data-i18n="contact_form_title">Send us a message</h2>
 
         <form class="contact-form" method="POST" action="https://formsubmit.co/business@ecoconusantara.com">
 
@@ -157,37 +157,37 @@
 
             <div class="contact-form-row">
                 <div class="contact-form-field">
-                    <label for="cf-name">Name *</label>
-                    <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+                    <label for="cf-name" data-i18n="contact_label_name">Name *</label>
+                    <input type="text" id="cf-name" name="name" placeholder="Your full name" data-i18n-placeholder="contact_placeholder_name" required>
                 </div>
                 <div class="contact-form-field">
-                    <label for="cf-company">Company <span class="optional-hint">(optional)</span></label>
-                    <input type="text" id="cf-company" name="company" placeholder="Company name">
+                    <label for="cf-company" data-i18n="contact_label_company">Company <span class="optional-hint" data-i18n="contact_company_optional">(optional)</span></label>
+                    <input type="text" id="cf-company" name="company" placeholder="Company name" data-i18n-placeholder="contact_placeholder_company">
                 </div>
             </div>
 
             <div class="contact-form-row">
                 <div class="contact-form-field">
-                    <label for="cf-email">Email *</label>
-                    <input type="email" id="cf-email" name="email" placeholder="Enter your email" required>
+                    <label for="cf-email" data-i18n="contact_label_email">Email *</label>
+                    <input type="email" id="cf-email" name="email" placeholder="Enter your email" data-i18n-placeholder="contact_placeholder_email" required>
                 </div>
                 <div class="contact-form-field">
-                    <label for="cf-phone">WhatsApp / Phone</label>
-                    <input type="tel" id="cf-phone" name="phone" placeholder="Phone number">
+                    <label for="cf-phone" data-i18n="contact_label_phone">WhatsApp / Phone</label>
+                    <input type="tel" id="cf-phone" name="phone" placeholder="Phone number" data-i18n-placeholder="contact_placeholder_phone">
                 </div>
             </div>
 
             <div class="contact-form-field contact-form-field-full">
-                <label for="cf-interest">Product Interest</label>
-                <input type="text" id="cf-interest" name="interest" placeholder="e.g. Coconut Shisha Charcoal">
+                <label for="cf-interest" data-i18n="contact_label_interest">Product Interest</label>
+                <input type="text" id="cf-interest" name="interest" placeholder="e.g. Coconut Shisha Charcoal" data-i18n-placeholder="contact_placeholder_interest">
             </div>
 
             <div class="contact-form-field contact-form-field-full">
-                <label for="cf-message">Message *</label>
-                <textarea id="cf-message" name="message" rows="5" placeholder="Describe your requirements - quantity, grade, packaging preferences, destination..." required></textarea>
+                <label for="cf-message" data-i18n="contact_label_message">Message *</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Describe your requirements - quantity, grade, packaging preferences, destination..." data-i18n-placeholder="contact_placeholder_message" required></textarea>
             </div>
 
-            <button type="submit" class="contact-submit-btn">Send Message</button>
+            <button type="submit" class="contact-submit-btn" data-i18n="contact_submit">Send Message</button>
 
             <p class="contact-form-status" role="status" aria-live="polite"></p>
 
@@ -212,7 +212,7 @@
             <span class="orange">NUSANTARA</span>
         </div>
 
-        <p class="footer-copy">
+        <p class="footer-copy" data-i18n="footer_copy">
             © 2026 Ecoco Nusantara. Premium Quality from Indonesia. Est. 2025
         </p>
 
@@ -323,6 +323,8 @@ contactForm.addEventListener('submit', async (e) => {
 </script>
 
 <script src="../javascript/script.js"></script>
+<script src="../javascript/translations.js"></script>
+<script src="../javascript/i18n.js"></script>
 
 </body>
 

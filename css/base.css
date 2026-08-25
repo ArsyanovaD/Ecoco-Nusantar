@@ -2,6 +2,50 @@ body{
     overflow-x:clip;
 }
 
+/* ===== LANGUAGE DROPDOWN ===== */
+.lang-pill{
+    position:relative;
+}
+.lang-dropdown{
+    display:none;
+    position:absolute;
+    top:calc(100% + 8px);
+    right:0;
+    background:#1a1a1a;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:12px;
+    padding:6px;
+    z-index:1000;
+    min-width:60px;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+.lang-dropdown.open{
+    display:block;
+}
+.lang-option{
+    display:block;
+    width:100%;
+    padding:8px 14px;
+    border:none;
+    background:none;
+    color:#ccc;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    border-radius:8px;
+    text-align:center;
+    transition:background .2s,color .2s;
+}
+.lang-option:hover{
+    background:rgba(247,144,30,.15);
+    color:#f7901e;
+}
+.lang-option.active{
+    background:rgba(247,144,30,.2);
+    color:#f7901e;
+    font-weight:600;
+}
+
 /* ===== NAVBAR LOGO (consistency fix) ===== */
 .logo img{
     display:inline;

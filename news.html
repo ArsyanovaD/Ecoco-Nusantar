@@ -26,21 +26,21 @@
 <nav aria-label="Main navigation">
 
 <ul class="nav-list">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
+<li><a href="index.html" data-i18n="nav_home">Home</a></li>
+<li><a href="about.html" data-i18n="nav_about">About Us</a></li>
 
 <li class="nav-dropdown">
-<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Our Product <span class="caret" aria-hidden="true">▾</span></a>
+<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="nav_product">Our Product <span class="caret" aria-hidden="true">▾</span></a>
 <ul class="dropdown-menu">
-<li><a href="products/shisha.html">Coconut Shisha Charcoal Briquette</a></li>
-<li><a href="products/bbq.html">Barbeque Charcoal Briquette</a></li>
-<li><a href="products/hardwood.html">Hardwood Charcoal</a></li>
+<li><a href="products/shisha.html" data-i18n="nav_shisha">Coconut Shisha Charcoal Briquette</a></li>
+<li><a href="products/bbq.html" data-i18n="nav_bbq">Barbeque Charcoal Briquette</a></li>
+<li><a href="products/hardwood.html" data-i18n="nav_hardwood">Hardwood Charcoal</a></li>
 </ul>
 </li>
 
-<li><a href="Manufacturing Process.html">Manufacturing Process</a></li>
-<li><a href="news.html" class="active">News &amp; Article</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="Manufacturing Process.html" data-i18n="nav_manufacturing">Manufacturing Process</a></li>
+<li><a href="news.html" class="active" data-i18n="nav_news">News &amp; Article</a></li>
+<li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
 </ul>
 
 </nav>
@@ -66,9 +66,9 @@
 <section class="news-hero">
   <div class="news-hero-overlay"></div>
   <div class="news-hero-content">
-    <p class="eyebrow"><span>THE</span> CHRONICLES</p>
-    <h1>News &amp; <span>Article</span></h1>
-    <p class="hero-desc">Every story we have published, reported first-hand, supporting our exploration, culture, practice, and inspiration.</p>
+<p class="eyebrow" data-i18n="news_hero_eyebrow2"><span>THE</span> CHRONICLES</p>
+<h1 data-i18n="news_hero_heading1">News &amp; <span>Article</span></h1>
+<p class="hero-desc" data-i18n="news_hero_desc">Every story we have published, reported first-hand, supporting our exploration, culture, practice, and inspiration.</p>
   </div>
 </section>
 
@@ -105,7 +105,7 @@
             <span class="orange">NUSANTARA</span>
         </div>
 
-        <p class="footer-copy">
+        <p class="footer-copy" data-i18n="footer_copy">
             © 2026 Ecoco Nusantara. Premium Quality from Indonesia. Est. 2025
         </p>
 
@@ -115,6 +115,8 @@
 
 <script src="javascript/script.js"></script>
 <script src="javascript/articles.js?v=8"></script>
+<script src="javascript/translations.js"></script>
+<script src="javascript/i18n.js"></script>
 
 <script>
 /* ================= HAMBURGER / MOBILE NAV ================= */
