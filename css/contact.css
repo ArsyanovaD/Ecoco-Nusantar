@@ -431,7 +431,7 @@ transform:scale(1.1);
    CONTACT HERO
 =================================================================== */
 .contact-hero{
-    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/Assets/hero/hero4.png");
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/Assets/hero/hero4.webp");
     background-size:cover;
     background-position:center 95%;
     padding:200px 100px 80px;

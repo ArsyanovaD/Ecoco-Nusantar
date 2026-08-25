@@ -278,7 +278,7 @@ overflow:hidden;
 /* ===== HERO SECTION ===== */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("/Assets/hero/hero.png");
+background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("/Assets/hero/hero.webp");
 background-size:cover;
 background-position:center;
 position:relative;
@@ -1249,7 +1249,7 @@ transform:translateX(0);
 
     position:relative;
 
-    background:url("/Assets/hero/hero.png") center center/cover no-repeat;
+    background:url("/Assets/hero/hero.webp") center center/cover no-repeat;
 
     padding:140px 20px;
 
