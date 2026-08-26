@@ -73,7 +73,7 @@
 <section class="process-hero">
     <div class="process-hero-overlay"></div>
     <span class="process-eyebrow" data-i18n="mfg_hero_label"><span class="eyebrow-bar"></span>Production Process</span>
-    <h1 class="process-title">How We Deliver <span class="highlight">High-<br class="hide-mobile">Performance</span> Charcoal Worldwide</h1>
+    <h1 class="process-title" data-i18n="mfg_hero_heading_full">How We Deliver <span class="highlight">High-<br class="hide-mobile">Performance</span> Charcoal Worldwide</h1>
     <p class="process-subtitle" data-i18n="mfg_hero_sub">
         Nine controlled stages — from hand-picked coconut shells to sealed,
         export-ready cartons with a Certificate of Analysis.
@@ -138,7 +138,7 @@
 <section class="moq-section" id="moq">
 
     <span class="process-eyebrow" data-i18n="mfg_payment_label"><span class="eyebrow-bar"></span>Payment Terms Details</span>
-    <h2 class="moq-title">Minimum Order Quantity &amp;<br><span style="color:#F99532">Payment</span> <span class="highlight">Terms</span></h2>
+    <h2 class="moq-title" data-i18n="mfg_moo_title_text">Minimum Order Quantity &amp;<br><span style="color:#F99532">Payment</span> <span class="highlight">Terms</span></h2>
 
     <div class="moq-grid">
 
@@ -184,11 +184,11 @@
             <div class="moq-container-options">
                 <div class="moq-container-option">
                     <span class="moq-container-size">20&quot;</span>
-                    <span class="moq-container-tons">18 Tons</span>
+                    <span class="moq-container-tons" data-i18n="mfg_tons18">18 Tons</span>
                 </div>
                 <div class="moq-container-option selected">
                     <span class="moq-container-size">40&quot;</span>
-                    <span class="moq-container-tons">28 Tons</span>
+                    <span class="moq-container-tons" data-i18n="mfg_tons28">28 Tons</span>
                 </div>
             </div>
 
@@ -253,7 +253,7 @@
 <section class="faq-section" id="faq">
 
     <span class="process-eyebrow" data-i18n="mfg_faq_label"><span class="eyebrow-bar"></span>Support</span>
-    <h2 class="faq-title"><span class="faq-title-serif" data-i18n="mfg_faq_title1">Frequently Asked</span> <span class="highlight">Questions</span></h2>
+    <h2 class="faq-title"><span class="faq-title-serif" data-i18n="mfg_faq_title1">Frequently Asked</span> <span class="highlight" data-i18n="mfg_faq_questions">Questions</span></h2>
     <p class="faq-subtitle" data-i18n="mfg_faq_sub">Find answers to common questions about our charcoal briquettes, applications, packaging, logistics, and customization.</p>
 
     <div class="faq-container">
@@ -517,78 +517,15 @@ document.addEventListener('click', (e) => {
 
 /* ================= PRODUCTION PROCESS STAGES ================= */
 const processStages = [
-    {
-        number: '01',
-        label: 'Premium Raw Material',
-        title: 'Premium Raw Material',
-        tagline: 'The Finest Shells from Sumatra & Sulawesi',
-        description: 'To meet the rigorous demands of global markets, we mandate a strict quality control protocol starting at the source. We process only high-density, premium-grade coconut shells from Sumatra and Sulawesi that have reached full maturity. Every batch is carefully inspected for cleanliness and density, ensuring the resulting charcoal consistently delivers optimal fixed carbon levels, ultra-low ash output, and highly reliable performance.',
-        image: '/Assets/manufacturing/manufacturing1.webp'
-    },
-    {
-        number: '02',
-        label: 'Carbonization',
-        title: 'Carbonization',
-        tagline: 'Precision Carbonization Process Shell to Charcoal',
-        description: 'To guarantee unmatched consistency, the shells are carbonized in highly controlled, low-oxygen environments under strict monitoring protocols. This meticulous oversight ensures every batch meets our exacting export specifications: maximizing the fixed carbon yield (≈80%) while strictly minimizing ash residue (≤2%) for superior end-user performance.',
-        image: '/Assets/manufacturing/manufacturing2.webp'
-    },
-    {
-        number: '03',
-        label: 'Crushing & Sieving',
-        title: 'Crushing & Sieving',
-        tagline: '',
-        description: 'The carbonized charcoal is carefully pulverized and sieved to exact granular specifications, creating a standardized powder. This precise consistency is essential for the mixing phase, resulting in dense briquettes that deliver a long-lasting and even combustion.',
-        image: '/Assets/manufacturing/manufacturing3.webp'
-    },
-    {
-        number: '04',
-        label: 'Mixing & Binding',
-        title: 'Mixing & Binding',
-        tagline: 'Natural Binder',
-        description: 'During the mixing phase, the charcoal powder is combined with water and a natural, food-grade binder (commonly tapioca starch). Our strictly chemical-free process guarantees a clean, safe product that is entirely odorless and tasteless, providing an uncompromised shisha experience',
-        image: '/Assets/manufacturing/manufacturing4.webp'
-    },
-    {
-        number: '05',
-        label: 'Molding',
-        title: 'Molding',
-        tagline: 'Shaping for Maximum Density',
-        description: 'The blended mixture is pressed under high pressure into exact cubic shapes, ranging from standard 25mm and 26mm sizes or custom sizes to meet your market needs. Creating this compact density is the key to delivering an extended burn time and highly reliable heat output.',
-        image: '/Assets/manufacturing/manufacturing5.webp'
-    },
-    {
-        number: '06',
-        label: 'Drying and Curing',
-        title: 'Drying and Curing',
-        tagline: '',
-        description: 'The shaped briquettes are dried in controlled ovens until moisture levels are reduced to below 5%. This exact drying standard prevents any cracking and ensures the final product has the durability required for long-distance export.',
-        image: '/Assets/manufacturing/manufacturing6.webp'
-    },
-    {
-        number: '07',
-        label: 'Quality Control & Lab Testing',
-        title: 'Quality Control & Lab Testing',
-        tagline: '',
-        description: 'To guarantee performance, each production batch is thoroughly tested against key industry metrics: fixed carbon, ash, moisture, volatile matter, calorific value, and burning duration. Passing these exact benchmarks is mandatory, ensuring international buyers receive a reliable, high-performance product every time.',
-        image: '/Assets/manufacturing/manufacturing7.webp'
-    },
-    {
-        number: '08',
-        label: 'Packaging',
-        title: 'Packaging',
-        tagline: 'Secure Packaging & Export-Ready Packaging',
-        description: 'The briquettes are safely sealed in inner plastic bags to lock out moisture, then placed into OEM master boxes. We offer fully customizable packaging options to suit the specific needs of your brand.',
-        image: '/Assets/manufacturing/manufacturing8.webp'
-    },
-    {
-        number: '09',
-        label: 'Storage and Ready to Export',
-        title: 'Storage and Ready to Export',
-        tagline: '',
-        description: 'Finished briquettes are stored safely in a dry warehouse until they are ready to ship through international ports like Jakarta, or Semarang. We ensure a hassle-free import process for our buyers by providing complete export documents and a Certificate of Analysis (COA) for transparency',
-        image: '/Assets/manufacturing/manufacturing9.webp'
-    }
+    { number: '01', key: 'mfg_s1', image: '/Assets/manufacturing/manufacturing1.webp' },
+    { number: '02', key: 'mfg_s2', image: '/Assets/manufacturing/manufacturing2.webp' },
+    { number: '03', key: 'mfg_s3', image: '/Assets/manufacturing/manufacturing3.webp' },
+    { number: '04', key: 'mfg_s4', image: '/Assets/manufacturing/manufacturing4.webp' },
+    { number: '05', key: 'mfg_s5', image: '/Assets/manufacturing/manufacturing5.webp' },
+    { number: '06', key: 'mfg_s6', image: '/Assets/manufacturing/manufacturing6.webp' },
+    { number: '07', key: 'mfg_s7', image: '/Assets/manufacturing/manufacturing7.webp' },
+    { number: '08', key: 'mfg_s8', image: '/Assets/manufacturing/manufacturing8.webp' },
+    { number: '09', key: 'mfg_s9', image: '/Assets/manufacturing/manufacturing9.webp' }
 ];
 
 const tabsWrap = document.getElementById('processTabs');
@@ -604,13 +541,22 @@ const nextBtn = document.getElementById('processNext');
 
 let currentStage = 0;
 
+function getTranslation(key, fallback) {
+    var lang = (typeof EcocoI18n !== 'undefined') ? EcocoI18n.get() : 'en';
+    if (typeof translations !== 'undefined' && translations[key] && translations[key][lang]) {
+        return translations[key][lang];
+    }
+    return fallback || '';
+}
+
 function renderTabs(){
     tabsWrap.innerHTML = '';
     processStages.forEach((stage, i) => {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'process-tab' + (i === currentStage ? ' active' : '');
-        btn.innerHTML = `<span class="process-tab-num">${stage.number}</span> ${stage.label}`;
+        const label = getTranslation(stage.key + '_label', 'Stage ' + stage.number);
+        btn.innerHTML = '<span class="process-tab-num">' + stage.number + '</span> ' + label;
         btn.addEventListener('click', () => goToStage(i));
         tabsWrap.appendChild(btn);
     });
@@ -621,10 +567,10 @@ function goToStage(i){
     const stage = processStages[currentStage];
 
     imgEl.src = stage.image;
-    imgEl.alt = stage.title;
-    titleEl.textContent = stage.title;
-    taglineEl.textContent = stage.tagline;
-    descEl.textContent = stage.description;
+    imgEl.alt = getTranslation(stage.key + '_title', '');
+    titleEl.textContent = getTranslation(stage.key + '_title', '');
+    taglineEl.textContent = getTranslation(stage.key + '_tagline', '');
+    descEl.textContent = getTranslation(stage.key + '_desc', '');
     currentEl.textContent = stage.number;
     totalEl.textContent = String(processStages.length).padStart(2, '0');
 

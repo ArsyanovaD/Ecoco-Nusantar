@@ -193,7 +193,8 @@ if (!article) {
 document.title = article.title + ' | Ecoco Nusantara';
 
 document.getElementById('aTitle').textContent = article.title;
-document.getElementById('aMeta').innerHTML = '<span class="article-meta-author">Ecoco Nusantara Team</span><span class="article-meta-sep" aria-hidden="true">—</span><span class="article-meta-date">' + article.date + '</span>';
+var teamName = (typeof translations !== 'undefined' && translations['article_team']) ? translations['article_team'][document.documentElement.lang || 'en'] : 'Ecoco Nusantara Team';
+document.getElementById('aMeta').innerHTML = '<span class="article-meta-author">' + teamName + '</span><span class="article-meta-sep" aria-hidden="true">—</span><span class="article-meta-date">' + article.date + '</span>';
 
 const coverImg = document.getElementById('aImage');
 coverImg.src = article.image;

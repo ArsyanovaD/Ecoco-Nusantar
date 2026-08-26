@@ -216,7 +216,8 @@ function renderGrid() {
     newsGrid.innerHTML = '';
 
     if (newsItems.length === 0) {
-        newsGrid.innerHTML = '<p class="news-empty">No articles yet. Stay tuned, our first story is on the way!</p>';
+        var emptyMsg = (typeof translations !== 'undefined' && translations['news_empty_msg']) ? translations['news_empty_msg'][document.documentElement.lang || 'en'] : 'No articles yet. Stay tuned, our first story is on the way!';
+        newsGrid.innerHTML = '<p class="news-empty">' + emptyMsg + '</p>';
     }
 
     pageItems.forEach(item => newsGrid.appendChild(renderCard(item)));

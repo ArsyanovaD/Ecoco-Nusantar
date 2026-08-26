@@ -497,7 +497,7 @@ document.addEventListener('click', (e) => {
             .slice(0, 3);
 
         if (latest.length === 0) {
-            grid.innerHTML = '<p class="news-empty">Articles coming soon. Stay tuned!</p>';
+            grid.innerHTML = '<p class="news-empty">' + (typeof translations !== 'undefined' && translations['home_news_empty'] ? translations['home_news_empty'][document.documentElement.lang || 'en'] : 'Articles coming soon. Stay tuned!') + '</p>';
             return;
         }
 
