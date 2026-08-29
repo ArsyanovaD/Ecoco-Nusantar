@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/news.css?v=8">
-<link rel="stylesheet" href="css/base.css?v=7">
+<link rel="stylesheet" href="css/base.css?v=10">
 </head>
 <body>
 
@@ -25,12 +25,14 @@
 
 <nav aria-label="Main navigation">
 
+<button class="nav-close-btn" aria-label="Close menu">&times;</button>
+
 <ul class="nav-list">
 <li><a href="index.html" data-i18n="nav_home">Home</a></li>
 <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
 
 <li class="nav-dropdown">
-<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="nav_product">Our Product <span class="caret" aria-hidden="true">▾</span></a>
+<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav_product">Our Product</span> <svg class="caret" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 <ul class="dropdown-menu">
 <li><a href="products/shisha.html" data-i18n="nav_shisha">Coconut Shisha Charcoal Briquette</a></li>
 <li><a href="products/bbq.html" data-i18n="nav_bbq">Barbeque Charcoal Briquette</a></li>
@@ -60,14 +62,16 @@
 
 </div>
 
+<div class="mobile-nav-overlay"></div>
+
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="news-hero">
   <div class="news-hero-overlay"></div>
   <div class="news-hero-content">
-<p class="eyebrow" data-i18n="news_hero_eyebrow2"><span>THE</span> CHRONICLES</p>
-<h1 data-i18n="news_hero_heading1">News &amp; <span>Article</span></h1>
+<p class="eyebrow"><span data-i18n="news_hero_eyebrow1" style="color:#fff">THE</span> <span data-i18n="news_hero_eyebrow2" style="color:#f7901e">CHRONICLES</span></p>
+<h1><span data-i18n="news_hero_heading1" style="color:#fff">News &amp;</span> <span data-i18n="news_hero_heading2">Article</span></h1>
 <p class="hero-desc" data-i18n="news_hero_desc">Every story we have published, reported first-hand, supporting our exploration, culture, practice, and inspiration.</p>
   </div>
 </section>
@@ -122,31 +126,56 @@
 /* ================= HAMBURGER / MOBILE NAV ================= */
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('#navbar > nav');
+const navOverlay = document.querySelector('.mobile-nav-overlay');
+const navCloseBtn = document.querySelector('.nav-close-btn');
 
-hamburger.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    hamburger.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
-    hamburger.setAttribute('aria-expanded', isOpen);
+function closeSidebar(){
+    navMenu.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded','false');
+    if(navOverlay) navOverlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+    document.querySelectorAll('.nav-dropdown.mobile-open').forEach(function(d){
+        d.classList.remove('mobile-open');
+        d.querySelector('.dropdown-toggle').setAttribute('aria-expanded','false');
+    });
+}
+
+function openSidebar(){
+    navMenu.classList.add('open');
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded','true');
+    if(navOverlay) navOverlay.classList.add('active');
+    document.body.classList.add('no-scroll');
+}
+
+hamburger.addEventListener('click', function(){
+    if(navMenu.classList.contains('open')){
+        closeSidebar();
+    } else {
+        openSidebar();
+    }
 });
 
-document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        const dropdown = toggle.closest('.nav-dropdown');
+if(navCloseBtn) navCloseBtn.addEventListener('click', closeSidebar);
+if(navOverlay) navOverlay.addEventListener('click', closeSidebar);
 
+document.querySelectorAll('.dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        var dropdown = toggle.closest('.nav-dropdown');
         if(window.innerWidth <= 900){
-            const isOpen = dropdown.classList.toggle('mobile-open');
+            var isOpen = dropdown.classList.toggle('mobile-open');
             toggle.setAttribute('aria-expanded', isOpen);
         } else {
-            const isOpen = dropdown.classList.toggle('open');
+            var isOpen = dropdown.classList.toggle('open');
             toggle.setAttribute('aria-expanded', isOpen);
         }
     });
 });
 
-document.addEventListener('click', (e) => {
-    document.querySelectorAll('.nav-dropdown.open').forEach(dropdown => {
+document.addEventListener('click', function(e){
+    document.querySelectorAll('.nav-dropdown.open').forEach(function(dropdown){
         if(!dropdown.contains(e.target)){
             dropdown.classList.remove('open');
             dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');

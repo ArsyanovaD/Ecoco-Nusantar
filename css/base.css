@@ -2,6 +2,10 @@ body{
     overflow-x:clip;
 }
 
+.no-scroll{
+    overflow:hidden;
+}
+
 /* ===== LANGUAGE DROPDOWN ===== */
 .lang-pill{
     position:relative;
@@ -49,6 +53,10 @@ body{
 /* ===== NAVBAR LOGO (consistency fix) ===== */
 .logo img{
     display:inline;
+}
+
+.nav-close-btn{
+    display:none;
 }
 
 @media(min-width:901px){
@@ -686,11 +694,8 @@ header.scrolled{
 }
 
 /* ============================================================
-   TAMBAHAN LAYOUT MOBILE BERSAMA (<=900px)
-   Berlaku di semua halaman. Dimuat paling akhir sehingga
-   menang pada selektor yang spesifisitasnya sama dengan CSS
-   halaman masing-masing. Blok desktop (>=901px) di atas
-   TIDAK diubah.
+   MOBILE FULL-WIDTH NAVIGATION (<=900px)
+   Full-screen menu shared consistently across all pages.
 ============================================================ */
 @media(max-width:900px){
     .logo{
@@ -707,41 +712,209 @@ header.scrolled{
         padding:20px;
     }
 
-    /* ===== MOBILE NAV MENU (rata tengah, konsisten) ===== */
+    /* ===== OVERLAY ===== */
+    .mobile-nav-overlay{
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.55);
+        z-index:1000;
+        opacity:0;
+        transition:opacity .3s ease;
+        backdrop-filter:blur(2px);
+        -webkit-backdrop-filter:blur(2px);
+    }
+
+    .mobile-nav-overlay.active{
+        display:block;
+        opacity:1;
+    }
+
+    /* ===== FULL-WIDTH MOBILE MENU (shared across all pages) ===== */
     #navbar > nav{
-        padding:90px 20px 40px;
+        display:flex;
+        flex-direction:column;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        width:100%;
+        height:100vh;
+        height:100dvh;
+        background:linear-gradient(180deg,#20150d 0%,#120d09 100%);
+        padding:clamp(90px,12vh,108px) clamp(20px,5vw,36px) 40px;
+        transform:translateX(100%);
+        transition:transform .32s cubic-bezier(.4,0,.2,1);
+        z-index:1001;
+        overflow-y:auto;
+        overscroll-behavior:contain;
     }
 
     #navbar > nav.open{
-        display:flex;
-        flex-direction:column;
+        transform:translateX(0);
     }
 
+    .hamburger.active{
+        opacity:0;
+        pointer-events:none;
+    }
+
+    #navbar > nav a::after{
+        display:none !important;
+    }
+
+    /* ===== CLOSE BUTTON (top-right, only when menu is open) ===== */
+    #navbar > nav.open .nav-close-btn{
+        position:fixed;
+        top:clamp(16px,4vh,26px);
+        right:clamp(16px,4vw,26px);
+        width:44px;
+        height:44px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:rgba(255,255,255,.08);
+        border:1px solid rgba(255,255,255,.14);
+        color:#fff;
+        font-size:24px;
+        cursor:pointer;
+        border-radius:50%;
+        transition:background .2s,transform .2s;
+        z-index:1002;
+        line-height:1;
+    }
+
+    .nav-close-btn:hover,
+    .nav-close-btn:focus-visible{
+        background:rgba(247,144,30,.2);
+        border-color:rgba(247,144,30,.4);
+        transform:rotate(90deg);
+    }
+
+    /* ===== NAV LIST ===== */
     .nav-list{
-        margin:auto 0;
-        gap:6px;
+        margin:0;
+        padding:0;
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        width:100%;
+        gap:0;
+    }
+
+    .nav-list > li{
+        border-bottom:1px solid rgba(255,255,255,.09);
+    }
+
+    .nav-list > li:last-child{
+        border-bottom:none;
+    }
+
+    .nav-list li{
+        opacity:0;
+        transform:translateX(20px);
+        animation:navSlideIn .35s ease forwards;
+    }
+    .nav-list li:nth-child(1){ animation-delay:.04s; }
+    .nav-list li:nth-child(2){ animation-delay:.08s; }
+    .nav-list li:nth-child(3){ animation-delay:.12s; }
+    .nav-list li:nth-child(4){ animation-delay:.16s; }
+    .nav-list li:nth-child(5){ animation-delay:.20s; }
+    .nav-list li:nth-child(6){ animation-delay:.24s; }
+
+    @keyframes navSlideIn{
+        to{
+            opacity:1;
+            transform:translateX(0);
+        }
     }
 
     #navbar > nav a{
-        text-align:center;
-        padding:12px 20px;
-        margin-bottom:0;
+        color:#ece2d4;
+        text-align:left;
+        padding:clamp(16px,4.4vh,24px) 16px;
+        border-radius:10px;
+        transition:background .2s,color .2s;
+        font-size:clamp(17px,4.6vw,22px);
+        font-weight:500;
+        display:flex;
+        align-items:center;
+        gap:8px;
     }
 
+    #navbar > nav a:hover{
+        background:rgba(247,144,30,.12);
+        color:#f7901e;
+    }
+
+    #navbar > nav a.active{
+        background:#f7901e;
+        color:#fff !important;
+        font-weight:600;
+    }
+
+    /* ===== DROPDOWN (Our Product) ===== */
     .dropdown-toggle{
-        justify-content:center;
+        display:flex !important;
+        align-items:center;
+        justify-content:space-between;
+        width:100%;
         gap:6px;
+        position:relative;
+    }
+
+    .dropdown-toggle .caret{
+        flex-shrink:0;
+        transition:transform .3s ease;
     }
 
     .dropdown-menu{
         min-width:0;
         width:100%;
+        padding-left:16px;
+        position:static;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        max-height:0;
+        overflow:hidden;
+        background:transparent;
+        border:none;
+        border-radius:0;
+        transition:max-height .35s ease;
+    }
+
+    .nav-dropdown.mobile-open .dropdown-menu{
+        max-height:440px;
+        margin-top:2px;
     }
 
     .dropdown-menu a{
         white-space:normal;
+        font-size:clamp(14px,3.9vw,17px);
+        padding:clamp(13px,3.4vh,17px) 14px;
+        color:#d8c9b6 !important;
+        border-bottom:1px solid rgba(255,255,255,.07);
     }
 
+    .dropdown-menu a:last-child{
+        border-bottom:none;
+    }
+
+    .caret{
+        transition:transform .3s ease;
+    }
+
+    .nav-dropdown:hover .caret{
+        transform:none;
+    }
+
+    .nav-dropdown.mobile-open .caret{
+        transform:rotate(180deg) !important;
+    }
+
+    /* ===== FOOTER ===== */
     .footer{
         padding:25px 20px;
     }

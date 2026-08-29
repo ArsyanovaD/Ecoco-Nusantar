@@ -86,7 +86,7 @@ const translations = {
 
     /* ===== ABOUT PAGE ===== */
     'about_hero_small': { en: 'YOUR TRUSTED GLOBAL PARTNER IN INDONESIA CHARCOAL BRIQUETTES', ko: '인도네시아 숯 브리켓 분야의 신뢰할 수 있는 글로벌 파트너', ar: 'شريكك العالمي الموثوق في فحم البوريت الإندونيسي', ja: 'インドネシャチャコールブリケットの信頼できるグローバルパートナー' },
-    'about_hero_heading': { en: 'ABOUT US', ko: '회사 소개', ar: 'من نحن', ja: '会社概要' },
+    'about_hero_heading': { en: 'ABOUT <span>US</span>', ko: '회사 소개', ar: 'من نحن', ja: '会社概要' },
     'about_sidebar1': { en: 'About Us', ko: '회사 소개', ar: 'من نحن', ja: '会社概要' },
     'about_sidebar2': { en: 'What We Offer', ko: '제공 서비스', ar: 'ما نقدمه', ja: '提供内容' },
     'about_sidebar3': { en: 'Our Factory', ko: '우리의 공장', ar: 'مصنعنا', ja: '私たちの工場' },
@@ -136,6 +136,8 @@ const translations = {
     /* ===== CONTACT PAGE ===== */
     'contact_hero_label': { en: 'Contact Us', ko: '문의하기', ar: 'اتصل بنا', ja: 'お問い合わせ' },
     'contact_hero_heading': { en: 'Let\'s start a Partnership.', ko: '파트너십을 시작합시다.', ar: 'لنبدأ شراكة.', ja: 'パートナーシップを始めましょう。' },
+    'contact_hero_heading1': { en: 'Let\'s start a', ko: '파트너십을 시작합시다.', ar: 'لنبدأ شراكة', ja: 'パートナーシップを始めましょう' },
+    'contact_hero_heading2': { en: 'Partnership.', ko: '', ar: '', ja: '。' },
     'contact_hero_sub': { en: 'Reach out for wholesale orders, OEM packaging, or custom specifications. Our team replies within one business day.', ko: '도매 주문, OEM 포장 또는 맞춤 사양에 대해 문의하십시오. 우리 팀은 1영업일 이내에 답변드립니다.', ar: 'تواصل معنا للطلبات بالجملة أو تغليف OEM أو المواصفات المخصصة. يرد فريقنا خلال يوم عمل واحد.', ja: '卸売注文、OEMパッケージ、カスタム仕様についてお問い合わせください。チームは1営業日以内にご返信いたします。' },
     'contact_info_title': { en: 'Contact Information', ko: '연락처 정보', ar: 'معلومات الاتصال', ja: '連絡先情報' },
     'contact_info_office': { en: 'Head Office', ko: '본사', ar: 'المكتب الرئيسي', ja: '本社' },
