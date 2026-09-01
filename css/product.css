@@ -152,10 +152,14 @@ transform:scale(1.1);
 
 /* ================= FOOTER ================= */
 
+.footer, .footer *{
+    font-family: Poppins, sans-serif;
+}
+
 .footer{
     background:#16100c;
     border-top:1px solid rgba(255,255,255,.08);
-    padding:28px 100px;
+    padding:28px 100px 0;
 }
 
 .footer-container{
@@ -197,7 +201,7 @@ transform:scale(1.1);
 @media (max-width:768px){
 
 .footer{
-    padding:25px 20px;
+    padding:25px 20px 0;
 }
 
 .footer-container{

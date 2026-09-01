@@ -15,7 +15,19 @@ const translations = {
     'nav_contact': { en: 'Contact', ko: '문의하기', ar: 'اتصل بنا', ja: 'お問い合わせ' },
 
     /* ===== FOOTER (shared) ===== */
-    'footer_copy': { en: '© 2026 Ecoco Nusantara. Premium Quality from Indonesia. Est. 2025', ko: '© 2026 에코코 누산타라. 인도네시아 프리미엄 품질. 2025년 설립', ar: '© 2026 إيكوكو نوسانتارا. جودة ممتازة من إندونيسيا. تأسست عام 2025', ja: '© 2026 Ecoco Nusantara. インドネシアクオリティ。2025年設立' },
+    'footer_follow': { en: 'FOLLOW US', ko: '팔로우', ar: 'تابعنا', ja: 'フォローする' },
+    'footer_about': { en: 'About Us', ko: '회사 소개', ar: 'من نحن', ja: '会社概要' },
+    'footer_products': { en: 'Products', ko: '제품', ar: 'المنتجات', ja: '製品' },
+    'footer_mfg_news': { en: 'Manufacturing & News', ko: '제조 및 뉴스', ar: 'التصنيع والأخبار', ja: '製造＆ニュース' },
+    'footer_contact': { en: 'Contact Us', ko: '문의하기', ar: 'اتصل بنا', ja: 'お問い合わせ' },
+    'footer_about_who': { en: 'Who We Are', ko: '우리는 누구인가', ar: 'من نحن', ja: '私たちについて' },
+    'footer_about_offer': { en: 'What We Offer', ko: '제공 서비스', ar: 'ما نقدمه', ja: '提供内容' },
+    'footer_about_factory': { en: 'Our Factory', ko: '우리의 공장', ar: 'مصنعنا', ja: '私たちの工場' },
+    'footer_about_logistics': { en: 'Our Logistics', ko: '물류 파트너', ar: 'اللوجستيات', ja: '物流' },
+    'footer_about_gallery': { en: 'Our Gallery', ko: '갤러리', ar: 'معرضنا', ja: 'ギャラリー' },
+    'footer_mfg_moq': { en: 'MOQ & Payment Terms', ko: 'MOQ 및 결제 조건', ar: 'الحد الأدنى للطلب وشروط الدفع', ja: 'MOQ＆支払い条件' },
+    'footer_mfg_faq': { en: 'FAQs', ko: 'FAQ', ar: 'الأسئلة الشائعة', ja: 'よくある質問' },
+    'footer_copy': { en: '© 2026 Ecoco Nusantara. All Rights Reserved.', ko: '© 2026 에코코 누산타라. 판권 소유.', ar: '© 2026 إيكوكو نوسانتارا. جميع الحقوق محفوظة.', ja: '© 2026 Ecoco Nusantara. All Rights Reserved.' },
 
     /* ===== HOME PAGE ===== */
     'home_hero_small': { en: 'PREMIUM QUALITY FROM INDONESIA', ko: '인도네시아산 프리미엄 품질', ar: 'جودة ممتازة من إندونيسيا', ja: 'インドネシアプリミアム品質' },
@@ -114,7 +126,7 @@ const translations = {
     'about_facility2_desc': { en: 'Spacious, climate-controlled storage designed to maintain product dryness and preserve material integrity before distribution.', ko: '유통 전 제품 건조함과 재료 무결성을 유지하도록 설계된 넓은 기후 조절 보관 시설.', ar: 'تخزين واسع محكم يحتوي على مراقبة مناخ مصممة للحفاظ على جفاف المنتج والحفاظ على سلامة المواد قبل التوزيع.', ja: '配送前に製品の乾燥状態と素材の完全性を維持するよう設計された、広々とした気候管理型保管施設。' },
     'about_facility3_title': { en: 'Packaging Line', ko: '포장 라인', ar: 'خط التغليف', ja: 'パッケージライン' },
     'about_facility3_desc': { en: 'Efficient automated packaging process ensuring safe, sealed, and export-ready final products for global shipping.', ko: '글로벌 배송을 위한 안전하고 밀봉된 수출 준비 완료 최종 제품을 보장하는 효율적인 자동화 포장 공정.', ar: 'عملية تغليف مؤتمتة فعالة تضمن منتجات نهائية آمنة ومغلقة وجاهزة للتصدير للشحن العالمي.', ja: '世界輸送向けの安全で密封された輸出準備完了の最終製品を保証する効率的な自動化パッケージ工程。' },
-    'about_stat1_num': { en: '150 Metric Tons', ko: '150미터톤', ar: '150 طن مترى', ja: '150メトリックトン' },
+    'about_stat1_num': { en: 'Metric Tons', ko: '미터톤', ar: 'طن مترى', ja: 'メトリックトン' },
     'about_stat1_label': { en: 'PRODUCTION CAPACITY / MONTH', ko: '월간 생산 능력', ar: 'القدرة الإنتاجية / شهرياً', ja: '月間生産能力' },
     'about_stat2_num': { en: '100%', ko: '100%', ar: '100%', ja: '100%' },
     'about_stat2_label': { en: 'SUSTAINABLY SOURCED', ko: '지속 가능 조달', ar: 'مصدر من مصادر مستدامة', ja: '持続可能な調達' },
@@ -143,6 +155,7 @@ const translations = {
     'contact_info_office': { en: 'Head Office', ko: '본사', ar: 'المكتب الرئيسي', ja: '本社' },
     'contact_info_factory': { en: 'Manufactured In', ko: '제조지', ar: 'يُصنع في', ja: '製造地' },
     'contact_info_whatsapp': { en: 'WhatsApp', ko: '왓츠앱', ar: 'واتساب', ja: 'WhatsApp' },
+    'contact_info_phone': { en: 'Office Phone', ko: '사무실 전화', ar: 'هاتف المكتب', ja: 'オフィス電話' },
     'contact_info_email': { en: 'Email', ko: '이메일', ar: 'البريد الإلكتروني', ja: 'メール' },
     'contact_order_box_title': { en: 'Ready to order?', ko: '주문 준비가 되셨나요?', ar: 'مستعد للطلب؟', ja: 'ご注文はお済みですか？' },
     'contact_order_box_desc': { en: 'Use the form or WhatsApp us directly. We respond within one business day and can arrange samples upon request.', ko: '양식을 사용하거나 왓츠앱으로 직접 문의하십시오. 1영업일 이내에 응답하며 요청 시 샘플을 제공할 수 있습니다.', ar: 'استخدم النموذج أو تواصل معنا عبر واتساب مباشرة. نرد خلال يوم عمل واحد ويمكننا ترتيب عينات عند الطلب.', ja: 'フォームまたはWhatsAppで直接お問い合わせください。1営業日以内にご返信し、ご要求によりサンプルを手配できます。' },

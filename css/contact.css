@@ -288,7 +288,7 @@ transform:scale(1.1);
 .footer{
     background:#16100c;
     border-top:1px solid rgba(255,255,255,.08);
-    padding:28px 100px;
+    padding:28px 100px 0;
 }
 
 .footer-container{
@@ -328,7 +328,7 @@ transform:scale(1.1);
 @media(max-width:768px){
 
 .footer{
-    padding:25px 20px;
+    padding:25px 20px 0;
 }
 
 .footer-container{
@@ -473,6 +473,24 @@ transform:scale(1.1);
     color:#9d9d9d;
     font-size:14px;
     line-height:1.75;
+}
+
+.contact-info-text p .ci-line{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+    vertical-align:middle;
+}
+
+.contact-info-text p .ci-line svg{
+    flex:0 0 auto;
+}
+
+.contact-info-text p .ci-divider{
+    margin:0 8px;
+    color:#f7901e;
+    font-weight:600;
 }
 
 .contact-order-box{

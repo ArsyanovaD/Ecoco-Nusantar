@@ -41,7 +41,7 @@ const articles = [
         title: 'Inside the Kiln: The Science Behind Long-Burning Shisha & BBQ Briquettes',
         date: 'August 22, 2026',
         readTime: '5 min read',
-        image: '/Assets/news/Charcoal Briquette2.png',
+        image: '/Assets/news/article2.webp',
         intro: 'Premium charcoal is engineered long before ignition. From carbonization temperatures above 600\u00B0C down to ultra-low ash targets, the science inside the kiln decides how long, how hot, and how clean your fuel burns.',
         sections: [
             {
@@ -87,7 +87,7 @@ const articles = [
         title: 'Trusted Charcoal Supplier : A Guide for Global Buyers',
         date: 'August 22, 2026',
         readTime: '4 min read',
-        image: '/Assets/news/hero4.png',
+        image: '/Assets/news/article1.webp',
         intro: 'For charcoal importers around the world, choosing a reliable and responsible supplier is essential for long-term business success. Ecoco Nusantara has earned a strong reputation as a trusted partner by providing high-quality coconut shell briquettes and BBQ lump wood, professional service, and a strict commitment to sustainability.',
         sections: [
             {

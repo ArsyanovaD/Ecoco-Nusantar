@@ -191,7 +191,7 @@ transform:scale(1.1);
 .footer{
     background:#16100c;
     border-top:1px solid rgba(255,255,255,.08);
-    padding:28px 100px;
+    padding:28px 100px 0;
 }
 
 .footer-container{
@@ -233,7 +233,7 @@ transform:scale(1.1);
 @media (max-width:768px){
 
 .footer{
-    padding:25px 20px;
+    padding:25px 20px 0;
 }
 
 .footer-container{
@@ -979,6 +979,31 @@ border-radius:18px;
     font-family:Georgia,serif;
 
     margin:8px 40px 0;
+
+}
+
+.factory-map h3 .flag-indonesia{
+    
+    display:inline-flex;
+    
+    align-items:center;
+    
+    margin-right:12px;
+    
+    margin-top:-4px;
+    
+    vertical-align:middle;
+    
+}
+
+.factory-map h3 .flag-indonesia svg{
+
+    display:block;
+
+    border-radius:3px;
+
+    box-shadow:0 0 0 1px rgba(255,255,255,.25);
+
 }
 
 .factory-map-media{
