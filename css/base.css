@@ -127,6 +127,8 @@ header.scrolled{
     gap:clamp(10px,1.11vw,16px);
 }
 
+} /* END @media(min-width:901px) */
+
 /* ===== FOOTER ===== */
 .footer{
     background:#16100c;
@@ -1021,8 +1023,6 @@ header.scrolled{
 
 .article-sidebar{
     padding:clamp(24px,2.36vw,34px);
-}
-
 }
 
 /* ============================================================
