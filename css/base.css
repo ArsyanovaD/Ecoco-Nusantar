@@ -232,6 +232,8 @@ header.scrolled{
     color:#F7901E;
     margin:0 0 20px;
     padding-top:2px;
+    padding-bottom:8px;
+    border-bottom:2px solid #F7901E;
 }
 
 .footer-links{
