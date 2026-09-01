@@ -210,7 +210,7 @@ background:rgba(0,0,0,.65);
 
 .content{
 position:relative;
-max-width:700px;
+max-width:820px;
 color:white;
 animation:fade 1.5s;
 }
@@ -225,7 +225,7 @@ margin-bottom:0px;
 
 .content h1{
 font-size:72px;
-color:#f7901e;
+color:#ffffff;
 margin-bottom:15px;
 font-family:Georgia,serif;
 }
