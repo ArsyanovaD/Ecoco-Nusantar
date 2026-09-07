@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Process | Ecoco Nusantara - Charcoal Briquette Production</title>
+    <meta name="description" content="Discover how Ecoco Nusantara manufactures premium charcoal briquettes, from sustainable raw material sourcing and carbonization to quality control, packaging, and export logistics.">
+    <link rel="canonical" href="https://ecoconusantara.com/manufacturing-process.html">
+    <link rel="icon" type="image/webp" href="/Assets/logo/favicon.webp">
+    <link rel="apple-touch-icon" href="/Assets/logo/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/css/Manufacturing Process.css">
+    <link rel="stylesheet" href="/css/base.css?v=10">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ecoconusantara.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Manufacturing Process", "item": "https://ecoconusantara.com/manufacturing-process.html" }
+        ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header id="navbar">
+
+<div class="logo">
+<img src="Assets/logo/logo.webp" alt="Ecoco Nusantara logo">
+</div>
+
+<nav aria-label="Main navigation">
+
+<button class="nav-close-btn" aria-label="Close menu">&times;</button>
+
+<ul class="nav-list">
+<li><a href="index.html" data-i18n="nav_home">Home</a></li>
+<li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+
+<li class="nav-dropdown">
+<a href="index.html#our-product" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav_product">Our Product</span> <svg class="caret" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<ul class="dropdown-menu">
+<li><a href="products/shisha.html" data-i18n="nav_shisha">Coconut Shisha Charcoal Briquette</a></li>
+<li><a href="products/bbq.html" data-i18n="nav_bbq">Barbeque Charcoal Briquette</a></li>
+<li><a href="products/hardwood.html" data-i18n="nav_hardwood">Hardwood Charcoal</a></li>
+</ul>
+</li>
+
+<li><a href="manufacturing-process.html" class="active" data-i18n="nav_manufacturing">Manufacturing Process</a></li>
+<li><a href="news.html" data-i18n="nav_news">News & Article</a></li>
+<li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="header-right">
+
+<button class="lang-pill" type="button" aria-label="Change language">
+<span class="globe-icon" aria-hidden="true">🌐</span>
+<span>EN</span>
+</button>
+
+<button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
+<div class="mobile-nav-overlay"></div>
+
+</header>
+
+<!-- ================= PROCESS HERO ================= -->
+<section class="process-hero">
+    <div class="process-hero-overlay"></div>
+    <span class="process-eyebrow" data-i18n="mfg_hero_label"><span class="eyebrow-bar"></span>Production Process</span>
+    <h1 class="process-title" data-i18n="mfg_hero_heading_full">How We Deliver <span class="highlight">High-<br class="hide-mobile">Performance</span> Charcoal Worldwide</h1>
+    <p class="process-subtitle" data-i18n="mfg_hero_sub">
+        Nine controlled stages — from hand-picked coconut shells to sealed,
+        export-ready cartons with a Certificate of Analysis.
+    </p>
+</section>
+
+<!-- ================= STAGE TABS ================= -->
+<section class="process-tabs-section">
+
+    <div class="process-tabs" id="processTabs">
+        <!-- populated by JS -->
+    </div>
+
+    <div class="process-progress">
+        <div class="process-progress-fill" id="processProgressFill"></div>
+    </div>
+
+    <!-- ================= STAGE CONTENT ================= -->
+    <div class="process-content">
+
+        <div class="process-media">
+            <img id="processImage" src="Assets/process/01-premium-raw-material.jpg" alt="">
+        </div>
+
+        <div class="process-text">
+            <div class="process-text-body">
+                <h2 id="processTitle">Premium Raw Material</h2>
+                <span class="process-tagline" id="processTagline">The Finest Shells from Sumatra &amp; Sulawesi</span>
+                <p id="processDescription">
+                    To meet the rigorous demands of global markets, we mandate a strict
+                    quality control protocol starting at the source. We process only
+                    high-density, premium-grade coconut shells from Sumatra and Sulawesi
+                    that have reached full maturity. Every batch is carefully inspected
+                    for cleanliness and density, ensuring the resulting charcoal
+                    consistently delivers optimal fixed carbon levels, ultra-low ash
+                    output, and highly reliable performance.
+                </p>
+            </div>
+
+            <div class="process-pagination">
+                <button type="button" class="process-arrow" id="processPrev" aria-label="Previous stage">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <span class="process-counter"><span id="processCurrent">01</span> / <span id="processTotal">09</span></span>
+
+                <button type="button" class="process-arrow process-arrow-next" id="processNext" aria-label="Next stage">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= MOQ & PAYMENT TERMS ================= -->
+<section class="moq-section" id="moq">
+
+    <span class="process-eyebrow" data-i18n="mfg_payment_label"><span class="eyebrow-bar"></span>Payment Terms Details</span>
+    <h2 class="moq-title" data-i18n="mfg_moo_title_text">Minimum Order Quantity &amp;<br><span style="color:#F99532">Payment</span> <span class="highlight">Terms</span></h2>
+
+    <div class="moq-grid">
+
+        <!-- LEFT: PAYMENT INFO -->
+        <div class="moq-info">
+
+            <h3 data-i18n="mfg_tt_title">Telegraphic Transfer (T/T) Payment</h3>
+            <p data-i18n="mfg_tt_desc">
+                Ecoco Nusantara prioritizes streamlined, secure export logistics.
+                We accept all transactions via T/T (Telegraphic Transfer),
+                ensuring processed and attentive transparency. By establishing
+                a Minimum Order Quantity (MOQ) of one standard container
+                (20ft or 40ft FCL), we optimize shipping economics and ensure
+                highly reliable, large-scale delivery to your destination.
+            </p>
+
+            <h3 data-i18n="mfg_payment_title">Payment Structure: 50% Advance Payment,<br>50% Balance Before Shipment</h3>
+            <p data-i18n="mfg_payment_desc">
+                To secure your order and initiate production, our standard
+                terms require a 50% advance deposit upon T/T, with the
+                remaining 50% balance settled prior to container loading. We
+                recognize that every business operates differently, and we
+                are open to negotiating these terms to establish a mutually
+                beneficial, long-term partnership.
+            </p>
+
+            <div class="moq-discuss-divider">
+                <span class="moq-discuss-line"></span>
+                <span class="moq-discuss-link" data-i18n="mfg_discuss">Can Be Discussed</span>
+                <span class="moq-discuss-line"></span>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: MOQ CARD -->
+        <div class="moq-card">
+
+            <div class="moq-card-header">
+                <h3 data-i18n="mfg_moo_card_title">Minimum Order Quantity</h3>
+                <span class="moq-tag">MOQ</span>
+            </div>
+
+            <div class="moq-container-options">
+                <div class="moq-container-option">
+                    <span class="moq-container-size">20&quot;</span>
+                    <span class="moq-container-tons" data-i18n="mfg_tons18">18 Tons</span>
+                </div>
+                <div class="moq-container-option selected">
+                    <span class="moq-container-size">40&quot;</span>
+                    <span class="moq-container-tons" data-i18n="mfg_tons28">28 Tons</span>
+                </div>
+            </div>
+
+            <ul class="moq-detail-list">
+
+                <li>
+                    <span class="moq-detail-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f7901e" stroke-width="1.6">
+                            <rect x="2.5" y="5.5" width="19" height="13" rx="2"/>
+                            <path d="M2.5 10h19"/>
+                        </svg>
+                    </span>
+                    <span class="moq-detail-label" data-i18n="mfg_moo_payment">Payment Method</span>
+                    <span class="moq-detail-value" data-i18n="mfg_moo_payment_val">T/T (Telegraphic Transfer)</span>
+                </li>
+
+                <li>
+                    <span class="moq-detail-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f7901e" stroke-width="1.6">
+                            <path d="M3 6l9-3 9 3-9 3-9-3z"/>
+                            <path d="M3 12l9 3 9-3"/>
+                            <path d="M3 18l9 3 9-3"/>
+                        </svg>
+                    </span>
+                    <span class="moq-detail-label" data-i18n="mfg_moo_structure">Payment Structure</span>
+                    <span class="moq-detail-value" data-i18n="mfg_moo_structure_val">50% Advance - 50% Balance</span>
+                </li>
+
+                <li>
+                    <span class="moq-detail-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f7901e" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 7v5l3.5 2"/>
+                        </svg>
+                    </span>
+                    <span class="moq-detail-label" data-i18n="mfg_moo_leadtime">Lead Time</span>
+                    <span class="moq-detail-value" data-i18n="mfg_moo_leadtime_val">Approx. 4-6 Weeks</span>
+                </li>
+
+                <li>
+                    <span class="moq-detail-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f7901e" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 7v10M9.5 9.3c0-1.3 1.1-2.1 2.5-2.1s2.5.8 2.5 2c0 2.4-5 1.6-5 4 0 1.2 1.1 2 2.5 2s2.5-.8 2.5-2.1"/>
+                        </svg>
+                    </span>
+                    <span class="moq-detail-label" data-i18n="mfg_moo_currency">Currency</span>
+                    <span class="moq-detail-value" data-i18n="mfg_moo_currency_val">USD</span>
+                </li>
+
+            </ul>
+
+            <p class="moq-note" data-i18n="mfg_moo_note">Price in USD/MT, confirmed upon order and payment received.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FAQ SECTION ================= -->
+<section class="faq-section" id="faq">
+
+    <span class="process-eyebrow" data-i18n="mfg_faq_label"><span class="eyebrow-bar"></span>Support</span>
+    <h2 class="faq-title"><span class="faq-title-serif" data-i18n="mfg_faq_title1">Frequently Asked</span> <span class="highlight" data-i18n="mfg_faq_questions">Questions</span></h2>
+    <p class="faq-subtitle" data-i18n="mfg_faq_sub">Find answers to common questions about our charcoal briquettes, applications, packaging, logistics, and customization.</p>
+
+    <div class="faq-container">
+
+        <h3 class="faq-category" data-i18n="mfg_faq_cat1">Product Quality &amp; Specifications</h3>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q1">What are your coconut shell charcoal briquettes made of?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a1">Our briquettes are crafted from 100% natural coconut shells, completely free from chemical additives, binders, or artificial fillers.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q2">What is the burning time of your charcoal briquettes?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <ul data-i18n="mfg_faq_a2">
+                        <li><strong>Shisha / Hookah:</strong> 2.5 to 3 hours</li>
+                        <li><strong>BBQ Charcoal:</strong> 4 to 5 hours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q3">What is the ash content and color?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <ul data-i18n="mfg_faq_a3">
+                        <li><strong>Shisha Charcoal:</strong> Very low ash content of 2.5% to 3% with 4–6% moisture, burning down to a fine, clean white-to-light-grey ash.</li>
+                        <li><strong>BBQ Charcoal:</strong> Ash content of 5% to 8% with 5–7% moisture, with high caloric density and excellent ventilation design for heavy grilling.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q4">What are the standard moisture and fixed carbon levels?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a4">Our briquettes feature low moisture content (under 6% to 7%) and high fixed carbon content of around 70% to 80%, ensuring maximum heat output and minimal smoke.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q5">Do your briquettes produce any odor or smoke?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a5">No. They are entirely odorless, smokeless, and sparkless during ignition and use, making them ideal for both indoor shisha lounges and outdoor culinary applications.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="faq-category" data-i18n="mfg_faq_cat2">Applications &amp; Usage</h3>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q6">Are these briquettes suitable for shisha/hookah?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a6">Yes. We offer meticulously crafted cube and flat briquettes specifically engineered for shisha sessions, delivering consistent, long-lasting heat without altering the authentic flavor of the tobacco.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q7">Can these briquettes be used for BBQ and grilling?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a7">Absolutely. Characterized by high, steady thermal output and an extended burn duration, our briquettes are the preferred fuel choice for both professional culinary operations and backyard grilling.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q8">How should I store the charcoal briquettes?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a8">To preserve their optimal moisture levels and ignition performance, store the briquettes in a dry, well-ventilated environment, elevated off the ground and completely protected from moisture.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="faq-category" data-i18n="mfg_faq_cat3">Ordering, Packaging &amp; Logistics</h3>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q9">What packaging options do you provide for export?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a9">We provide versatile export-grade packaging solutions, including master cartons with protective inner plastic liners, customized private-label retail boxes, and heavy-duty 10 kg or 20 kg master boxes tailored to your brand specifications.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q10">What is your Minimum Order Quantity (MOQ)?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a10">Our standard MOQ for international export orders is one 20-foot container (FCL). However, we remain flexible to accommodate sample orders to facilitate initial quality testing and evaluation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q11">What Incoterms do you support?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a11">We primarily accommodate FOB (Free on Board) shipping terms to major international ports, ensuring a streamlined handover for your logistics partners.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q12">What are your standard payment terms?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a12">We generally operate via Telegraphic Transfer (T/T), requiring a secure upfront deposit upon order confirmation with the remaining balance settled against shipping documents.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="faq-category" data-i18n="mfg_faq_cat4">Sustainability &amp; Customization</h3>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q13">Are your charcoal briquettes eco-friendly?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a13">Yes. By utilizing discarded coconut shells, our production process upcycles agricultural waste into clean energy, resulting in zero deforestation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q14">Do you offer OEM or private labeling services?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a14">Yes, we support custom branding and private label packaging tailored to your exact box dimensions, logo, and design requirements.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+                <span data-i18n="mfg_faq_q15">How can I request a product sample?</span>
+                <span class="faq-icon" aria-hidden="true"><span></span><span></span></span>
+            </button>
+            <div class="faq-answer">
+                <div class="faq-answer-inner">
+                    <p data-i18n="mfg_faq_a15">You can reach out to our sales team directly via email business@ecoconusantara.com or our website inquiry form to request a sample shipment for laboratory or market testing.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Tombol WhatsApp floating -->
+<a href="https://wa.me/6282114254329?text=Hello%2C%20I%27m%20interested%20in%20your%20charcoal%20products.%20Could%20you%20share%20more%20details%3F" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="white" aria-hidden="true">
+        <path d="M16.001 3C9.376 3 4 8.373 4 15c0 2.394.63 4.64 1.732 6.586L4 29l7.6-1.7A11.94 11.94 0 0 0 16.001 27C22.626 27 28 21.627 28 15S22.626 3 16.001 3zm6.965 16.997c-.297.833-1.47 1.526-2.407 1.727-.64.135-1.475.243-4.287-.92-3.597-1.49-5.91-5.148-6.09-5.39-.174-.24-1.454-1.936-1.454-3.693 0-1.757.914-2.618 1.24-2.977.297-.328.646-.41.862-.41.216 0 .432.002.62.011.2.01.468-.076.732.559.297.72.997 2.478 1.084 2.657.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.378.468-.54.63-.18.18-.368.375-.158.735.21.36.933 1.541 2.003 2.497 1.376 1.227 2.537 1.606 2.897 1.786.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.088.985 2.448 1.165.36.18.6.27.687.42.09.15.09.867-.207 1.7z"/>
+    </svg>
+</a>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-grid">
+
+            <!-- BRANDING -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="white">ECOCO</span>
+                    <span class="orange">NUSANTARA</span>
+                </div>
+                <p class="footer-follow" data-i18n="footer_follow">FOLLOW US</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/p/Ecoco-Nusantara-61592585075888/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ecoconusantara.id?igsh=bXoyMzlkaHBoam9x&utm_source=qr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38A6.1 6.1 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38c.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8zM18.41 4.15a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ABOUT US -->
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer_about">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="/about.html#who-we-are" data-i18n="footer_about_who">Who We Are</a></li>
+                    <li><a href="/about.html#what-we-offer" data-i18n="footer_about_offer">What We Offer</a></li>
+                    <li><a href="/about.html#our-factory" data-i18n="footer_about_factory">Our Factory</a></li>
+                    <li><a href="/about.html#our-logistics" data-i18n="footer_about_logistics">Our Logistics</a></li>
+                    <li><a href="/about.html#our-gallery" data-i18n="footer_about_gallery">Our Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- PRODUCTS -->
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer_products">Products</h4>
+                <ul class="footer-links">
+                    <li><a href="/products/shisha.html" data-i18n="nav_shisha">Coconut Shisha Charcoal Briquette</a></li>
+                    <li><a href="/products/bbq.html" data-i18n="nav_bbq">Barbeque Charcoal Briquette</a></li>
+                    <li><a href="/products/hardwood.html" data-i18n="nav_hardwood">Hardwood Charcoal</a></li>
+                </ul>
+            </div>
+
+            <!-- MANUFACTURING & NEWS -->
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer_mfg_news">Manufacturing &amp; News</h4>
+                <ul class="footer-links">
+                    <li><a href="/manufacturing-process.html" data-i18n="nav_manufacturing">Manufacturing Process</a></li>
+                    <li><a href="/manufacturing-process.html#moq" data-i18n="footer_mfg_moq">MOQ &amp; Payment Terms</a></li>
+                    <li><a href="/manufacturing-process.html#faq" data-i18n="footer_mfg_faq">FAQs</a></li>
+                    <li><a href="/news.html" data-i18n="nav_news">News &amp; Article</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT US -->
+            <div class="footer-col footer-col-contact">
+                <h4 class="footer-heading" data-i18n="footer_contact">Contact Us</h4>
+                <ul class="footer-contact-list">
+                    <li class="footer-contact-item">
+                        <span class="footer-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.2A7 7 0 0 1 19 9.8C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+                        </span>
+                        <span class="footer-contact-body">
+                            <span class="footer-contact-label" data-i18n="contact_info_office">Head Office</span>
+                            <span class="footer-contact-value">SOVEREIGN PLAZA, RT.1/RW.2, CILANDAK BAR., KEC. CILANDAK, KOTA JAKARTA SELATAN, DKI JAKARTA 12430, INDONESIA</span>
+                        </span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="footer-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+                        </span>
+                        <span class="footer-contact-body">
+                            <span class="footer-contact-label" data-i18n="contact_info_phone">Office Phone</span>
+                            <span class="footer-contact-value"><a href="tel:+622129400153">(021) 294 00153</a></span>
+                        </span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="footer-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H8l2 5-2.4 1.6a11 11 0 0 0 5.8 5.8L15 13l5 2v2.5A2.5 2.5 0 0 1 17.5 20 15.5 15.5 0 0 1 3 5.5z"/></svg>
+                        </span>
+                        <span class="footer-contact-body">
+                            <span class="footer-contact-label" data-i18n="contact_info_whatsapp">WhatsApp</span>
+                            <span class="footer-contact-value"><a href="https://wa.me/6282114254329" target="_blank" rel="noopener">+62 821-1425-4329</a></span>
+                        </span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="footer-contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                        </span>
+                        <span class="footer-contact-body">
+                            <span class="footer-contact-label" data-i18n="contact_info_email">Email</span>
+                            <span class="footer-contact-value"><a href="mailto:business@ecoconusantara.com">business@ecoconusantara.com</a><br><a href="mailto:sales@ecoconusantara.com">sales@ecoconusantara.com</a></span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy" data-i18n="footer_copy">© 2026 Ecoco Nusantara. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="javascript/translations.js"></script>
+<script src="javascript/i18n.js"></script>
+<script src="javascript/script.js"></script>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('#navbar > nav');
+const navOverlay = document.querySelector('.mobile-nav-overlay');
+const navCloseBtn = document.querySelector('.nav-close-btn');
+
+function closeSidebar(){
+    navMenu.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded','false');
+    if(navOverlay) navOverlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+    document.querySelectorAll('.nav-dropdown.mobile-open').forEach(function(d){
+        d.classList.remove('mobile-open');
+        d.querySelector('.dropdown-toggle').setAttribute('aria-expanded','false');
+    });
+}
+
+function openSidebar(){
+    navMenu.classList.add('open');
+    hamburger.classList.add('active');
+    hamburger.setAttribute('aria-expanded','true');
+    if(navOverlay) navOverlay.classList.add('active');
+    document.body.classList.add('no-scroll');
+}
+
+hamburger.addEventListener('click', function(){
+    if(navMenu.classList.contains('open')){
+        closeSidebar();
+    } else {
+        openSidebar();
+    }
+});
+
+if(navCloseBtn) navCloseBtn.addEventListener('click', closeSidebar);
+if(navOverlay) navOverlay.addEventListener('click', closeSidebar);
+
+document.querySelectorAll('.dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        var dropdown = toggle.closest('.nav-dropdown');
+        if(window.innerWidth <= 900){
+            var isOpen = dropdown.classList.toggle('mobile-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        } else {
+            var isOpen = dropdown.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        }
+    });
+});
+
+document.addEventListener('click', function(e){
+    document.querySelectorAll('.nav-dropdown.open').forEach(function(dropdown){
+        if(!dropdown.contains(e.target)){
+            dropdown.classList.remove('open');
+            dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
+/* ================= PRODUCTION PROCESS STAGES ================= */
+const processStages = [
+    { number: '01', key: 'mfg_s1', image: '/Assets/manufacturing/manufacturing1.webp' },
+    { number: '02', key: 'mfg_s2', image: '/Assets/manufacturing/manufacturing2.webp' },
+    { number: '03', key: 'mfg_s3', image: '/Assets/manufacturing/manufacturing3.webp' },
+    { number: '04', key: 'mfg_s4', image: '/Assets/manufacturing/manufacturing4.webp' },
+    { number: '05', key: 'mfg_s5', image: '/Assets/manufacturing/manufacturing5.webp' },
+    { number: '06', key: 'mfg_s6', image: '/Assets/manufacturing/manufacturing6.webp' },
+    { number: '07', key: 'mfg_s7', image: '/Assets/manufacturing/manufacturing7.webp' },
+    { number: '08', key: 'mfg_s8', image: '/Assets/manufacturing/manufacturing8.webp' },
+    { number: '09', key: 'mfg_s9', image: '/Assets/manufacturing/manufacturing9.webp' }
+];
+
+const tabsWrap = document.getElementById('processTabs');
+const progressFill = document.getElementById('processProgressFill');
+const imgEl = document.getElementById('processImage');
+const titleEl = document.getElementById('processTitle');
+const taglineEl = document.getElementById('processTagline');
+const descEl = document.getElementById('processDescription');
+const currentEl = document.getElementById('processCurrent');
+const totalEl = document.getElementById('processTotal');
+const prevBtn = document.getElementById('processPrev');
+const nextBtn = document.getElementById('processNext');
+
+let currentStage = 0;
+
+function getTranslation(key, fallback) {
+    var lang = (typeof EcocoI18n !== 'undefined') ? EcocoI18n.get() : 'en';
+    if (typeof translations !== 'undefined' && translations[key] && translations[key][lang]) {
+        return translations[key][lang];
+    }
+    return fallback || '';
+}
+
+function renderTabs(){
+    tabsWrap.innerHTML = '';
+    processStages.forEach((stage, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'process-tab' + (i === currentStage ? ' active' : '');
+        const label = getTranslation(stage.key + '_label', 'Stage ' + stage.number);
+        btn.innerHTML = '<span class="process-tab-num">' + stage.number + '</span> ' + label;
+        btn.addEventListener('click', () => goToStage(i));
+        tabsWrap.appendChild(btn);
+    });
+}
+
+function goToStage(i){
+    currentStage = (i + processStages.length) % processStages.length;
+    const stage = processStages[currentStage];
+
+    imgEl.src = stage.image;
+    imgEl.alt = getTranslation(stage.key + '_title', '');
+    titleEl.textContent = getTranslation(stage.key + '_title', '');
+    taglineEl.textContent = getTranslation(stage.key + '_tagline', '');
+    descEl.textContent = getTranslation(stage.key + '_desc', '');
+    currentEl.textContent = stage.number;
+    totalEl.textContent = String(processStages.length).padStart(2, '0');
+
+    progressFill.style.width = ((currentStage + 1) / processStages.length * 100) + '%';
+
+    renderTabs();
+
+    const activeTab = tabsWrap.querySelector('.process-tab.active');
+    if(activeTab) activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+}
+
+prevBtn.addEventListener('click', () => goToStage(currentStage - 1));
+nextBtn.addEventListener('click', () => goToStage(currentStage + 1));
+
+goToStage(0);
+
+/* ================= FAQ ACCORDION ================= */
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+
+        document.querySelectorAll('.faq-item.active').forEach(openItem => {
+            openItem.classList.remove('active');
+            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
+</script>
+
+</body>
+
+</html>
