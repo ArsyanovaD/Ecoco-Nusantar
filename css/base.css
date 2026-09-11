@@ -929,11 +929,13 @@ header.scrolled{
     margin-bottom:clamp(36px,4.17vw,60px);
 }
 
+@media(min-width:901px){
 .process-content{
     width:min(1290px,92vw);
     height:clamp(500px,47.2vw,680px);
     gap:clamp(40px,5.56vw,80px);
     padding:clamp(30px,3.47vw,50px);
+}
 }
 
 .process-text-body{
