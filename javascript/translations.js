@@ -10,6 +10,7 @@ const translations = {
     'nav_shisha': { en: 'Coconut Shisha Charcoal Briquette', ko: '코코넛 시샤 숯 브리켓', ar: 'فحم الشيشة من قشور جوز الهند', ja: 'ココナッツシシャ用チャコールブリケット' },
     'nav_bbq': { en: 'Barbeque Charcoal Briquette', ko: '바비큐 숯 브리켓', ar: 'فحم الشواء', ja: 'バーベキュー用チャコールブリケット' },
     'nav_hardwood': { en: 'Hardwood Charcoal', ko: '경목 숯', ar: 'فحم الخشب الصلب', ja: 'ハードウッドチャコール' },
+    'nav_binchotan': { en: 'Binchotan White Charcoal', ko: '빈촌탄 화이트 숯', ar: 'فحم بينتشونتان الأبيض', ja: '備長炭ホワイトチャコール' },
     'nav_manufacturing': { en: 'Manufacturing Process', ko: '제조 공정', ar: 'عملية التصنيع', ja: '製造工程' },
     'nav_news': { en: 'News & Article', ko: '뉴스 & 아티클', ar: 'الأخبار والمقالات', ja: 'ニュース＆記事' },
     'nav_contact': { en: 'Contact', ko: '문의하기', ar: 'اتصل بنا', ja: 'お問い合わせ' },
@@ -345,10 +346,21 @@ const translations = {
     'hard_shapesize_sub': { en: 'Your Partner for Premium Private Label Charcoal', ko: '프리미엄 프라이빗 라벨 숯의 파트너', ar: 'شريكك في فحم العلامة التجارية الخاصة الممتازة', ja: 'プレミアムプライベートラベルチャコールのパートナー' },
     'hard_lump_wood': { en: 'Lump Wood', ko: '덩어리 목재', ar: 'خشب كتلة', ja: 'ランプウッド' },
 
+    /* ===== BINCHOTAN PAGE ===== */
+    'binch_heading1': { en: 'Binchotan', ko: '빈촌탄', ar: 'بينتشونتان', ja: '備長炭' },
+    'binch_heading2': { en: 'White Charcoal', ko: '화이트 숯', ar: 'فحم أبيض', ja: 'ホワイトチャコール' },
+    'binch_desc': { en: 'Premium Binchotan White Charcoal – Intense Heat, Clean Finish. Crafted from dense, high-grade white charcoal, our Binchotan delivers the signature sharp "ting" and powerful, steady heat that Japanese culinary tradition demands. With near-zero ash and a very high fixed carbon, it burns clean and long enough to be reused across several services — ideal for omakase counters, yakitori and yakiniku restaurants, as well as demanding grilling and smoking applications.', ko: '프리미엄 빈촌탄 화이트 숯 – 강한 열, 깨끗한 연소. 밀도 높은 고등급 화이트 숯으로 만든 빈촌탄은 일본 요리가 요구하는 또렷한 "팅" 소리와 강하고 안정적인 열을 제공합니다. 재 함량이 거의 없고 고정탄소가 높아 깨끗하고 오래 연소되며 여러 번 재사용할 수 있습니다. 오마카세, 야키토리, 야키니쿠 식당 및 그릴링과 스모킹에 적합합니다.', ar: 'فحم بينتشونتان الأبيض الممتاز – حرارة قوية ونهاية نظيفة. مصنوع من فحم أبيض كثيف وعالي الدرجة، يقدم بينتشونتان الصوت المميز "تينغ" وحرارة قوية ومستقرة كما يتطلب المطبخ الياباني. مع محتوى رماد قريب من الصفر ومحتوى كربون ثابت عالٍ، يحترق نظيفاً وطويلاً ويمكن إعادة استخدامه عدة مرات. مناسب للأوماكاسيه ومطاعم الياكيتوري والياكينيكو والشواء والتدخين.', ja: 'プレミアム備長炭ホワイトチャコール — 強い熱、きれいな燃焼。高密度で高品質なホワイトチャコールから作られた備長炭は、日本の料理が求める澄んだ「チン」という音と、強く安定した熱を提供します。灰分がほぼゼロで固定炭素が高いため、きれいに長く燃焼し何度も再使用できます。おまかせ、焼鳥、焼肉、グリリングやスモーキングに最適です。' },
+    'binch_spec_title': { en: 'Specification', ko: '사양', ar: 'المواصفات', ja: '仕様' },
+    'binch_spec_sub': { en: 'Choose the right binchotan grade for your business needs.', ko: '비즈니스 요구에 맞는 올바른 빈촌탄 품종을 선택하십시오.', ar: 'اختر درجة بينتشونتان المناسبة لاحتياجات عملك.', ja: 'ビジネスニーズに合った備長炭のグレードを選択してください。' },
+    'binch_white_grade': { en: 'Binchotan White Charcoal', ko: '빈촌탄 화이트 숯', ar: 'فحم بينتشونتان الأبيض', ja: '備長炭ホワイトチャコール' },
+
     /* ===== HOME PAGE (additional) ===== */
     'home_product_hardwood_label': { en: 'HARDWOOD / LUMP', ko: '경목 / 덩어리', ar: 'خشب صلب / كتلة', ja: 'ハードウッド / ランプ' },
     'home_product_hardwood_title': { en: 'Natural Lump Charcoal', ko: '천연 덩어리 숯', ar: 'فحم كتلة طبيعي', ja: '天然ランプチャコール' },
     'home_product_hardwood_desc': { en: 'Premium hardwood lump — long-lasting heat with pure smoky flavor for steakhouses.', ko: '프리미엄 경목 덩어리 — 스테이크하우스를 위한 순수한 스모키한 풍미의 오래 지속되는 열.', ar: 'كتلة خشب صلب ممتازة — حرارة طويلة الأمد بنكهة دخانية نقية لمطاعم الستيك.', ja: 'プレミアムハードウッドランプ — ステーキハウス向けの純粋なスモーキーフレーバーの長持ちする熱。' },
+    'home_product_binchotan_label': { en: 'BINCHOTAN / WHITE', ko: '빈촌탄 / 화이트', ar: 'بينتشونتان / أبيض', ja: '備長炭 / ホワイト' },
+    'home_product_binchotan_title': { en: 'Binchotan White Charcoal', ko: '빈촌탄 화이트 숯', ar: 'فحم بينتشونتان الأبيض', ja: '備長炭ホワイトチャコール' },
+    'home_product_binchotan_desc': { en: 'Japanese-style white charcoal — intense, clean heat for omakase and yakitori.', ko: '일본식 화이트 숯 — 오마카세와 야키토리를 위한 강렬하고 깨끗한 열.', ar: 'فحم أبيض على النمط الياباني — حرارة قوية ونظيفة للأوماكاسيه والياكيتوري.', ja: '日本式ホワイトチャコール — おまかせや焼鳥に向けた强烈で清潔な熱。' },
     'home_info_pack_li1': { en: 'Neutral <strong>master cartons</strong> & bulk bags', ko: '중립 <strong>마스터 카톤</strong> & 벌크 백', ar: 'كراتين رئيسية <strong>محايدة</strong> وأكياس بالجملة', ja: '中立的な<strong>マスターカートン</strong>＆バルクバッグ' },
     'home_info_pack_li2': { en: 'Fully branded <strong>OEM boxes</strong> available', ko: '풀 브랜딩 <strong>OEM 박스</strong> 가능', ar: 'متاح <strong>صناديق OEM</strong> بالعلامة التجارية الكاملة', ja: 'フルブランド<strong>OEMボックス</strong>対応' },
     'home_info_pack_li3': { en: 'Your label, your formula', ko: '당신의 라벨, 당신의 포뮬러', ar: 'علامتك التجارية، صيغتك', ja: 'あなたのラベル、あなたのフォーミュラ' },
