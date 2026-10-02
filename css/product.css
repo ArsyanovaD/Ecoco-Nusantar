@@ -596,6 +596,28 @@ max-width:600px;
     object-fit:cover;
 }
 
+/* ===== HARDWOOD PAGE: keep long spec values (e.g. Application) tidy ===== */
+.page-hardwood .grade-name{
+    text-align:center;
+}
+
+.page-hardwood .grade-list li{
+    gap:16px;
+}
+
+.page-hardwood .grade-list li span:first-child{
+    flex:0 0 auto;
+    white-space:nowrap;
+}
+
+.page-hardwood .grade-list li span:last-child{
+    min-width:0;
+    flex:1 1 auto;
+    text-align:right;
+    line-height:1.4;
+    overflow-wrap:break-word;
+}
+
 .page-hardwood .video-section{
     background:#110C08;
 }
@@ -1053,7 +1075,7 @@ transform:translate(-50%,-50%) scale(1.1);
 .grade-card{
     background:#110C08;
     border:3px solid rgba(53,44,37,.6);
-    height:770px;
+    min-height:770px;
     display:flex;
     flex-direction:column;
 }
@@ -1365,7 +1387,7 @@ transform:translate(-50%,-50%) scale(1.1);
     }
 
     .grade-card{
-        height:auto;
+        min-height:0;
     }
 
     .spec-layout{

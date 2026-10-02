@@ -830,7 +830,7 @@ header.scrolled{
 }
 
 .grade-card{
-    height:clamp(600px,53.5vw,770px);
+    min-height:clamp(600px,53.5vw,770px);
 }
 
 .grade-image{
