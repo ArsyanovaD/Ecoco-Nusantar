@@ -370,6 +370,13 @@ const translations = {
     'home_news_link': { en: 'All articles', ko: '모든 아티클', ar: 'جميع المقالات', ja: 'すべての記事' },
     'home_catalog_download': { en: '\u2B07 Download Catalogue Now', ko: '\u2B07 카탈로그 지금 다운로드', ar: '\u2B07 تحميل الكتالوج الآن', ja: '\u2B07 今すぐカタログをダウンロード' },
 
+    /* REQUEST FOR SAMPLE */
+    'home_sample_label': { en: 'REQUEST FOR SAMPLE', ko: '샘플 요청', ar: 'طلب عينة', ja: 'サンプル請求' },
+    'home_sample_heading': { en: 'Experience the Quality Firsthand', ko: '직접 확인해 보세요', ar: 'اختبر الجودة بنفسك', ja: '実物で確かめてから決めて' },
+    'home_sample_desc': { en: 'Experience the quality of our products firsthand. We offer a 5kg sample box for you to test the exceptional quality and performance of our Shisha Charcoal Briquettes, BBQ Charcoal Briquettes, Natural Wood, and Binchotan charcoal.', ko: '우리 제품의 품질을 직접 확인해 보세요. 5kg 샘플 박스를 통해 시샤 숯 브리켓, 바비큐 숯 브리켓, 내추럴 우드, 빈촌탄 숯의 뛰어난 품질과 성능을 직접 테스트해 보실 수 있습니다.', ar: 'اختبر جودة منتجاتنا بنفسك. نوفر صندوق عينة بوزن 5 كجم لتختبر جودة وأداء منتجاتنا الاستثنائية: فحم جوز الهند للشيشة، وفحم الشواء، والخشب الطبيعي، وفحم بينتشونتان.', ja: '私たちの製品の品質を実際にお試しください。5kgのサンプルボックスをご用意し、シシャ炭ブリケット、BBQ炭ブリケット、ナチュラルウッド、備長炭の優れた品質と性能を直接確かめていただけます。' },
+    'home_sample_info': { en: '5 KG SAMPLE BOX', ko: '5 KG 샘플 박스', ar: 'صندوق عينة 5 كجم', ja: '5 KG サンプルボックス' },
+    'home_sample_btn': { en: 'Request Sample via WhatsApp', ko: 'WhatsApp으로 샘플 요청', ar: 'اطلب عينة عبر واتساب', ja: 'WhatsAppでサンプルを請求' },
+
     /* ===== MANUFACTURING PROCESS (hero + MOQ + FAQ missing titles) ===== */
     'mfg_hero_title1': { en: 'How We Deliver', ko: '어떻게 전달하는가', ar: 'كيف نقدم', ja: 'どのように提供するか' },
     'mfg_hero_title2': { en: 'High-<br class="hide-mobile">Performance Charcoal Worldwide', ko: '세계적으로 고성능<br class="hide-mobile">숯을', ar: 'الفحم عالي الأداء<br class="hide-mobile">عالمياً', ja: '世界に高性能<br class="hide-mobile">チャコールを' },
